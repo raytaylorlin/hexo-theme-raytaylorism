@@ -1,0 +1,39 @@
+<article class="<%= item.layout %>">
+  <header>
+    <% if (item.layout != 'page'){ %>
+      <div class="icon"></div>
+      <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+    <% } %>
+    <%- partial('post/title') %>
+  </header>
+  <% if (item.photos && item.photos.length > 0){ %>
+    <%- partial('post/gallery') %>
+  <% } %>
+  <div class="entry">
+    <% if (item.excerpt && index){ %>
+      <%- item.excerpt %>
+    <% } else { %>
+      <%- item.content %>
+    <% } %>
+  </div>
+  <footer<% if (index) { %> class="end-sep"<% } %>>
+    <% if (index){ %>
+      <% if (item.excerpt){ %>
+        <div class="alignleft">
+          <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
+        </div>
+      <% } %>
+      <% if (item.comment && config.disqus_shortname){ %>
+      <div class="alignright">
+        <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
+      </div>
+      <% } %>
+    <% } else { %>
+      <%- partial('post/category') %>
+      <%- partial('post/tag') %>
+    <% } %>
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+<%- partial('comment') %>

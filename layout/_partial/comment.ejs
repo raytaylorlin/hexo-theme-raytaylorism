@@ -1,0 +1,14 @@
+<% if (config.disqus_shortname && page.comments){ %>
+<section id="comment">
+  <h1 class="title"><%= __('comment') %></h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } else if (theme.duoshuo_shortname && page.comments){ %>
+<section id="comment">
+  <h1 class="title"><%= __('comment') %></h1>
+  <div class="ds-thread" data-title="<%= item.title %>">
+  </div>
+</section>
+<% } %>

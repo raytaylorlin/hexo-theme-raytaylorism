@@ -1,0 +1,286 @@
+icon-size = 18px
+
+article
+  padding 15px 20px
+  font-size 15px
+  position relative
+
+  &.page
+    padding-left 20px
+    .icon
+      display none
+
+  &.post
+    .icon
+      &:before
+        content '\f016'
+
+  &.photo
+    .icon
+      &:before
+        content '\f030'
+
+  &.link
+    .icon
+      &:before
+        content '\f0c1'
+
+  .gallery
+    margin 0 -20px 16px
+    overflow hidden
+    position relative
+    &:hover
+      .control
+        opacity 1
+      img
+        transform scale(1.1, 1.1)
+        transition all 0.8s
+        @media screen and (max-width:580px)
+          transform none
+          transition none
+
+    img
+      min-width 100%
+      max-width 100%
+      height auto
+      position absolute
+      top 0
+      left 0
+      opacity 0
+      transition all 0.8s
+
+    .control
+      opacity 0
+      transition 0.3s
+
+    .prev, .next
+      position absolute
+      top 0
+      width 50%
+      height 100%
+      cursor pointer
+      &:before
+        position absolute
+        font 24px/1 font-icon
+        text-align center
+        width 24px
+        text-shadow 0 0 15px rgba(0,0,0,0.5)
+        color #fff
+        margin-top -12px
+        top 50%
+
+    .prev
+      left 0
+      &:before
+        content '\f053'
+        left 10px
+
+    .next
+      right 0
+      &:before
+        content '\f054'
+        right 10px
+
+  header
+    border-radius 0
+    background none
+    position relative
+    padding 0
+    border-bottom 0
+    margin-bottom 10px
+
+    .icon
+      width icon-size
+      height icon-size
+      position absolute
+      top 0px
+      left -2px
+      color color-link
+      @media screen and (max-width: 600px)
+        display none
+      &:before
+        position absolute
+        font 18px font-icon    
+        top 0
+        left 0 
+        width 18px
+        text-align center
+
+    time
+      font 0.9em font-title
+      margin 0 0 5px 20px
+      display block
+      line-height 1
+      @media screen and (max-width: 600px)
+        margin 0 0 5px 1px
+
+    .title
+      font-size 24px
+      font-weight normal
+      line-height 1.2
+      margin 0
+      padding 0
+      text-shadow rgba(255, 255, 255, 0.9) 0 1px 0
+
+      a
+        color #222
+
+        &:hover
+          color color-link
+
+  .entry
+    text-align justify
+    line-height 1.6
+
+    h1, h2, h3, h4, h5, h6
+      color #222
+      padding 0
+      margin 0 0 20px
+      line-height 1.2
+
+    p, ul, ol, table, pre, dl
+      margin 0 0 20px
+
+    h1, h2, h3
+      line-height 1.1
+
+    h1
+      font-size 28px
+
+    h2
+      color #393939
+
+    h3, h4, h5, h6
+      color #494949
+
+    blockquote
+      margin 0 -20px 20px
+      padding 15px 20px 1px 40px
+      font-style italic
+      background #ccc
+      background rgba(0, 0, 0, 0.06)
+      color #222
+
+    img, video
+      max-width 98%
+      border-radius 3px
+      padding 5px
+      background #FFFFFF
+      box-shadow 0 0 8px #aaa
+
+      &.nstyle
+        border-radius 0
+        padding 0
+        background none
+        box-shadow none
+
+    iframe
+      max-width 98%
+
+    .caption
+      display block
+      margin-top 5px
+      color #aaa
+      position relative
+      font-size 0.9em
+      padding-left 25px
+      &:before
+        content '\f040'
+        position absolute
+        font 1.3em font-icon
+        position absolute
+        left 0
+        top 3px
+
+    code, pre
+      font-family Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal
+      color #333
+      font-size 0.8em
+      overflow auto
+      white-space pre-wrap
+      word-wrap break-word
+
+    code
+      font-size 13px
+      padding 2px 5px
+      margin 0 2px
+
+    pre
+      color #f8f8f2
+      overflow-x auto
+
+      code
+        color #f8f8f2
+
+      li &
+        margin-left -60px
+        padding-left 60px
+
+    table
+      width 100%
+      border-collapse collapse
+
+    th, td
+      text-align left
+      padding 5px 10px
+      border-bottom 1px solid #aaa
+
+    dt
+      color #222
+      font-weight 700
+
+    th
+      color #222
+
+    small
+      font-size 11px
+
+    hr
+      border 0
+      background #aaa
+      height 1px
+      margin 0 0 20px
+
+  footer
+    border-top 1px solid #aaa
+    padding 10px 0 0 0
+    margin-top 10px
+
+    &.end-sep
+      border-top none
+      border-bottom 1px solid #aaa
+      padding 0 0 10px 0
+
+    a
+      &:before
+        font 1.1em font-icon
+        padding-right 10px
+        vertical-align middle
+
+      &.more-link
+        &:before
+          content '\f054'
+
+      &.comment-link
+        &:before
+          content '\f075'
+
+    .categories, .tags
+      position relative
+      padding-left 25px
+      margin 5px 0
+      &:before
+        position absolute
+        font 1.1em font-icon
+
+    .categories
+      &:before
+        content '\f07b'
+        top 4px
+        left 1px
+
+    .tags
+      &:before
+        content '\f02b'
+        top 5px
+        left 2px

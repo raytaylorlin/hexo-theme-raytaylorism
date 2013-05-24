@@ -1,0 +1,13 @@
+<div class="copyright">
+  <% if (config.author){ %>
+  &copy; <%= new Date().getFullYear() %> <a href="<%- config.root %>"><%= config.author %></a>
+  <% } else { %>
+  &copy; <%= new Date().getFullYear() %> <a href="<%- config.root %>"><%= config.title %></a>
+  <% } %>
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div>

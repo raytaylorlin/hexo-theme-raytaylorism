@@ -1,0 +1,14 @@
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+  Rss: /atom.xml
+
+excerpt_link: 阅读全文
+
+fancybox: true
+
+duoshuo_shortname: heroicyang
+
+google_analytics:
+rss:
