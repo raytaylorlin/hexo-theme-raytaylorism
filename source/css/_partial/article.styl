@@ -1,12 +1,12 @@
-icon-size = 18px
+icon-container-size = 32px
+icon-size = 24px
 
 article
-  padding 15px 20px
+  padding 15px 30px
   font-size 15px
   position relative
 
   &.page
-    padding-left 20px
     .icon
       display none
 
@@ -26,7 +26,7 @@ article
         content '\f0c1'
 
   .gallery
-    margin 0 -20px 16px
+    margin 0 -30px 16px
     overflow hidden
     position relative
     &:hover
@@ -90,29 +90,31 @@ article
     margin-bottom 10px
 
     .icon
-      width icon-size
-      height icon-size
+      width icon-container-size
+      height icon-container-size
       position absolute
       top 0px
-      left -2px
-      color color-link
+      left 0px
+      margin-left -46px
+      color #FFFFFF
+      background #5198DF
+      border-radius 100em
+      box-shadow 0 0 2px rgba(0, 0, 0, 0.4)
       @media screen and (max-width: 600px)
         display none
       &:before
         position absolute
-        font 18px font-icon    
-        top 0
+        font icon-size font-icon    
+        top 6px
         left 0 
-        width 18px
+        width icon-container-size
         text-align center
 
     time
       font 0.9em font-title
-      margin 0 0 5px 20px
+      margin-bottom 5px
       display block
       line-height 1
-      @media screen and (max-width: 600px)
-        margin 0 0 5px 1px
 
     .title
       font-size 24px
@@ -154,7 +156,7 @@ article
       color #494949
 
     blockquote
-      margin 0 -20px 20px
+      margin 0 -30px 20px
       padding 15px 20px 1px 40px
       font-style italic
       background #ccc
