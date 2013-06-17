@@ -4,6 +4,16 @@ menu:
 
 excerpt_link: Read More
 
+widgets:
+  - category
+  - tag
+  - tagcloud
+  - recent_posts
+  - blogroll
+
+blogrolls:
+  - Heroic Yang's Blog: http://heroicyang.com/
+
 fancybox: true
 
 duoshuo_shortname: 

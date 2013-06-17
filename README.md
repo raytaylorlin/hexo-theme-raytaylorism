@@ -32,6 +32,16 @@ menu:
 
 excerpt_link: Read More
 
+widgets:
+  - category
+  - tag
+  - tagcloud
+  - recent_posts
+  - blogroll
+
+blogrolls:
+  - Heroic Yang's Blog: http://heroicyang.com/
+
 fancybox: true
 
 duoshuo_shortname:
@@ -42,6 +52,8 @@ rss:
 
 - **menu** - Main navigation menu
 - **excerpt_link** - "Read More" link text at the bottom of excerpted articles
+- **widget** - Widgets displaying in sidebar
+- **blogrolls** - Blogrolls displaying in `blogroll` widget
 - **fancybox** - Enable [Fancybox]
 - **duoshuo_shortname** - [Duoshuo] ID
 - **google_analytics** - Google Analytics ID

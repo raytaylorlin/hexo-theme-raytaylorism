@@ -1,0 +1,54 @@
+#sidebar
+  max-width 750px
+  margin 0 auto
+  padding 10px 0
+  color #fff
+  @media screen and (max-width: 600px)
+    padding 5px 10px
+
+  a
+    color #fff
+
+  .widget
+    float left
+    width 30%
+    margin-left 5%
+    word-wrap break-word
+    @media screen and (max-width: 600px)
+      float none
+      width 100%
+      margin-left 0
+
+    &.first
+      margin-left 0
+
+    &.newline
+      clear: both
+
+    ul, ol, dl
+      list-style none
+
+    .entry
+      padding-left 2px
+
+    .title
+      padding 4px 2px
+      font-size 20px
+      font-weight normal
+      border-bottom 1px solid #000
+      box-shadow rgba(255,255,255,0.25) 0 1px 0
+      text-shadow rgba(0,0,0,0.4) 0 2px 2px
+
+  .tag
+    small
+      margin-left 15px
+      color #ccc
+      &:before
+        content '('
+      &:after
+        content ')'
+
+  .tagcloud
+    a
+      margin-right 10px
+      display inline-block

@@ -1,0 +1,28 @@
+<% if (theme.blogrolls && theme.blogrolls.length > 0) { %>
+<%
+  var extraClass = '';
+  if (idx.current % 3 === 0) {
+    extraClass += ' first';
+    if (idx.current >= 3) {
+      extraClass += ' newline';
+    }
+  }
+%>
+<div class="widget blogroll<%= extraClass %>">
+  <h3 class="title"><%= __('blogroll') %></h3>
+  <ul class="entry">
+  <% theme.blogrolls.forEach(function(item){ %>
+    <%
+      var description, linkURL
+      for (var tmp in item) {
+        description = tmp;
+        linkURL = item[tmp];
+      }
+    %>
+    <li><a href="<%- linkURL %>"><%= description %></a></li>
+  <% }); %>
+  </ul>
+</div>
+<% } else {
+  idx.current -= 1
+} %>
