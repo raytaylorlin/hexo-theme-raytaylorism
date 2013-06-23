@@ -3,7 +3,7 @@ menu:
   Archives: /archives
 
 excerpt_link: Read More
-archive_yearly: true
+archive_yearly: false
 
 widgets:
   - category

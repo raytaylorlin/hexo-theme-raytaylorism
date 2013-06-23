@@ -31,6 +31,7 @@ menu:
   Archives: /archives
 
 excerpt_link: Read More
+archive_yearly: false
 
 widgets:
   - category
@@ -52,6 +53,7 @@ rss:
 
 - **menu** - Main navigation menu
 - **excerpt_link** - "Read More" link text at the bottom of excerpted articles
+- **archive_yearly** - Enable archives grouped by year
 - **widgets** - Widgets displaying in sidebar
 - **blogrolls** - Blogrolls displaying in `blogroll` widget
 - **fancybox** - Enable [Fancybox]
