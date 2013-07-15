@@ -11,9 +11,59 @@
 <div class="widget tag<%= extraClass %>">
   <h3 class="title"><%= __('categories') %></h3>
   <ul class="entry">
-  <% site.categories.sort('name').each(function(item){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% }); %>
+  <% 
+    var catTree = {};
+    site.categories.each(function(item) {
+      if(item.posts.length > 0) {
+        var cats = item.path.split('/');
+        var i, depth = 0;
+
+        var addTree = function(root, i) {
+          if(i + 1 > cats.length) {
+            return;
+          } else if(!root.hasOwnProperty(cats[i])) {
+            root[cats[i]] = {posts_num: item.posts.length};
+            addTree(root[cats[i]], i + 1);
+          } else {
+            //root[cats[i]]['posts_num'] += 1;
+            addTree(root[cats[i]], i + 1);
+          }
+        };
+
+        addTree(catTree, 1);
+      }
+    });
+  %>
+
+  <%
+    var walk = function(root, path, depth) {
+      var item;
+  %>
+      <ul>
+
+      <%
+      for(item in root) {
+        if(item.length > 0 && item != 'posts_num'){
+          var space = '';
+          for(i = 0; i < depth; i++) {
+            space += '--';
+          } 
+      %>
+
+          <li><a href="<%- config.root %><%- path + item + '/' %>"><%= item %></a><small><%= root[item]['posts_num'] %></small></li>
+
+      <%
+          console.log(space + item + '  ' + (path + item + '/'));
+          walk(root[item], path + item + '/', depth + 1);
+        }
+      }
+      %>
+      </ul>
+  <%
+    };
+    walk(catTree, 'categories/', 0);
+
+  %>
   </ul>
 </div>
 <% } else {

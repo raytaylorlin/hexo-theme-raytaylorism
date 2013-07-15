@@ -1,6 +1,6 @@
 menu:
   Home: /
-  Archives: /archives
+  Category: /categories
 
 excerpt_link: Read More
 archive_yearly: false
@@ -17,7 +17,7 @@ blogrolls:
 
 fancybox: true
 
-duoshuo_shortname: 
+duoshuo_shortname: raytaylorlin
 
 google_analytics:
 rss:
