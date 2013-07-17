@@ -1,12 +1,17 @@
 <%- partial('_partial/head') %>
 
 <body>
-  <div class="wrapper">
-    <header id="header"><%- partial('_partial/header') %></header>
-    <div class="content"><%- body %></div>
-  </div>
-  <div class="widget-wrapper">
-    <%- partial('_partial/sidebar') %>
+  <div id="container">
+    <div class="wrapper">
+      <header id="header"><%- partial('_partial/header') %></header>
+      <div class="content"><%- body %></div>
+    </div>
+    <div class="category-tag">
+      目录
+    </div>
+    <div class="widget-wrapper">
+      <%- partial('_partial/sidebar') %>
+    </div>
   </div>
   <footer id="footer"><%- partial('_partial/footer') %></footer>
   <%- partial('_partial/after_footer') %>

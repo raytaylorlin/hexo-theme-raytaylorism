@@ -23,11 +23,12 @@ if (page.archive){
   }
 }
 %>
-<h2 class="archive-title<% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>"><%= title %></h2>
+<% var prefixTitle = '你当前所在的位置：'; %>
+<h2 class="archive-title<% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>"><%= prefixTitle + title %></h2>
 
 <% if (pagination == 2){ %>
   <% page.posts.each(function(item){ %>
-    <%- partial('article', {item: item, index: true}) %>
+    <%- partial('article', {item: item, index: true, showContent: false}) %>
   <% }); %>
 
   <%- partial('pagination') %>

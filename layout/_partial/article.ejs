@@ -10,15 +10,17 @@
     <%- partial('post/gallery') %>
   <% } %>
   <div class="entry">
-    <% if (item.excerpt && index){ %>
+    <% if (showContent){
+      if (item.excerpt && index){ %>
       <%- item.excerpt %>
     <% } else { %>
       <%- item.content %>
-    <% } %>
+    <% } 
+    } %>
   </div>
   <footer<% if (index) { %> class="end-sep"<% } %>>
     <% if (index){ %>
-      <% if (item.excerpt){ %>
+      <% if (item.excerpt && showContent){ %>
         <div class="alignleft">
           <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
         </div>

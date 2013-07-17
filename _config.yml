@@ -1,16 +1,12 @@
 menu:
-  Home: /
-  Category: /categories
+  首页: /
+  归档: /archives
 
 excerpt_link: Read More
 archive_yearly: false
 
 widgets:
   - category
-  - tag
-  - tagcloud
-  - recent_posts
-  - blogroll
 
 blogrolls:
   - Heroic Yang's Blog: http://heroicyang.com/

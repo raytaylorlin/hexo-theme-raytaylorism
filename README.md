@@ -6,11 +6,11 @@
 
 ## 安装
 
-Execute the following command and modify `theme` in `_config.yml` to `modernist`.
-
 ```
 git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 ```
+
+修改 `_config.yml` 中的`theme`一项的值为 `Raytaylorism`即可启用主题。
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/

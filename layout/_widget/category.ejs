@@ -10,7 +10,7 @@
 %>
 <div class="widget tag<%= extraClass %>">
   <h3 class="title"><%= __('categories') %></h3>
-  <ul class="entry">
+  <div class="entry">
   <% 
     var catTree = {};
     site.categories.each(function(item) {
@@ -53,7 +53,6 @@
           <li><a href="<%- config.root %><%- path + item + '/' %>"><%= item %></a><small><%= root[item]['posts_num'] %></small></li>
 
       <%
-          console.log(space + item + '  ' + (path + item + '/'));
           walk(root[item], path + item + '/', depth + 1);
         }
       }
@@ -64,7 +63,7 @@
     walk(catTree, 'categories/', 0);
 
   %>
-  </ul>
+  </div>
 </div>
 <% } else {
   idx.current -= 1
