@@ -1,17 +1,19 @@
 menu:
-  首页: /
-  归档: /archives
+    首页: /
+    存档: /archives
+
+menu_icon:
+    首页: icon-home
+    存档: icon-archive
 
 excerpt_link: Read More
 archive_yearly: false
 
 widgets:
-  - category
+    - category
 
 blogrolls:
-  - Heroic Yang's Blog: http://heroicyang.com/
-
-fancybox: true
+    - Heroic Yang's Blog: http://heroicyang.com/
 
 duoshuo_shortname: raytaylorlin
 
