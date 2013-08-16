@@ -1,13 +1,12 @@
 <div class="copyright">
-  <% if (config.author){ %>
-  &copy; <%= new Date().getFullYear() %> <a href="<%- config.root %>"><%= config.author %></a>
-  <% } else { %>
-  &copy; <%= new Date().getFullYear() %> <a href="<%- config.root %>"><%= config.title %></a>
-  <% } %>
+    <% if (config.author){ %>
+    Copyright &copy; <%= new Date().getFullYear() %> <a href="<%- config.root %>"><%= config.author %></a>
+    <% } else { %>
+    Copyright &copy; <%= new Date().getFullYear() %> <a href="<%- config.root %>"><%= config.title %></a>
+    <% } %>
 </div>
 <div class="theme-copyright">
-  Theme <strong>modernist</strong> by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
-   | 
-  Redesign by <a href="http://raytaylorlin.com/" target="_blank">Ray Taylor Lin</a>
+    <span>Blog powered by <a href="http://zespia.tw/hexo/zh-CN/">hexo</a></span>
+    Theme <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a> desgined by <strong>Nix</strong>
 </div>
 <div class="clearfix"></div>
