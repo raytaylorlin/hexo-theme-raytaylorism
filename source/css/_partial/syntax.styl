@@ -1,99 +1,114 @@
+color-code-background = #042029
+
 figure.highlight
-  position relative
-  padding 10px 20px
-  background rgba(25, 30, 40, 1.0)
-  margin 0
-
-  @media screen and (max-width:580px)
-    margin 0 -20px 16px
-    padding 10px
-
-  pre
-    border none
-    padding 0 10px
+    position relative
+    padding 10px 20px
+    background color-code-background
     margin 0
 
-  table
-    margin 0
-    border-spacing 0
+    @media screen and (max-width:580px)
+        margin 0 -20px 16px
+        padding 10px
 
-  td
-    padding 0
-    border-bottom 0
-
-  .gutter
     pre
-      padding 0 0 0 10px
-      border-right 1px solid #fff
-      height 100%
+        border none
+        padding 0 10px
+        margin 0
 
-pre
-  // Theme: Solarized - Light
-  // More theme here: http://softwaremaniacs.org/media/soft/highlight/test.html
-  .comment
-  .template_comment
-  .diff .header
-  .doctype
-  .pi
-  .lisp .string
-  .javadoc
-    color #93a1a1
-    font-style italic
+    table
+        margin 0
+        border-spacing 0
 
-  .keyword
-  .winutils
-  .method
-  .addition
-  .css .tag
-  .request
-  .status
-  .nginx .title
+    td
+        padding 0
+        border-bottom 0
+
+    .gutter
+        pre
+            padding 0 0 0 10px
+            border-right 1px solid #fff
+            height 100%
+
+pre, code 
+    background color-code-background
+
+pre .keyword
     color #859900
 
-  .number
-  .command
-  .string
-  .tag .value
-  .phpdoc
-  .tex .formula
-  .regexp
-  .hexcolor
-    color #2aa198
+pre .tag
+    color #f8f8f2
 
-  .title
-  .localvars
-  .chunk
-  .decorator
-  .built_in
-  .identifier
-  .vhdl
-  .literal
-  .id
-    color #268bd2
+pre
+    // Theme: Monokai plus Solarized(Dark) from Sublime Text theme
+    .comment
+    .template_comment
+    .diff .header
+    .doctype
+    .pi
+    .lisp .string
+    .javadoc
+        color #75715c
+        font-style italic
 
-  .attribute
-  .variable
-  .lisp .body
-  .smalltalk .number
-  .constant
-  .class .title
-  .parent
-  .haskell .type
-    color #b58900
+    .doctype
+        color #268bd2
 
-  .preprocessor
-  .preprocessor .keyword
-  .shebang
-  .symbol
-  .symbol .string
-  .diff .change
-  .special
-  .attr_selector
-  .important
-  .subst
-  .cdata
-  .clojure .title
-    color #cb4b16
+    .keyword
+    .winutils
+    .method
+    .addition
+    .css .tag
+    .request
+    .status
+    .nginx .title
+        color #66d9ef
 
-  .deletion
-    color #dc322f
+    .number
+    .command
+    .phpdoc
+    .tex .formula
+    .regexp
+    .hexcolor
+        color #ae81fc
+
+    .string
+    .tag .value
+        color #e6db6e
+
+    .title
+    .localvars
+    .chunk
+    .decorator
+    .built_in
+    .identifier
+    .vhdl
+    .literal
+    .id
+        color #f22672
+
+    .attribute
+    .variable
+    .lisp .body
+    .smalltalk .number
+    .constant
+    .class .title
+    .parent
+    .haskell .type
+        color #a6e22e
+
+    .preprocessor
+    .preprocessor .keyword
+    .shebang
+    .symbol
+    .symbol .string
+    .diff .change
+    .special
+    .attr_selector
+    .important
+    .subst
+    .cdata
+    .clojure .title
+        color #cb4b16
+
+    .deletion
+        color #dc322f
