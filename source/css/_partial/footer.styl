@@ -1,13 +1,31 @@
 #footer
-  padding header-footer-height-padding page-padding
-  background-color color-footer-background
-  color color-font
-  overflow hidden
-  // text-align center
+    padding header-footer-height-padding page-padding
+    background-color color-footer-background
+    color color-font
+    overflow hidden
 
-  a
+.footer-text
+    float left
+    padding-left 30px
+
+.footer-text a
     color #66d9ef
     font-style italic
+
+.footer-text a:hover
+    color #16a085
+
+.social-group
+    float right
+    width 5em
+    font-size: 2.5em;
+
+.social-group a
+    color color-font
+    padding 0 4px
+
+.social-group a:hover
+    color #2ea5cd
 
 @media screen and (max-width: 740px)
   body

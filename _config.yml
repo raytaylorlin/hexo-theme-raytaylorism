@@ -12,8 +12,12 @@ archive_yearly: false
 widgets:
     - category
 
+weibo_url: http://weibo.com/1956184117
+renren_url: http://www.renren.com/309069699
+github_url: https://github.com/raytaylorlin
+
 blogrolls:
-    - Heroic Yang's Blog: http://heroicyang.com/
+    - Ray Taylor Lin's Blog: http://raytaylorlin.com/
 
 duoshuo_shortname: raytaylorlin
 

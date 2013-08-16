@@ -8,10 +8,10 @@ Font Custom - icon webfonts made simple
   font-family: "fontdiao";
 
 
-  src: url("../font/fontdiao.eot?#iefix&v=0.0.6") format("embedded-opentype"),
-       url("../font/fontdiao.woff?v=0.0.6") format("woff"),
-       url("../font/fontdiao.ttf?v=0.0.6") format("truetype"),
-       url("../font/fontdiao.svg#fontdiao?v=0.0.6") format("svg");
+  src: url("../fonts/fontdiao/fontdiao.eot?#iefix&v=0.0.6") format("embedded-opentype"),
+       url("../fonts/fontdiao/fontdiao.woff?v=0.0.6") format("woff"),
+       url("../fonts/fontdiao/fontdiao.ttf?v=0.0.6") format("truetype"),
+       url("../fonts/fontdiao/fontdiao.svg#fontdiao?v=0.0.6") format("svg");
   font-weight: normal;
   font-style: normal;
 }
