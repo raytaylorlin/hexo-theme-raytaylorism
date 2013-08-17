@@ -1,0 +1,20 @@
+<article class="<%= item.layout %>">
+    <div class="row-fluid">
+        <div class="span2" id="date-tags">
+            <div class="date-row">
+                <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+            </div>
+            <div class="tags-row">
+                <a href="javascript:void(0)" class="btn btn-info">tags</a>
+            </div>
+        </div>
+        <div class="span10" id="article-excerpt">
+            <%- partial('post/title') %>
+            <% if (showEntry && item.excerpt && index) { %>
+                <div class="entry">
+                    <%- item.excerpt %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</article>

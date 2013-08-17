@@ -1,9 +1,15 @@
 <%- partial('_partial/html_head') %>
 
 <body>
-    <header><%- partial('_partial/header') %></header>
-    <div class="content"><%- body %></div>
-    <footer id="footer"><%- partial('_partial/footer') %></footer>
-    <%- partial('_partial/after_footer') %>
+    <%- partial('_partial/header') %>
+    <div class="container-center">
+        <div class="row-fluid">
+            <div class="span12">
+                <%- body %>
+            </div>
+        </div>
+    </div>
+    <!-- <footer id="footer"><%- partial('_partial/footer') %></footer> -->
+    <!-- <%- partial('_partial/after_footer') %> -->
 </body>
 </html>

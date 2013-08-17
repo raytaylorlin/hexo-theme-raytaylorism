@@ -7,11 +7,11 @@
     font-weight: normal;
     font-style: normal
 }
-
+*/
 .meteocon:before {
     font-family: 'MeteoconsRegular';
     content: attr(data-meteocon)
-}*/
+}
 
 .icon-large {
     font-size: 1.33333em;

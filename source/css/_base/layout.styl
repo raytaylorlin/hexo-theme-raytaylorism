@@ -4,11 +4,16 @@ html
     background color-background linear-gradient(#00ADE3, #080046, #000000) fixed
 
 body
+    background color-body
     padding-top 0
 
-.content
-    background color-body
-    padding 0 page-padding
+.container, .navbar .container
+    width 1170px
+    margin 0 auto
+    // padding 0 page-padding
+
+.container:after
+    clear both
 
 p 
     color #fff

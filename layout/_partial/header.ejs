@@ -1,24 +1,24 @@
-<div class="navbar">
+
+<div class="navbar inverse-navbar">
     <div class="navbar-inner">
-        <div class="container">
-            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M"></a>
-            <div class="nav-collapse collapse">
+        <div class="container-center">
+            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M">
+            </a>
+            <div class="nav-collapse navbar-responsive-collapse collapse">
                 <nav id="menu">
                     <ul class="nav">
-                    <li><a class="brand" href="javascript:void(0)"><%= config.title %></a></li>
+                        <li><a class="brand" href="javascript:void(0)"><%= config.title %></a></li>
                     </ul>
+                    <div class="pull-right">
+                        <% for (var i in theme.menu){ %>
+                            <a href="<%- theme.menu[i] %>" class="btn btn-primary btn-large">
+                                <i class="<%- theme.menu_icon[i] %> icon-white"></i>
+                                <%= i %>
+                            </a>
+                        <% } %>
+                    </div>
                 </nav>
-                <div id="nav-button-group" class="pull-right">
-                    <% for (var i in theme.menu){ %>
-                        <a href="<%- theme.menu[i] %>" class="btn btn-primary btn-large">
-                            <i class="<%- theme.menu_icon[i] %> icon-white"></i>
-                            <%= i %>
-                        </a>
-                    <% } %>
-                    
-                <div>
             </div>
         </div>
     </div>
 </div>
-<div class="clearfix"></div>
