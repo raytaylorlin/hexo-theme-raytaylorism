@@ -2,10 +2,12 @@
     <div class="row-fluid">
         <div class="span2" id="date-tags">
             <div class="date-row">
-                <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+                <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
             </div>
             <div class="tags-row">
-                <a href="javascript:void(0)" class="btn btn-info">tags</a>
+                <% item.tags.forEach(function(tag) { %>
+                    <a href="javascript:void(0)" class="btn btn-info"><%= tag.name %></a>
+                <% }); %>
             </div>
         </div>
         <div class="span10" id="article-excerpt">

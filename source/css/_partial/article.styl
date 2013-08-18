@@ -4,26 +4,32 @@ icon-size = 24px
 article
     font-size 18px
 
+    .article-title
+        font-size 32px
+        font-weight bold
+        line-height 1.6
+        margin 0
+        padding 10px 0
+        text-shadow rgba(128, 128, 128, 0.6) 1px 1px 3px
+
+        a
+            color color-title
+
+    /* simple_article CSS start */
     #date-tags 
+        padding-left 30px
+
         .date-row
-            margin 16px 0
+            color color-font
+            margin 20px 0
             font-size 20px
 
         .tags-row
+            .btn-info
+                background-color color-tag
             // padding 12px 0
 
     #article-excerpt
-        .title
-            font-size 32px
-            font-weight bold
-            line-height 1.6
-            margin 0
-            padding 10px 0
-            text-shadow rgba(128, 128, 128, 0.6) 1px 1px 3px
-
-        a
-            color #222
-
         .entry
             text-align justify
             line-height 1.6
@@ -33,13 +39,8 @@ article
                 padding 0
                 margin 0 0 20px
                 line-height 1.2
-
+    /* simple_article CSS end */                
     
-
-    
-
-
-
     .prev, .next
         position absolute
         top 0
@@ -191,46 +192,46 @@ article
     .text-lt
       text-decoration line-through
 
-  footer
-    border-top 1px solid #aaa
-    padding 10px 0 0 0
-    margin-top 10px
+    footer
+        border-top 1px solid #aaa
+        padding 10px 0 0 0
+        margin-top 10px
 
-    &.end-sep
-      border-top none
-      border-bottom 1px solid #aaa
-      padding 0 0 10px 0
+        &.end-sep
+          border-top none
+          border-bottom 1px solid #aaa
+          padding 0 0 10px 0
 
-    a
-      &:before
-        font 1.1em font-icon
-        padding-right 10px
-        vertical-align middle
+        a
+          &:before
+            font 1.1em font-icon
+            padding-right 10px
+            vertical-align middle
 
-      &.more-link
-        &:before
-          content '\f054'
+          &.more-link
+            &:before
+              content '\f054'
 
-      &.comment-link
-        &:before
-          content '\f075'
+          &.comment-link
+            &:before
+              content '\f075'
 
-    .categories, .tags
-      position relative
-      padding-left 25px
-      margin 5px 0
-      &:before
-        position absolute
-        font 1.1em font-icon
+        .categories, .tags
+          position relative
+          padding-left 25px
+          margin 5px 0
+          &:before
+            position absolute
+            font 1.1em font-icon
 
-    .categories
-      &:before
-        content '\f07b'
-        top 4px
-        left 1px
+        .categories
+          &:before
+            content '\f07b'
+            top 4px
+            left 1px
 
-    .tags
-      &:before
-        content '\f02b'
-        top 5px
-        left 2px
+        .tags
+          &:before
+            content '\f02b'
+            top 5px
+            left 2px
