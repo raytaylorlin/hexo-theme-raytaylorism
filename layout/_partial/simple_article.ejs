@@ -11,7 +11,9 @@
             </div>
         </div>
         <div class="span10" id="article-excerpt">
-            <%- partial('post/title') %>
+            <div class="article-title">
+                <%- partial('post/title') %>
+            </div>
             <% if (showEntry && item.excerpt && index) { %>
                 <div class="entry">
                     <%- item.excerpt %>

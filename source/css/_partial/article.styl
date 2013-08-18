@@ -1,33 +1,28 @@
-icon-container-size = 50px
-icon-size = 24px
-
 article
-    font-size 18px
+    font-size context-font-size
 
-    .article-title
+    .article-title h1
+        color color-title
         font-size 32px
         font-weight bold
         line-height 1.6
         margin 0
         padding 10px 0
-        text-shadow rgba(128, 128, 128, 0.6) 1px 1px 3px
 
         a
             color color-title
 
+        a:hover
+            color color-title-hover
+
+    .article-title-big h1
+        font-size 48px
+
     /* simple_article CSS start */
-    #date-tags 
-        padding-left 30px
-
-        .date-row
-            color color-font
-            margin 20px 0
-            font-size 20px
-
-        .tags-row
-            .btn-info
-                background-color color-tag
-            // padding 12px 0
+    .date-row
+        color color-font
+        margin 20px 0
+        font-size 24px
 
     #article-excerpt
         .entry
@@ -80,23 +75,7 @@ article
         text-align justify
         line-height 1.6
 
-        h1, h2, h3, h4, h5, h6
-            color #222
-            padding 0
-            margin 0 0 20px
-            line-height 1.2
-
-        p, ul, ol, table, pre, dl
-            margin 0 0 20px
-
-        h1, h2, h3
-            line-height 1.1
-
-        h1
-            font-size 24px
-
         h2
-            font-size 22px
             color #393939
 
         h3, h4, h5, h6
