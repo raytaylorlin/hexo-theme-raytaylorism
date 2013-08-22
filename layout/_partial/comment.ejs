@@ -7,7 +7,7 @@
 </section>
 <% } else if (config.duoshuo_shortname && page.comments){ %>
 <section id="comment">
-    <h1 class="title"><%= __('comment') %></h1>
+    <h1 class="page-sub-title"><%= __('comment') %></h1>
     <!-- Duoshuo Comment BEGIN -->
     <div class="ds-thread" data-title="<%= item.title %>">
 
@@ -15,14 +15,15 @@
         var duoshuoQuery = {short_name:"<%= config.duoshuo_shortname %>"};
         (function() {
             var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
+            ds.type = 'text/javascript';
+            ds.async = true;
             ds.src = 'http://static.duoshuo.com/embed.js';
             ds.charset = 'UTF-8';
             (document.getElementsByTagName('head')[0] 
             || document.getElementsByTagName('body')[0]).appendChild(ds);
         })();
     </script>
-<!-- Duoshuo Comment END -->
+    <!-- Duoshuo Comment END -->
     </div>
 </section>
 <% } %>

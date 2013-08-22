@@ -1,12 +1,11 @@
 <% if (item.tags && item.tags.length > 0){ %>
-  <%
-  var tags = [];
-  item.tags.forEach(function(tag){
-    tags.push(tag.name);
-  });
-  %>
-  <div class="tags">
-    标签：
-    <%- tags.join(', ') %>
-  </div>
+    <%
+        var tags = [];
+        item.tags.forEach(function(tag){
+            tags.push('<a class="btn btn-info" href="' + config.root + tag.path + '">' + tag.name + '</a>');
+        });
+    %>
+    <div class="tags-row">
+        标签：<%- tags.join('') %>
+    </div>
 <% } %>

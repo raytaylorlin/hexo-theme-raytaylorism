@@ -6,7 +6,7 @@
     });
 %>
 <% for (i = 0; i < pageList.length; i++) { %>
-    <%- partial('_partial/simple_article', {item: pageList[i], index: true, showEntry: true}) %>
+    <%- partial('_partial/simple_article', {item: pageList[i], index: true, showEntry: true, showTags: true}) %>
     <% if(i != pageList.length - 1) { %>
     <hr>
     <% } %>

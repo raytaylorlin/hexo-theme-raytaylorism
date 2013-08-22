@@ -4,11 +4,13 @@
             <div class="date-row">
                 <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
             </div>
-            <div class="tags-row">
+            <% if(showTags) { %>
+                <div class="tags-row">
                 <% item.tags.forEach(function(tag) { %>
                     <a href="javascript:void(0)" class="btn btn-info"><%= tag.name %></a>
                 <% }); %>
-            </div>
+                </div>
+            <% } %>
         </div>
         <div class="span10" id="article-excerpt">
             <div class="article-title">

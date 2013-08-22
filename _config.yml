@@ -7,7 +7,7 @@ menu_icon:
     存档: icon-archive
 
 excerpt_link: Read More
-archive_yearly: false
+archive_yearly: true
 
 widgets:
     - category

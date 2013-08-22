@@ -19,11 +19,6 @@
                     <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
                 </div>
             <% } %>
-            <% if (item.comment && config.disqus_shortname){ %>
-                <div class="alignright">
-                  <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
-              </div>
-            <% } %>
         <% } else { %>
             <%- partial('post/category') %>
             <%- partial('post/tag') %>
