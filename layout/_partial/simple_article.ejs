@@ -1,4 +1,4 @@
-<article class="<%= item.layout %>">
+<article>
     <div class="row-fluid">
         <div class="span2" id="date-tags">
             <div class="date-row">
@@ -7,7 +7,7 @@
             <% if(showTags) { %>
                 <div class="tags-row">
                 <% item.tags.forEach(function(tag) { %>
-                    <a href="javascript:void(0)" class="btn btn-info"><%= tag.name %></a>
+                    <a href="<%= config.root + tag.path %>" class="btn btn-info"><%= tag.name %></a>
                 <% }); %>
                 </div>
             <% } %>
