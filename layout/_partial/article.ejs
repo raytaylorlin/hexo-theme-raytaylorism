@@ -2,22 +2,26 @@
     <div class="article-title article-title-big">
         <%- partial('post/title') %>
     </div>
+
     <div class="date-row">
         <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
     </div>
 
-    <% if (item.photos && item.photos.length > 0){ %>
-        <%- partial('post/gallery') %>
-    <% } %>
     <div class="entry">
         <%- item.content %>
     </div>
+    
     <footer <% if (index) { %> class="end-sep"<% } %>>
         <% if (index){ %>
             <% if (item.excerpt && showContent){ %>
                 <div class="alignleft">
                     <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
                 </div>
+            <% } %>
+            <% if (item.comment && config.disqus_shortname){ %>
+                <div class="alignright">
+                  <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
+              </div>
             <% } %>
         <% } else { %>
             <%- partial('post/category') %>
@@ -27,4 +31,4 @@
     </footer>
 </article>
 
-<%- partial('comment') %>
+<%- partial('plugin/comment') %>
