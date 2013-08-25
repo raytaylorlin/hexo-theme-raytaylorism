@@ -37,8 +37,16 @@
     <link rel="stylesheet" href="<%- config.root %>css/lib/normalize.css" type="text/css">
     <link rel="stylesheet" href="<%- config.root %>css/lib/furatto.css" type="text/css">
     <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
+
+    <% if(theme.google_code_prettify) { 
+        if(theme.google_code_prettify_theme) { %>
+        <link rel="stylesheet" href="<%- config.root %>css/lib/<%= theme.google_code_prettify_theme %>.css" type="text/css">
+        <% } else { %>
+        <link rel="stylesheet" href="<%- config.root %>css/lib/prettify_default.css" type="text/css">
+        <% } %>
+    <% } %>
     <link rel="icon" type="image/x-icon" href="<%- config.root %>favicon.ico">
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    <%- partial('google_analytics') %>
+    
 </head>

@@ -1,0 +1,9 @@
+<% if (theme.google_code_prettify){ %>
+<script src="<%- config.root %>js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+<% } %>
