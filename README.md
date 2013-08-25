@@ -1,6 +1,6 @@
 # Raytaylorism V1.0a
 
-这是我制作的一款扁平化风格的[Hexo]主题。
+这是我制作的一款扁平化风格的[Hexo]主题，基于[Furatto]和[Font Awesome]。
 
 [主题预览]
 
@@ -24,3 +24,5 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 [主题预览]: http://raytaylorlin.com/
 [Google-code-prettify]: https://code.google.com/p/google-code-prettify/
 [Google Analytics]: http://www.google.com/analytics/
+[Furatto]: http://icalialabs.github.io/furatto/
+[Font Awesome]: http://fortawesome.github.io/Font-Awesome/
