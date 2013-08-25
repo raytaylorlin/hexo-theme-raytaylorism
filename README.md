@@ -18,6 +18,8 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 
 流量分析 [Google Analytics]
 
+第三方社会化评论 [多说]
+
 ## 更新日志
 
 [Hexo]: http://zespia.tw/hexo/
@@ -26,3 +28,4 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 [Google Analytics]: http://www.google.com/analytics/
 [Furatto]: http://icalialabs.github.io/furatto/
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
+[多说]: http://duoshuo.com/
