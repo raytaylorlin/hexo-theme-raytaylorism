@@ -1,2 +1,18 @@
 <%- partial('plugin/google_analytics') %>
 <%- partial('plugin/google_code_prettify') %>
+<script>
+    (function($) {
+        //当内容区内容不够长时，设置内容区域的高度使footer沉底
+        var resizeContentWrapper = function() {
+            var contentHeight = Math.floor($('#content-wrapper .container-center').height()),
+                headerHeight = Math.floor($('#page-header').height()),
+                footerHeight = Math.floor($('#page-footer').height()),
+                minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
+            if(contentHeight < minHeight) {
+                $('#content-wrapper').height(minHeight);
+            }
+         };
+         $(document).ready(resizeContentWrapper);
+         $(window).resize(resizeContentWrapper);
+    })(jQuery);
+</script>
