@@ -1,10 +1,12 @@
 menu:
     首页: /
     存档: /archives
+    关于: /about
 
 menu_icon:
     首页: icon-home
     存档: icon-archive
+    关于: icon-user
 
 excerpt_link: Read More
 archive_yearly: true

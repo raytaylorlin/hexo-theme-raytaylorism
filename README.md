@@ -20,7 +20,8 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 
 ## 更新日志
 
-1.01(2013-8-26) 使页面主内容在高度不够的时候可以自适应屏幕，让页脚沉底
+* 1.01(2013-8-26) 使页面主内容在高度不够的时候可以自适应屏幕，让页脚沉底
+* 1.02(2013-8-31) 添加了About页面并使用自定义模板
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/

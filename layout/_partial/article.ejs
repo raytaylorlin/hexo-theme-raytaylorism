@@ -3,7 +3,7 @@
         <%- partial('post/title') %>
     </div>
 
-    <div class="date-row">
+    <div class="date-row <% if (extra) { %> hide"<% } %>">
         <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
     </div>
 
@@ -31,4 +31,6 @@
     </footer>
 </article>
 
+<% if (!extra) { %>
 <%- partial('plugin/comment') %>
+<% } %>
