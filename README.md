@@ -1,6 +1,6 @@
 # Raytaylorism V1.0a
 
-这是我制作的一款扁平化风格的[Hexo]主题。
+这是我制作的一款扁平化风格的[Hexo]主题，基于[Furatto]和[Font Awesome]。
 
 [主题预览]
 
@@ -18,6 +18,8 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 
 流量分析 [Google Analytics]
 
+第三方社会化评论 [多说]
+
 ## 更新日志
 
 * 1.01(2013-8-26) 使页面主内容在高度不够的时候可以自适应屏幕，让页脚沉底
@@ -27,3 +29,6 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 [主题预览]: http://raytaylorlin.com/
 [Google-code-prettify]: https://code.google.com/p/google-code-prettify/
 [Google Analytics]: http://www.google.com/analytics/
+[Furatto]: http://icalialabs.github.io/furatto/
+[Font Awesome]: http://fortawesome.github.io/Font-Awesome/
+[多说]: http://duoshuo.com/
