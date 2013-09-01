@@ -1,0 +1,30 @@
+color-menu-background = #232323
+color-item-hover = #3498db
+color-border = #333
+
+#jPanelMenu-menu-side
+    display none
+
+#jPanelMenu-menu
+    .nav
+        li
+            border-bottom 1px solid color-border
+            transition background-color .5s
+
+        li:hover
+            background-color color-item-hover
+            transition background-color .5s
+
+        li:first-child:hover
+            background-color color-menu-background
+            transition background-color .5s
+
+        [class^="icon-"]
+            margin-right 10px
+
+        [class*=" icon-"]
+            margin-right 10px
+
+    .nav>li>a.brand
+        padding 5px 0
+        

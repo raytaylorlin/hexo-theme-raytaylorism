@@ -1,14 +1,15 @@
 <div class="navbar inverse-navbar">
     <div class="navbar-inner">
         <div class="container-center">
-            <a href="#menu" class="menu-trigger meteocon" data-meteocon="M">
+            <a href="#menu" class="menu-trigger" data-meteocon="M">
+                <i class="icon-reorder"></i>
             </a>
             <div class="nav-collapse navbar-responsive-collapse collapse">
                 <nav id="menu">
                     <ul class="nav">
-                        <li><a class="brand" href="javascript:void(0)"><%= config.title %></a></li>
+                        <li><a class="brand" href="index.html"><%= config.title %></a></li>
                     </ul>
-                    <div class="pull-right">
+                    <div class="pull-right nav">
                         <% for (var i in theme.menu){ %>
                             <a href="<%- theme.menu[i] %>" class="btn btn-primary btn-large">
                                 <i class="<%- theme.menu_icon[i] %> icon-white"></i>
@@ -17,6 +18,7 @@
                         <% } %>
                     </div>
                 </nav>
+                <%- partial('side_menu') %>
             </div>
         </div>
     </div>

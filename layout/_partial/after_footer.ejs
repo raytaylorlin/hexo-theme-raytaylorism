@@ -11,8 +11,19 @@
             if(contentHeight < minHeight) {
                 $('#content-wrapper').height(minHeight);
             }
-         };
-         $(document).ready(resizeContentWrapper);
-         $(window).resize(resizeContentWrapper);
+        };
+
+        //响应式侧边栏
+        var initJPanelMenu = function() {
+            var jPM = $.jPanelMenu({
+                menu: '#jPanelMenu-menu-side',
+                duration: 500
+            });
+            jPM.on();
+        };
+
+        $(document).ready(resizeContentWrapper);
+        $(document).ready(initJPanelMenu);
+        $(window).resize(resizeContentWrapper);
     })(jQuery);
 </script>

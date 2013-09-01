@@ -20,10 +20,13 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 
 第三方社会化评论 [多说]
 
+响应式侧滑菜单 [jQuery.jPanelMenu.js]
+
 ## 更新日志
 
 * 1.01(2013-8-26) 使页面主内容在高度不够的时候可以自适应屏幕，让页脚沉底
 * 1.02(2013-8-31) 添加了About页面并使用自定义模板
+* 1.03(2013-9-1) 新增响应式设计的侧滑菜单
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
@@ -32,3 +35,4 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 [Furatto]: http://icalialabs.github.io/furatto/
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
 [多说]: http://duoshuo.com/
+[jQuery.jPanelMenu.js]: http://jpanelmenu.com/

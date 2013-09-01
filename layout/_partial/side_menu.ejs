@@ -1,0 +1,13 @@
+<nav id="jPanelMenu-menu-side">
+    <ul class="nav">
+        <li><a class="brand" href="index.html"><%= config.title %></a></li>
+        <% for (var i in theme.menu){ %>
+            <li>
+                <a href="<%- theme.menu[i] %>">
+                    <i class="<%- theme.menu_icon[i] %> icon-white"></i>
+                    <%= i %>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+</nav>
