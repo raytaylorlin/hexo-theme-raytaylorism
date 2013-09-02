@@ -1,13 +1,13 @@
 article
-    font-size context-font-size
+    font-size 1em
 
     .article-title h1
         color color-title
-        font-size 32px
+        font-size 2em
         font-weight bold
-        line-height 1.6
+        line-height 1.4
         margin 0
-        padding 10px 0
+        padding 20px 0
 
         a
             color color-title
@@ -15,28 +15,23 @@ article
         a:hover
             color color-title-hover
 
-    .article-title-big h1
-        font-size 48px
+    .simple-article-title h1
+        font-size 1.6em
+        padding 10px 0
 
     .tags-row a
         margin 2px 2px
 
     /* simple_article CSS start */
+
+    .date-tags
+        margin-top 16px
+
     .date-row
         color color-font
-        margin 20px 0
-        font-size 24px
+        margin-bottom 10px
+        font-size 1.2em
 
-    #article-excerpt
-        .entry
-            text-align justify
-            line-height 1.6
-
-            h1, h2, h3, h4, h5, h6
-                color #222
-                padding 0
-                margin 0 0 20px
-                line-height 1.2
     /* simple_article CSS end */                
     
     .prev, .next
@@ -76,16 +71,19 @@ article
         text-align justify
         line-height 1.6
 
+        h1, h2, h3, h4, h5, h6
+            margin 0.4em 0
+
         h1
-            font-size 32px
+            font-size 1.6em
             color color-entry-subtitle
 
         h2
-            font-size 28px
+            font-size 1.4em
             color color-entry-subtitle
 
         h3, h4, h5, h6
-            font-size 24px
+            font-size 1.2em
             color color-entry-subtitle
 
         blockquote
@@ -130,7 +128,7 @@ article
         code, pre
             font-family font-mono
             color #333
-            font-size 1.1em
+            font-size 1em
             white-space pre-wrap
             word-wrap break-word
 
@@ -143,84 +141,3 @@ article
             color #fff
             padding 4px
 
-    pre
-      color #f8f8f2
-
-      code
-        color #f8f8f2
-
-      li &
-        margin-left -60px
-        padding-left 60px
-
-    table
-      width 100%
-      border-collapse collapse
-
-    th, td
-      text-align left
-      padding 5px 10px
-      border-bottom 1px solid #aaa
-
-    dt
-      color #222
-      font-weight 700
-
-    th
-      color #222
-
-    small
-      font-size 11px
-
-    hr
-      border 0
-      background #aaa
-      height 1px
-      margin 0 0 20px
-
-    .text-lt
-      text-decoration line-through
-
-    footer
-        border-bottom 1px solid #aaa
-        padding 10px 0 0 0
-        padding-bottom 16px
-
-        &.end-sep
-          border-top none
-          border-bottom 1px solid #aaa
-          padding 0 0 10px 0
-
-        a
-          &:before
-            font 1.1em font-icon
-            padding-right 10px
-            vertical-align middle
-
-          &.more-link
-            &:before
-              content '\f054'
-
-          &.comment-link
-            &:before
-              content '\f075'
-
-        .categories, .tags
-          position relative
-          // padding-left 25px
-          margin 5px 0
-          &:before
-            position absolute
-            font 1.1em font-icon
-
-        .categories
-          &:before
-            content '\f07b'
-            top 4px
-            left 1px
-
-        .tags
-          &:before
-            content '\f02b'
-            top 5px
-            left 2px

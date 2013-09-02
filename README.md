@@ -27,6 +27,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.01(2013-8-26) 使页面主内容在高度不够的时候可以自适应屏幕，让页脚沉底
 * 1.02(2013-8-31) 添加了About页面并使用自定义模板
 * 1.03(2013-9-1) 新增响应式设计的侧滑菜单
+* 1.04(2013-9-2) 针对手机进行响应式设计，重新定义所有版面的字体大小
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/

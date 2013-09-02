@@ -5,16 +5,24 @@
     margin-bottom 0
 
 .navbar-inner 
-    min-height 55px
+    // min-height 55px
     padding header-footer-height-padding 0
     background color-header-background
 
 .navbar .menu-trigger
+    font-size 2em
     padding-top 0
     margin-bottom 0
 
+    @media (max-width: 979px)
+        line-height inherit
+
+    @media (max-width: 767px)
+        line-height inherit
+        font-size 2.8em
+
 .navbar .brand 
-    font-size 40px
+    font-size 1.8em
     font-weight 400
 
 .navbar .nav>li>a

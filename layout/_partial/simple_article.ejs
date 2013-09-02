@@ -1,6 +1,6 @@
 <article>
     <div class="row-fluid">
-        <div class="span2" id="date-tags">
+        <div class="span2 date-tags">
             <div class="date-row">
                 <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
             </div>
@@ -12,8 +12,8 @@
                 </div>
             <% } %>
         </div>
-        <div class="span10" id="article-excerpt">
-            <div class="article-title">
+        <div class="span10">
+            <div class="article-title simple-article-title">
                 <%- partial('post/title') %>
             </div>
             <% if (showEntry && item.excerpt && index) { %>

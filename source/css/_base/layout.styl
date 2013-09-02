@@ -37,7 +37,10 @@ hr
     color color-page-sub-title
 
 .container-center
-    width 70%
+    @media (min-width: 777px)
+        width 70%
+    @media (max-width: 767px)
+        width 90%
 
 .main-content
     padding 20px 0
