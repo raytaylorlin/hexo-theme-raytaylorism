@@ -11,8 +11,8 @@ menu_icon:
 excerpt_link: Read More
 archive_yearly: true
 
-widgets:
-    - category
+# widgets:
+#     - category
 
 weibo_url: http://weibo.com/1956184117
 renren_url: http://www.renren.com/309069699

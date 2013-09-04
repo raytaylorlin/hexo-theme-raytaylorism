@@ -22,8 +22,29 @@
             jPM.on();
         };
 
+        var pagination = function() {
+            var PER_PAGE_NUM = 1,
+                i,
+                showNum = 5, 
+                initHeight = 0,
+                articleList = $('#content-wrapper article'),
+                articleNum = articleList.length;
+            for(i = PER_PAGE_NUM; i < articleList.length; i++) {
+                $(articleList[i]).hide();
+            }
+
+            $('.btn-loadmore').click(function() {
+                i = showNum;
+                showNum += PER_PAGE_NUM;
+                for(; i < showNum; i++) {
+                    $(articleList[i]).show();
+                }
+            });
+        };
+
         $(document).ready(resizeContentWrapper);
         $(document).ready(initJPanelMenu);
+        $(document).ready(pagination);
         $(window).resize(resizeContentWrapper);
     })(jQuery);
 </script>
