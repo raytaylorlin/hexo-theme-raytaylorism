@@ -10,6 +10,8 @@
                 minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
             if(contentHeight < minHeight) {
                 $('#content-wrapper').height(minHeight);
+            } else {
+                $('#content-wrapper').css({height: 'auto'});
             }
         };
 
@@ -23,28 +25,53 @@
         };
 
         var pagination = function() {
-            var PER_PAGE_NUM = 1,
+            var PER_PAGE_NUM = showNum = 5,
                 i,
-                showNum = 5, 
                 initHeight = 0,
+                outerHeightList = [],
                 articleList = $('#content-wrapper article'),
                 articleNum = articleList.length;
-            for(i = PER_PAGE_NUM; i < articleList.length; i++) {
-                $(articleList[i]).hide();
+
+            for(i = 0; i < articleList.length; i++) {
+                outerHeightList.push($(articleList[i]).outerHeight());
+                if(i >= PER_PAGE_NUM) {
+                    $(articleList[i]).hide();
+                }
             }
 
             $('.btn-loadmore').click(function() {
-                i = showNum;
-                showNum += PER_PAGE_NUM;
-                for(; i < showNum; i++) {
-                    $(articleList[i]).show();
+                var deltaH = 0,
+                    toShowList = [];
+                for(i = showNum, showNum += PER_PAGE_NUM; i < showNum; i++) {
+                    if(i >= articleList.length) {
+                        $('.btn-loadmore').html("已经到底啦");
+                        break;
+                    }
+                    toShowList.push($(articleList[i]));
+                    deltaH += outerHeightList[i];
                 }
+                $('body').animate({
+                    scrollTop: $('#article-list').height()
+                });
+                $('#article-list').animate({
+                    height: "+=" + deltaH
+                }, 1000, function() {
+                    for(i = 0; i < toShowList.length; i++) {
+                        toShowList[i].css({opacity: 0});
+                        toShowList[i].show();
+                        toShowList[i].animate({
+                            opacity: 1
+                        }, 1000);
+                    }
+                });
             });
+            resizeContentWrapper();
         };
 
+        $(document).ready(pagination);
         $(document).ready(resizeContentWrapper);
         $(document).ready(initJPanelMenu);
-        $(document).ready(pagination);
+        
         $(window).resize(resizeContentWrapper);
     })(jQuery);
 </script>

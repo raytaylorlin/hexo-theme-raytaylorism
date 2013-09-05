@@ -28,6 +28,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.02(2013-8-31) 添加了About页面并使用自定义模板
 * 1.03(2013-9-1) 新增响应式设计的侧滑菜单
 * 1.04(2013-9-2) 针对手机进行响应式设计，重新定义所有版面的字体大小
+* 1.05(2013-9-5) 调整基础布局，新增首页加载更多按钮
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
