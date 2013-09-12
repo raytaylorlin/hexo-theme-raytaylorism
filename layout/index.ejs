@@ -1,10 +1,9 @@
-<div class="container-center">
-            <div id="article-list">
-                <% page.posts.each(function(item){ %>
-                    <%- partial('_partial/simple_article', {item: item, index: true, showTags:true, showEntry: true}) %>
-                <% }); %>
-            </div>
-    <div>
-        <a class="btn btn-funky btn-xlarge btn-block btn-loadmore" href="javascript:void(0)">点击加载更多</a>
-    </div>
+<div id="article-list">
+    <% page.posts.each(function(item){ %>
+        <%- partial('_partial/simple_article', {item: item, index: true, showTags:true, showEntry: true}) %>
+    <% }); %>
 </div>
+<div>
+    <a class="btn btn-funky btn-xlarge btn-block btn-loadmore" href="javascript:void(0)">点击加载更多</a>
+</div>
+
