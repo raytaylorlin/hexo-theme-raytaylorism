@@ -24,6 +24,7 @@
             jPM.on();
         };
 
+        //按一定数目显示博文条目
         var pagination = function() {
             var PER_PAGE_NUM = showNum = 5,
                 i,
@@ -68,9 +69,66 @@
             resizeContentWrapper();
         };
 
+        //检测是否有新的功能，并提示用户
+        var checkNewFeature = function() {
+            //设置本地存储
+            var setStorage = window.localStorage ?
+                //若支持HTML5的localStorage则使用localStorage
+                function(key, value) {
+                    window.localStorage.key = value;
+                } : 
+                //否则使用cookie存储
+                function(key, value){
+                    var exdate = new Date(),
+                        expireDays = 15;    //cookie过期时间15天
+                    exdate.setDate(exdate.getDate() + expiredays);
+                    document.cookie = key + '=' + escape(value) + ';expires=' + exdate.toGMTString();
+                };
+            //获取本地存储
+            var getStorage = window.localStorage ?
+                function(key) {
+                    return window.localStorage.key || null;
+                } :
+                function(key) {
+                    if (document.cookie.length > 0) {
+                        var start = document.cookie.indexOf(key + '='),
+                            end;
+                        if (start !== -1) {
+                            start = start + key.length + 1;
+                            end = document.cookie.indexOf(';', start);
+                            if (end === -1) {
+                                end = document.cookie.length;
+                            }
+                            return unescape(document.cookie.substring(start, end));
+                        } else {
+                            return null;
+                        }
+                    }
+                    return null;
+                };
+
+            var 
+                //新功能特征值，以此识别一个功能点
+                FEATURE_CODE = '',
+                //新功能高亮提醒的jQuery对象
+                FEATURE_DOM = '',
+                //新功能描述
+                FEATURE_DESCRIPTION = '';
+
+            //存储的key
+            var storageKey = 'raytaylor_world_feature_notify',
+                lastValue = getStorage(storageKey);
+
+            //若本地存储没有特征值，或特征值与最新发布的不一致，则提示用户
+            if(lastValue === null || lastValue !== FEATURE_CODE){
+                //TODO: 提示用户新功能点
+            }
+        };
+
         $(document).ready(pagination);
         $(document).ready(resizeContentWrapper);
         $(document).ready(initJPanelMenu);
+        $(document).ready(checkNewFeature);
         
         $(window).resize(resizeContentWrapper);
     })(jQuery);
