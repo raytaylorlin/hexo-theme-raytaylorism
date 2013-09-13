@@ -75,7 +75,7 @@
             var setStorage = window.localStorage ?
                 //若支持HTML5的localStorage则使用localStorage
                 function(key, value) {
-                    window.localStorage.key = value;
+                    window.localStorage[key] = value;
                 } : 
                 //否则使用cookie存储
                 function(key, value){
@@ -87,7 +87,7 @@
             //获取本地存储
             var getStorage = window.localStorage ?
                 function(key) {
-                    return window.localStorage.key || null;
+                    return window.localStorage[key] || null;
                 } :
                 function(key) {
                     if (document.cookie.length > 0) {
@@ -122,6 +122,11 @@
             //若本地存储没有特征值，或特征值与最新发布的不一致，则提示用户
             if(lastValue === null || lastValue !== FEATURE_CODE){
                 //TODO: 提示用户新功能点
+                var $body = $('body'),
+                    $shadow = $('<div class="shadow"></div>').
+                    width($body.width()).
+                    height($body.height());
+                $body.append($shadow);
             }
         };
 
