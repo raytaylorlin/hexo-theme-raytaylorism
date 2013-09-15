@@ -111,7 +111,7 @@
                 //新功能特征值，以此识别一个功能点
                 FEATURE_CODE = '',
                 //新功能高亮提醒的jQuery对象
-                FEATURE_DOM = '',
+                FEATURE_DOM = $('header .nav .icon-user').parent(),
                 //新功能描述
                 FEATURE_DESCRIPTION = '';
 
@@ -121,12 +121,29 @@
 
             //若本地存储没有特征值，或特征值与最新发布的不一致，则提示用户
             if(lastValue === null || lastValue !== FEATURE_CODE){
-                //TODO: 提示用户新功能点
+                var newShadow = function(className, offset, size) {
+                    var $shadow = $('<div class="' + className + '"></div>');
+                    $shadow.offset(offset);
+                    $shadow.width(size.width);
+                    $shadow.height(size.height);
+                    return $shadow;
+                };
+
                 var $body = $('body'),
-                    $shadow = $('<div class="shadow"></div>').
-                    width($body.width()).
-                    height($body.height());
-                $body.append($shadow);
+                    domWidth = FEATURE_DOM.outerWidth(),
+                    domHeight = FEATURE_DOM.outerHeight(),
+                    domLeft = FEATURE_DOM.offset().left,
+                    domTop = FEATURE_DOM.offset().top,
+                    domRight = domLeft + domWidth,
+                    domBottom = domTop + domHeight,
+                    $shadowLeft = newShadow('shadow', {left: 0, top: 0}, {width: domLeft, height: $body.height()}),
+                    $shadowTop = newShadow('shadow', {left: domLeft, top: 0}, {width: domWidth, height: domTop}),
+                    $shadowRight = newShadow('shadow', {left: domRight, top: 0}, {width: $body.width() - domBottom, height: $body.height()}),
+                    $shadowBottom = newShadow('shadow', {left: domLeft, top: domBottom}, {width: domWidth, height: $body.height() - domBottom}),
+                    $shadowLight = newShadow('shadow-light', {left: domLeft, top: domTop}, {width: domWidth, height: domHeight});
+                $body.append($shadowLeft).append($shadowTop)
+                .append($shadowRight).append($shadowBottom)
+                .append($shadowLight);
             }
         };
 
