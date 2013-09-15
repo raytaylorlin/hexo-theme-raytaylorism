@@ -109,7 +109,7 @@
 
             var 
                 //新功能特征值，以此识别一个功能点
-                FEATURE_CODE = '',
+                FEATURE_CODE = '1',
                 //新功能高亮提醒的jQuery对象
                 FEATURE_DOM = $('header .nav .icon-user').parent(),
                 //新功能描述
@@ -121,6 +121,7 @@
 
             //若本地存储没有特征值，或特征值与最新发布的不一致，则提示用户
             if(lastValue === null || lastValue !== FEATURE_CODE){
+                //生成阴影div的方法
                 var newShadow = function(className, offset, size) {
                     var $shadow = $('<div class="' + className + '"></div>');
                     $shadow.offset(offset);
@@ -131,6 +132,8 @@
 
                 var $body = $('body'),
                     $featureBox = $('.feature-box'),
+                    $shadowContainer = $('.shadow-container'),
+                    $featureGuideContainer = $('.feature-guide-container'),
                     domWidth = FEATURE_DOM.outerWidth(),
                     domHeight = FEATURE_DOM.outerHeight(),
                     domLeft = FEATURE_DOM.offset().left,
@@ -142,13 +145,23 @@
                     $shadowRight = newShadow('shadow', {left: domRight, top: 0}, {width: $body.width() - domBottom, height: $body.height()}),
                     $shadowBottom = newShadow('shadow', {left: domLeft, top: domBottom}, {width: domWidth, height: $body.height() - domBottom}),
                     $shadowLight = newShadow('shadow-light', {left: domLeft, top: domTop}, {width: domWidth, height: domHeight});
-                $('.shadow-container').append($shadowLeft).append($shadowTop)
+
+                //添加阴影
+                $shadowContainer.append($shadowLeft).append($shadowTop)
                 .append($shadowRight).append($shadowBottom)
                 .append($shadowLight);
 
+                //填充并定位描述内容
                 $featureBox.find('.feature-description').html(FEATURE_DESCRIPTION);
                 $featureBox.offset({left: domLeft, top: domBottom + 20});
-                $featureBox.show();
+
+                //显示新功能描述
+                $featureGuideContainer.fadeIn('slow');
+                //绑定关闭按钮事件
+                $featureGuideContainer.find('.btn-i-know').click(function() {
+                    $featureGuideContainer.fadeOut('slow');
+                    setStorage(storageKey, FEATURE_CODE);
+                });
             }
         };
 

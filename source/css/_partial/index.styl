@@ -3,6 +3,7 @@
     opacity 0.5
 
 .feature-guide-container
+    display none
     position absolute
     left 0
     top 0
@@ -17,7 +18,6 @@
     background-color rgba(0, 0, 0, 0)
 
 .feature-box
-    display none
     position relative
     max-width 300px
     background-color #ffebb5
@@ -26,7 +26,12 @@
 
     .btn-i-know
         background-color #f4867b
+        transition background-color .5s
         margin-bottom 0
+
+    .btn-i-know:hover
+        background-color #f5a69e
+        transition background-color .5s
 
     .feature-description
         font-size 1em
