@@ -67,7 +67,7 @@
                     }
                 });
                 //滚动条滚动动画
-                $('body').animate({
+                $('body, html').animate({
                     scrollTop: "+=" + deltaH
                 }, duration);
             });
@@ -77,7 +77,7 @@
         //检测是否有新的功能，并提示用户
         var checkNewFeature = function() {
             //设置本地存储
-            var setStorage = window.localStorage ?
+            var setStorage = (typeof window.localStorage === undefined) ?
                 //若支持HTML5的localStorage则使用localStorage
                 function(key, value) {
                     window.localStorage[key] = value;
@@ -86,11 +86,11 @@
                 function(key, value){
                     var exdate = new Date(),
                         expireDays = 15;    //cookie过期时间15天
-                    exdate.setDate(exdate.getDate() + expiredays);
+                    exdate.setDate(exdate.getDate() + expireDays);
                     document.cookie = key + '=' + escape(value) + ';expires=' + exdate.toGMTString();
                 };
             //获取本地存储
-            var getStorage = window.localStorage ?
+            var getStorage = (typeof window.localStorage === undefined) ?
                 function(key) {
                     return window.localStorage[key] || null;
                 } :
@@ -127,38 +127,58 @@
             //若本地存储没有特征值，或特征值与最新发布的不一致，则提示用户
             if(lastValue === null || lastValue !== FEATURE_CODE){
                 //生成阴影div的方法
-                var newShadow = function(className, offset, size) {
+                function newShadow(className) {
                     var $shadow = $('<div class="' + className + '"></div>');
-                    $shadow.offset(offset);
-                    $shadow.width(size.width);
-                    $shadow.height(size.height);
                     return $shadow;
-                };
+                }
 
-                var $body = $('body'),
+                function setOffsetSize(obj, offset, size) {
+                    obj.css({left: offset.left, top: offset.top});
+                    obj.width(size.width);
+                    obj.height(size.height);
+                }
+
+                var 
                     $featureBox = $('.feature-box'),
                     $shadowContainer = $('.shadow-container'),
                     $featureGuideContainer = $('.feature-guide-container'),
+                    
+                    $shadowLeft = newShadow('shadow'),
+                    $shadowTop = newShadow('shadow'),
+                    $shadowRight = newShadow('shadow'),
+                    $shadowBottom = newShadow('shadow'),
+                    $shadowLight = newShadow('shadow-light');
+
+                function resizeAllShadow() {
+                    var $body = $('body'),
+                    marginBottom = 3,    //for IE
                     domWidth = FEATURE_DOM.outerWidth(),
                     domHeight = FEATURE_DOM.outerHeight(),
-                    domLeft = FEATURE_DOM.offset().left,
-                    domTop = FEATURE_DOM.offset().top,
-                    domRight = domLeft + domWidth,
-                    domBottom = domTop + domHeight,
-                    $shadowLeft = newShadow('shadow', {left: 0, top: 0}, {width: domLeft, height: $body.height()}),
-                    $shadowTop = newShadow('shadow', {left: domLeft, top: 0}, {width: domWidth, height: domTop}),
-                    $shadowRight = newShadow('shadow', {left: domRight, top: 0}, {width: $body.width() - domBottom, height: $body.height()}),
-                    $shadowBottom = newShadow('shadow', {left: domLeft, top: domBottom}, {width: domWidth, height: $body.height() - domBottom}),
-                    $shadowLight = newShadow('shadow-light', {left: domLeft, top: domTop}, {width: domWidth, height: domHeight});
+                    domLeft = Math.round(FEATURE_DOM.offset().left),
+                    domTop = Math.round(FEATURE_DOM.offset().top),
+                    domRight = Math.round(domLeft + domWidth),
+                    domBottom = Math.round(domTop + domHeight);
+
+                    setOffsetSize($shadowLeft, {left: 0, top: 0}, {width: domLeft, height: $body.height() - 5});
+                    setOffsetSize($shadowTop, {left: domLeft, top: 0}, {width: domWidth, height: domTop});
+                    setOffsetSize($shadowRight, {left: domRight, top: 0}, {width: $body.width() - domBottom, height: $body.height() - 5});
+                    setOffsetSize($shadowBottom, {left: domLeft, top: domBottom}, {width: domWidth, height: $body.height() - domBottom - 5});
+                    setOffsetSize($shadowLight, {left: domLeft, top: domTop}, {width: domWidth, height: domHeight});
+
+                    //填充并定位描述内容
+                    $featureBox.find('.feature-description').html(FEATURE_DESCRIPTION);
+                    $featureBox.offset({left: domLeft, top: domBottom + 20});
+                }
+
+                resizeAllShadow();
+                $(window).resize(resizeAllShadow);
 
                 //添加阴影
-                $shadowContainer.append($shadowLeft).append($shadowTop)
-                .append($shadowRight).append($shadowBottom)
+                $shadowContainer.append($shadowLeft)
+                .append($shadowTop)
+                .append($shadowRight)
+                .append($shadowBottom)
                 .append($shadowLight);
-
-                //填充并定位描述内容
-                $featureBox.find('.feature-description').html(FEATURE_DESCRIPTION);
-                $featureBox.offset({left: domLeft, top: domBottom + 20});
 
                 //显示新功能描述
                 $featureGuideContainer.fadeIn('slow');
