@@ -42,7 +42,8 @@
 
             $('.btn-loadmore').click(function() {
                 var deltaH = 0,
-                    toShowList = [];
+                    toShowList = [],
+                    duration = 1000;
                 for(i = showNum, showNum += PER_PAGE_NUM; i < showNum; i++) {
                     if(i >= articleList.length) {
                         $('.btn-loadmore').html("已经到底啦");
@@ -51,20 +52,24 @@
                     toShowList.push($(articleList[i]));
                     deltaH += outerHeightList[i];
                 }
-                $('body').animate({
-                    scrollTop: $('#article-list').height()
-                });
+                
+                //执行文章列表高度加大动画
                 $('#article-list').animate({
                     height: "+=" + deltaH
-                }, 1000, function() {
+                }, duration, function() {
+                    //执行完毕后，每篇文章淡入动画
                     for(i = 0; i < toShowList.length; i++) {
                         toShowList[i].css({opacity: 0});
                         toShowList[i].show();
                         toShowList[i].animate({
                             opacity: 1
-                        }, 1000);
+                        }, duration);
                     }
                 });
+                //滚动条滚动动画
+                $('body').animate({
+                    scrollTop: "+=" + deltaH
+                }, duration);
             });
             resizeContentWrapper();
         };
