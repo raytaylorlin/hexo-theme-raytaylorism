@@ -11,7 +11,8 @@
         //检测是否有新的功能，并提示用户
         var checkNewFeature = function() {
             //设置本地存储
-            var setStorage = (typeof window.localStorage !== undefined) ?
+            var setStorage = 
+            (typeof window.localStorage !== 'undefined') && (typeof window.localStorage !== 'unknown') ?
                 //若支持HTML5的localStorage则使用localStorage
                 function(key, value) {
                     window.localStorage[key] = value;
@@ -24,7 +25,8 @@
                     document.cookie = key + '=' + escape(value) + ';expires=' + exdate.toGMTString();
                 };
             //获取本地存储
-            var getStorage = (typeof window.localStorage !== undefined) ?
+            var getStorage = 
+            (typeof window.localStorage !== 'undefined') && (typeof window.localStorage !== 'unknown') ?
                 function(key) {
                     return window.localStorage[key] || null;
                 } :
