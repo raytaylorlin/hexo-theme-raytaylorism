@@ -31,6 +31,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.05(2013-9-5) 调整基础布局，新增首页加载更多按钮
 * 1.06(2013-9-15) 新增新功能导航效果
 * 1.07(2013-9-18) 修复“加载更多”动画效果滚动不到位的问题
+* 1.08(2013-9-19) 修复“你当前所在的位置”为空的bug
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
