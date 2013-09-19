@@ -30,6 +30,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.04(2013-9-2) 针对手机进行响应式设计，重新定义所有版面的字体大小
 * 1.05(2013-9-5) 调整基础布局，新增首页加载更多按钮
 * 1.06(2013-9-15) 新增新功能导航效果
+* 1.07(2013-9-18) 修复“加载更多”动画效果滚动不到位的问题
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
