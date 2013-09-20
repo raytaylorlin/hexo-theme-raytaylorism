@@ -32,6 +32,8 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.0.6(2013-9-15) 新增新功能导航效果
 * 1.0.7(2013-9-18) 修复“加载更多”动画效果滚动不到位的问题
 * 1.0.8(2013-9-19) 修复“你当前所在的位置”为空的bug
+* 1.0.9(2013-9-19) 修复IE新功能导航阴影的显示问题
+* 1.1.0(2013-9-20) 把新功能导航的特征值分离到博客的配置中
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/

@@ -50,11 +50,11 @@
 
             var 
                 //新功能特征值，以此识别一个功能点
-                FEATURE_CODE = '588ba45',
+                FEATURE_CODE = '<%= config.new_feature_guide.hash_code %>',
                 //新功能高亮提醒的jQuery对象
-                FEATURE_DOM = $('.brand'),
+                FEATURE_DOM = $('.' + '<%= config.new_feature_guide.dom_class %>'),
                 //新功能描述
-                FEATURE_DESCRIPTION = '如你所见，这是新功能导航哦。以后如果博客有新功能的话，就会通过这个来让大家知道>_<';
+                FEATURE_DESCRIPTION = '<%= config.new_feature_guide.description %>';
 
             //存储的key
             var storageKey = 'raytaylor_world_feature_notify',
