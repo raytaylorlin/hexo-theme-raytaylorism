@@ -34,6 +34,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.0.8(2013-9-19) 修复“你当前所在的位置”为空的bug
 * 1.0.9(2013-9-19) 修复IE新功能导航阴影的显示问题
 * 1.1.0(2013-9-20) 把新功能导航的特征值分离到博客的配置中
+* 1.1.1(2013-9-20) 修复Google Analytics无效的bug
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
