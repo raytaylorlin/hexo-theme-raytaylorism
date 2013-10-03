@@ -35,6 +35,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.0.9(2013-9-19) 修复IE新功能导航阴影的显示问题
 * 1.1.0(2013-9-20) 把新功能导航的特征值分离到博客的配置中
 * 1.1.1(2013-9-20) 修复Google Analytics无效的bug
+* 1.1.2(2013-10-3) 修复google_analytics.ejs中没有引用博客配置的错误
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
