@@ -51,8 +51,8 @@
             var 
                 //新功能特征值，以此识别一个功能点
                 FEATURE_CODE = '<%= config.new_feature_guide.hash_code %>',
-                //新功能高亮提醒的jQuery对象
-                FEATURE_DOM = $('.' + '<%= config.new_feature_guide.dom_class %>'),
+                //新功能高亮提醒的jQuery查询字符串
+                FEATURE_DOM = $('<%= config.new_feature_guide.query_string %>'),
                 //新功能描述
                 FEATURE_DESCRIPTION = '<%= config.new_feature_guide.description %>';
 

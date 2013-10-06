@@ -8,6 +8,11 @@ menu_icon:
     存档: icon-archive
     关于: icon-user
 
+menu_id:
+    首页: id-home
+    存档: id-archive
+    关于: id-about
+
 excerpt_link: Read More
 archive_yearly: true
 

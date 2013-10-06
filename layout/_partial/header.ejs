@@ -11,7 +11,7 @@
                     </ul>
                     <div class="pull-right nav">
                         <% for (var i in theme.menu){ %>
-                            <a href="<%- theme.menu[i] %>" class="btn btn-primary btn-large">
+                            <a href="<%- theme.menu[i] %>" id="<%- theme.menu_id[i] %>" class="btn btn-primary btn-large">
                                 <i class="<%- theme.menu_icon[i] %> icon-white"></i>
                                 <%= i %>
                             </a>
