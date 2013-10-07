@@ -36,6 +36,8 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.1.0(2013-9-20) 把新功能导航的特征值分离到博客的配置中
 * 1.1.1(2013-9-20) 修复Google Analytics无效的bug
 * 1.1.2(2013-10-3) 修复google_analytics.ejs中没有引用博客配置的错误
+* 1.1.3(2013-10-6) 修改新功能导航的DOM识别方式为查询字符串，给navbar的各项添加id
+* 1.1.4(2013-10-7) 新增about.ejs模板
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
