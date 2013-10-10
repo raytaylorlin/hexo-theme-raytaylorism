@@ -1,4 +1,9 @@
-<% if (config.disqus_shortname && page.comments){ %>
+<% if (config.uyan_uid && page.comments) { %>
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=<%= config.uyan_uid %>"></script>
+<!-- UY END -->
+<% } else if (config.disqus_shortname && page.comments){ %>
 <section id="comment">
     <h1 class="title"><%= __('comment') %></h1>
     <div id="disqus_thread">
