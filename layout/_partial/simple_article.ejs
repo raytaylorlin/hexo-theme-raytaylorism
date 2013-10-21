@@ -1,6 +1,6 @@
 <article>
-    <div class="row-fluid">
-        <div class="span2 date-tags">
+    <div class="row">
+        <div class="col-2 date-tags">
             <div class="date-row">
                 <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
             </div>
@@ -12,7 +12,7 @@
                 </div>
             <% } %>
         </div>
-        <div class="span10">
+        <div class="col-10">
             <div class="article-title simple-article-title">
                 <%- partial('post/title') %>
             </div>
