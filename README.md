@@ -42,6 +42,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.1.4(2013-10-7) 新增about.ejs模板
 * 1.1.5(2013-10-8) 修复在其他页面点击header的博客名没有回到首页的bug
 * 1.1.6(2013-10-18) 将Furatto升级到V2.0版本
+* 1.1.7(2013-10-21) 修复Furatto升级版本后网格布局的显示错误
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
