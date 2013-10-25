@@ -1,0 +1,26 @@
+<% var item = page; %>
+
+<article class="<%= item.layout %>">
+    <div class="article-title article-title-big">
+        <h1>读书</h1>
+    </div>
+
+    <div class="entry">
+        <%- item.content %>
+        <h1>
+            在读
+            <small class="light"><span class="book-num"></span>本</small>
+        </h1>
+        <ul class="books-content reading-books-content"></ul>
+        <h1>
+            已读
+            <small class="light"><span class="book-num"></span>本</small>
+        </h1>
+        <h1>
+            想读
+            <small class="light"><span class="book-num"></span>本</small>
+        </h1>
+    </div>
+</article>
+
+<%- partial('_partial/plugin/comment', {item: page}) %>
