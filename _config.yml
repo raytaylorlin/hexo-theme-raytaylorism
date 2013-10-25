@@ -1,16 +1,19 @@
 menu:
     首页: /
     存档: /archives
+    读书: /reading
     关于: /about
 
 menu_icon:
     首页: icon-home
     存档: icon-archive
+    读书: icon-book
     关于: icon-user
 
 menu_id:
     首页: id-home
     存档: id-archive
+    读书: id-reading
     关于: id-about
 
 excerpt_link: Read More
