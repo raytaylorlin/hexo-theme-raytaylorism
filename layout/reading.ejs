@@ -1,6 +1,6 @@
 <% var item = page; %>
 
-<article class="<%= item.layout %>">
+<article class="reading-page">
     <div class="article-title article-title-big">
         <h1>读书</h1>
     </div>
@@ -11,7 +11,9 @@
             在读
             <small class="light"><span class="book-num"></span>本</small>
         </h1>
-        <ul class="books-content reading-books-content"></ul>
+        <ul class="books-content reading-books-content">
+            <li>hehe</li>
+        </ul>
         <h1>
             已读
             <small class="light"><span class="book-num"></span>本</small>
@@ -22,5 +24,14 @@
         </h1>
     </div>
 </article>
+<script type="text/custom-template" id="book-item-template">
+<li>
+    <div>
+        <a class="book-cover" href="javascript:void(0);">
+            <img src="{{cover}}" title="{{title}}" alt="{{title}}">
+        </a>
+    </div>
+</li>
+</script>
 
 <%- partial('_partial/plugin/comment', {item: page}) %>
