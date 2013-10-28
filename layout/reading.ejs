@@ -55,11 +55,16 @@
             url: '../data/test.json',
             dataType: 'json',
             success: function(data) {
-                var i, $bookItem, 
-                    $list = $('.reading-books-content');
-                for(i in data) {
-                    $bookItem = createBookItem(data[i]);
-                    $list.append($bookItem);
+                var i, bookClass, itemData, $bookItem, 
+                    $list;
+                //循环大类别
+                for(bookClass in data) {
+                    $list = $('.' + bookClass + ' .books-content');
+                    for(i in data[bookClass]) {
+                        itemData = data[bookClass][i];
+                        $bookItem = createBookItem(itemData);
+                        $list.append($bookItem);
+                    }
                 }
                 $('#content-wrapper').css('height', 'auto');
             }
