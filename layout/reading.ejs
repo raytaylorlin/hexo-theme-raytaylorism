@@ -7,21 +7,33 @@
 
     <div class="entry">
         <%- item.content %>
-        <h1>
-            在读
-            <small class="light"><span class="book-num"></span>本</small>
-        </h1>
-        <ul class="books-content reading-books-content">
-            
-        </ul>
-        <h1>
-            已读
-            <small class="light"><span class="book-num"></span>本</small>
-        </h1>
-        <h1>
-            想读
-            <small class="light"><span class="book-num"></span>本</small>
-        </h1>
+        <div class="reading-books-content">
+            <h1>
+                在读
+                <small class="light"><span class="book-num"></span>本</small>
+            </h1>
+            <ul class="books-content">
+
+            </ul>
+        </div>
+        <div class="readed-books-content">
+            <h1>
+                已读
+                <small class="light"><span class="book-num"></span>本</small>
+            </h1>
+            <ul class="books-content">
+
+            </ul>
+        </div>
+        <div class="wanted-books-content">
+            <h1>
+                想读
+                <small class="light"><span class="book-num"></span>本</small>
+            </h1>
+            <ul class="books-content">
+
+            </ul>
+        </div>
     </div>
 </article>
 <script type="text/custom-template" id="book-item-template">
@@ -49,7 +61,7 @@
                     $bookItem = createBookItem(data[i]);
                     $list.append($bookItem);
                 }
-                // window.resizeContentWrapper();
+                $('#content-wrapper').css('height', 'auto');
             }
         });
 
