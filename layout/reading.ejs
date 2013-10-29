@@ -59,12 +59,13 @@
                     $list;
                 //循环大类别
                 for(bookClass in data) {
-                    $list = $('.' + bookClass + ' .books-content');
+                    $list = $('.' + bookClass).find('.books-content');
                     for(i in data[bookClass]) {
                         itemData = data[bookClass][i];
                         $bookItem = createBookItem(itemData);
                         $list.append($bookItem);
                     }
+                    $('.' + bookClass).find('.book-num').html(data[bookClass].length);
                 }
                 $('#content-wrapper').css('height', 'auto');
             }
