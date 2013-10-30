@@ -4,7 +4,34 @@
 
 .reading-page ul>li
     display inline-block
-    margin 5px
+    margin 5px 10px 0
 
 .book-item
     width 180px
+    position relative
+
+.book-item:hover .book-item-body
+    opacity 1
+    -webkit-transform translate(15px, 0px)
+    -moz-transform translate(15px, 0px)
+    -ms-transform translate(15px, 0px)
+    transform translate(15px, 0px)
+
+.book-item-body
+    position absolute
+    top 0
+    left 0
+    padding 20px
+    background #2c3f52
+    color #ed4e6e
+    height 100%
+    width 150%
+    z-index 2
+
+    opacity 0
+    -webkit-backface-visibility hidden
+    -moz-backface-visibility hidden
+    backface-visibility hidden
+    -webkit-transition -webkit-transform 0.3s, opacity 0.3s
+    -moz-transition -moz-transform 0.3s, opacity 0.3s
+    transition transform 0.3s, opacity 0.3s
