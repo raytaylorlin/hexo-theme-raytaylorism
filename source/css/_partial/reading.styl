@@ -12,26 +12,39 @@
 
 .book-item:hover .book-item-body
     opacity 1
-    -webkit-transform translate(15px, 0px)
-    -moz-transform translate(15px, 0px)
-    -ms-transform translate(15px, 0px)
-    transform translate(15px, 0px)
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.3s;
+    transition: transform 0.4s, opacity 0.3s;
 
 .book-item-body
     position absolute
     top 0
     left 0
-    padding 20px
-    background #2c3f52
-    color #ed4e6e
+    padding 10px
+    background #2c3e50
     height 100%
     width 150%
     z-index 2
 
     opacity 0
-    -webkit-backface-visibility hidden
-    -moz-backface-visibility hidden
-    backface-visibility hidden
-    -webkit-transition -webkit-transform 0.3s, opacity 0.3s
-    -moz-transition -moz-transform 0.3s, opacity 0.3s
-    transition transform 0.3s, opacity 0.3s
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+
+.book-item-body p
+    color #fff
+
+.book-item-body .book-title
+    color #2980b9
