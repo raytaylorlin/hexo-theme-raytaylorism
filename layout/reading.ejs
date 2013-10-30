@@ -43,12 +43,12 @@
             <a class="book-cover" href="javascript:void(0);">
                 <img src="{{cover}}" title="{{title}}" alt="{{title}}">
             </a>
+        </div>
         <div class="book-item-body">
             <p class="book-title">{{title}}</p>
-            <p>完成日期：<span class="complete-date">{{completeDate}}</span></p>
             <p>简评：<span class="book-review">{{review}}</span></p>
             <p>推荐指数：<span class="book-score">{{score}}</span></p>
-            <a href="{{doubanLink}}" class="btn btn-warning btn-to-douban pull-right">去豆瓣看看</a>
+            <a href="{{doubanLink}}" class="btn btn-warning btn-to-douban pull-right" target="blank">去豆瓣看看</a>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -61,7 +61,7 @@
     var loadBookItem = function() {
         $.ajax({
             type: 'GET',
-            url: '../data/test.json',
+            url: '/data/test.json',
             dataType: 'json',
             success: function(data) {
                 var i, bookClass, itemData, $bookItem, 
@@ -82,10 +82,10 @@
 
         function createBookItem(data) {
             var templateHtml = $('#book-item-template').html(),
-                key, item;
+                key, itemRegExp;
             for(key in data) {
-                item = '{{' + key + '}}';
-                templateHtml = templateHtml.replace(item, data[key]);
+                itemRegExp = new RegExp('{{' + key + '}}', 'g');
+                templateHtml = templateHtml.replace(itemRegExp, data[key]);
             }
             return $(templateHtml);
         }
