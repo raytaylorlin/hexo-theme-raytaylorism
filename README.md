@@ -44,6 +44,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.1.6(2013-10-18) 将Furatto升级到V2.0版本
 * 1.1.7(2013-10-21) 修复Furatto升级版本后网格布局的显示错误
 * 1.1.8(2013-10-24) 修复Furatto升级版本后各种样式的问题
+* 1.1.9(2013-11-1) 新增读书栏目
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
