@@ -95,10 +95,10 @@
                     domRight = Math.round(domLeft + domWidth),
                     domBottom = Math.round(domTop + domHeight);
 
-                    setOffsetSize($shadowLeft, {left: 0, top: 0}, {width: domLeft, height: $body.height() - 5});
+                    setOffsetSize($shadowLeft, {left: 0, top: 0}, {width: domLeft, height: $body.height() + 500});
                     setOffsetSize($shadowTop, {left: domLeft, top: 0}, {width: domWidth, height: domTop});
-                    setOffsetSize($shadowRight, {left: domRight, top: 0}, {width: $body.width() - domBottom, height: $body.height() - 5});
-                    setOffsetSize($shadowBottom, {left: domLeft, top: domBottom}, {width: domWidth, height: $body.height() - domBottom - 5});
+                    setOffsetSize($shadowRight, {left: domRight, top: 0}, {width: $body.width() - domBottom, height: $body.height() + 500});
+                    setOffsetSize($shadowBottom, {left: domLeft, top: domBottom}, {width: domWidth, height: $body.height() - domBottom + 500});
                     setOffsetSize($shadowLight, {left: domLeft, top: domTop}, {width: domWidth, height: domHeight});
 
                     //填充并定位描述内容
