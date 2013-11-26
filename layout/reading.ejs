@@ -12,7 +12,7 @@
             <small class="light"><span class="book-num"></span>本</small>
         </h1>
         <ul class="books-content reading-books-content">
-            <li>hehe</li>
+            
         </ul>
         <h1>
             已读
@@ -26,12 +26,46 @@
 </article>
 <script type="text/custom-template" id="book-item-template">
 <li>
-    <div>
+    <div class="book-item">
         <a class="book-cover" href="javascript:void(0);">
             <img src="{{cover}}" title="{{title}}" alt="{{title}}">
         </a>
     </div>
 </li>
+</script>
+
+<script> type="text/javascript">
+(function($) {
+    //当内容区内容不够长时，设置内容区域的高度使footer沉底
+    var loadBookItem = function() {
+        $.ajax({
+            type: 'GET',
+            url: '../data/test.json',
+            dataType: 'json',
+            success: function(data) {
+                var i, $bookItem, 
+                    $list = $('.reading-books-content');
+                for(i in data) {
+                    $bookItem = createBookItem(data[i]);
+                    $list.append($bookItem);
+                }
+                // window.resizeContentWrapper();
+            }
+        });
+
+        function createBookItem(data) {
+            var templateHtml = $('#book-item-template').html(),
+                key, item;
+            for(key in data) {
+                item = '{{' + key + '}}';
+                templateHtml = templateHtml.replace(item, data[key]);
+            }
+            return $(templateHtml);
+        }
+    };
+
+    $(document).ready(loadBookItem);
+})(jQuery);
 </script>
 
 <%- partial('_partial/plugin/comment', {item: page}) %>
