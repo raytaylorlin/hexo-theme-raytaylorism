@@ -48,6 +48,8 @@
                     return null;
                 };
 
+            <% if(config.new_feature_guide) { %>
+
             var 
                 //新功能特征值，以此识别一个功能点
                 FEATURE_CODE = '<%= config.new_feature_guide.hash_code %>',
@@ -124,6 +126,8 @@
                     setStorage(storageKey, FEATURE_CODE);
                 });
             }
+
+            <% } %>
         };
 
         $(document).ready(checkNewFeature);
