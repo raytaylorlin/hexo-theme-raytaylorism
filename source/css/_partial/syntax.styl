@@ -1,33 +1,26 @@
+color-code-background = #042029
 color-simple-code-background = #93AAAC
 
-figure.highlight
-    position relative
-    padding 10px 20px
-    margin 0
-
-    @media screen and (max-width:580px)
-        padding 10px
-
+article
     pre
-        border none
-        padding 0 10px
-        margin 0
+        padding 10px 16px
 
-    table
-        margin 0
-        border-spacing 0
+    code, pre
+        font-family font-mono
+        color #333
+        font-size 1em
+        white-space pre-wrap
+        word-wrap break-word
 
-    td
-        padding 0
-        border-bottom 0
+    code
+        background color-code-background
+        font-size 16px
 
-    .gutter
-        pre
-            padding 0 0 0 10px
-            border-right 1px solid #fff
-            height 100%
+    p code, li code
+        color #fff
+        padding 4px
 
-pre, code 
+code 
     background color-simple-code-background
 
 pre .keyword
