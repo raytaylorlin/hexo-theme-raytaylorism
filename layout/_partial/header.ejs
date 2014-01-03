@@ -7,9 +7,9 @@
             <div class="nav-collapse navbar-responsive-collapse collapse">
                 <nav id="menu">
                     <ul class="nav">
-                        <li><a class="brand" href="/index.html"><%= config.title %></a></li>
+                        <li><a class="brand" id="blog-title" href="/index.html"><%= config.title %></a></li>
                     </ul>
-                    <div class="pull-right nav">
+                    <div class="pull-right nav" id="nav-button-group">
                         <% for (var i in theme.menu){ %>
                             <a href="<%- theme.menu[i] %>" id="<%- theme.menu_id[i] %>" class="btn btn-primary btn-large">
                                 <i class="<%- theme.menu_icon[i] %> icon-white"></i>

@@ -46,6 +46,8 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.1.8(2013-10-24) 修复Furatto升级版本后各种样式的问题
 * 1.1.9(2013-11-1) 新增读书栏目
 * 1.2.0(2013-12-12) 修复当在hexo配置中new_feature_guide字段不存在时，生成会报错的问题
+* 1.2.1(2013-12-16) 修复升级hexo版本到2.3.0后，正文中代码排版的问题
+* 1.2.2(2014-1-3) 重新调整全局的字体大小
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
