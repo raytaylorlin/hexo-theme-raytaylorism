@@ -53,7 +53,8 @@
                 
                 //执行文章列表高度加大动画
                 $('#article-list').animate({
-                    height: "+=" + deltaH
+                    height: "+=" + deltaH,
+                    scrollTop: "+=" + deltaH
                 }, duration, function() {
                     //执行完毕后，每篇文章淡入动画
                     for(i = 0; i < toShowList.length; i++) {
@@ -63,10 +64,11 @@
                             opacity: 1
                         }, duration);
                     }
+                    
                 });
                 //滚动条滚动动画
                 $('body, html').animate({
-                    scrollTop: "+=" + deltaH
+                    scrollTop: "+=" + deltaH / 2
                 }, duration);
             });
             resizeContentWrapper();
