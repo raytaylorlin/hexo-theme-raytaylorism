@@ -49,6 +49,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.2.1(2013-12-16) 修复升级hexo版本到2.3.0后，正文中代码排版的问题
 * 1.2.2(2014-1-3) 重新调整全局的字体大小
 * 1.2.3(2014-1-4) 修复“加载更多”无法滚动的问题
+* 1.2.4(2014-1-7) 修复Furatto升级版本后侧滑栏样式的问题
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
