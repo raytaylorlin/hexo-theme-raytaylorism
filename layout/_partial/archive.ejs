@@ -1,8 +1,8 @@
 <%
 var title = '';
-if (page.posts.category) title = page.posts.category;
-if (page.posts.tag) title = page.posts.tag;
-if (page.posts.archive){
+if (page.category) title = page.posts.category;
+if (page.tag) title = page.posts.tag;
+if (page.archive){
     if (page.year) {
         title = page.year + (page.month ? '/' + page.month : '');
     } else {
