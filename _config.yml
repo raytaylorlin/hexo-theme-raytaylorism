@@ -1,20 +1,23 @@
 menu:
     首页: /
     归档: /archives
+    分类: javascript:void(0);
     读书: /reading
     关于: /about
 
 menu_icon:
     首页: icon-home
     归档: icon-archive
+    分类: icon-archive
     读书: icon-book
     关于: icon-user
 
-menu_id:
-    首页: id-home
-    归档: id-archive
-    读书: id-reading
-    关于: id-about
+menu_class:
+    首页: menu-home
+    归档: menu-archive
+    分类: menu-category
+    读书: menu-reading
+    关于: menu-about
 
 excerpt_link: Read More
 archive_yearly: true

@@ -1,13 +1,18 @@
 <nav id="jPanelMenu-menu-side">
-    <ul class="nav">
+    <ul class="nav main-menu">
         <li><a class="brand" href="index.html"><%= config.title %></a></li>
         <% for (var i in theme.menu){ %>
             <li>
-                <a href="<%- theme.menu[i] %>">
+                <a href="<%- theme.menu[i] %>" class="<%- theme.menu_class[i] %>">
                     <i class="<%- theme.menu_icon[i] %> icon-white"></i>
                     <%= i %>
                 </a>
             </li>
         <% } %>
+    </ul>
+
+    <ul class="nav category-menu hide">
+        <li><a class="brand" href="javascript:void(0);">分类目录</a></li>
+        <li><a href="javascript:void(0);">heheheh</a></li>
     </ul>
 </nav>

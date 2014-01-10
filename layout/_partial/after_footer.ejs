@@ -24,8 +24,28 @@
             jPM.on();
         };
 
+        //初始化目录按钮事件绑定
+        var initCategory = function() {
+            $('.menu-category').click(function() {
+                var $jPanelMenu = $('#jPanelMenu-menu');
+                var jPM = $.jPanelMenu({
+                    duration: 500,
+                    beforeOpen: function() {
+                        $jPanelMenu.find('ul.category-menu').show();
+                        $jPanelMenu.find('ul.main-menu').hide();
+                    },
+                    afterClose: function() {
+                        $jPanelMenu.find('ul.category-menu').hide();
+                        $jPanelMenu.find('ul.main-menu').show();                        
+                    }
+                });
+                jPM.trigger();
+            });
+        };
+
         $(document).ready(resizeContentWrapper);
         $(document).ready(initJPanelMenu);
+        $(document).ready(initCategory);
         
         $(window).resize(resizeContentWrapper);
     })(jQuery);
