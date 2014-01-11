@@ -26,20 +26,39 @@
 
         //初始化目录按钮事件绑定
         var initCategory = function() {
-            $('.menu-category').click(function() {
+            function showMainMenu() {
                 var $jPanelMenu = $('#jPanelMenu-menu');
+                $jPanelMenu.find('ul.category-menu').hide();
+                $jPanelMenu.find('ul.main-menu').show();  
+            }
+
+            function showCategoryMenu() {
+                var $jPanelMenu = $('#jPanelMenu-menu');
+                $jPanelMenu.find('ul.category-menu').show();
+                $jPanelMenu.find('ul.main-menu').hide();
+            }
+
+            $('.menu-category').click(function() {
+                
                 var jPM = $.jPanelMenu({
                     duration: 500,
                     beforeOpen: function() {
-                        $jPanelMenu.find('ul.category-menu').show();
-                        $jPanelMenu.find('ul.main-menu').hide();
+                        showCategoryMenu();
                     },
                     afterClose: function() {
-                        $jPanelMenu.find('ul.category-menu').hide();
-                        $jPanelMenu.find('ul.main-menu').show();                        
+                        showMainMenu();
                     }
                 });
-                jPM.trigger();
+                if(jPM.isOpen()) {
+                    showCategoryMenu();
+                } else {
+                    jPM.open();
+                }
+                // jPM.trigger();
+            });
+
+            $('.category-menu').on('click', '.btn-back', function() {
+                showMainMenu();
             });
         };
 

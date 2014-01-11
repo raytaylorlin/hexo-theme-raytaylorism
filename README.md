@@ -51,6 +51,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.2.3(2014-1-4) 修复“加载更多”无法滚动的问题
 * 1.2.4(2014-1-7) 修复Furatto升级版本后侧滑栏样式的问题
 * 1.2.5(2014-1-8) 修复升级hexo版本到2.3.0后，归档的标题没有显示的问题
+* 1.2.6(2014-1-10) 添加分类目录菜单
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
