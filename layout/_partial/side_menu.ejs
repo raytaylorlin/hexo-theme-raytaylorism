@@ -12,11 +12,15 @@
     </ul>
 
     <ul class="nav category-menu hide">
-        <li><a class="brand" href="javascript:void(0);">分类目录</a></li>
+        <li>
+            <span><a class="brand" href="javascript:void(0);">分类目录</a></span>
+            <span><a class="btn-back brand pull-right" href="javascript:void(0);">
+                <i class="icon-arrow-left"></i>
+            </a></span>
+        </li>
 
         <% 
         var catTree = {};
-        // console.log(site.categories.length);
 
         site.categories.forEach(function(item) {
             if(item.posts.length > 0) {
@@ -31,7 +35,6 @@
                         root[cats[i]] = {posts_num: item.posts.length};
                         addTree(root[cats[i]], i + 1);
                     } else {
-                        //root[cats[i]]['posts_num'] += 1;
                         addTree(root[cats[i]], i + 1);
                     }
                 };
