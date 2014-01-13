@@ -13,6 +13,64 @@
 
     <ul class="nav category-menu hide">
         <li><a class="brand" href="javascript:void(0);">分类目录</a></li>
-        <li><a href="javascript:void(0);">heheheh</a></li>
+
+        <% 
+        var catTree = {};
+        // console.log(site.categories.length);
+
+        site.categories.forEach(function(item) {
+            if(item.posts.length > 0) {
+                console.log(item);
+                var cats = item.path.split('/');
+                var i, depth = 0;
+
+                var addTree = function(root, i) {
+                    if(i + 1 > cats.length) {
+                        return;
+                    } else if(!root.hasOwnProperty(cats[i])) {
+                        root[cats[i]] = {posts_num: item.posts.length};
+                        addTree(root[cats[i]], i + 1);
+                    } else {
+                        //root[cats[i]]['posts_num'] += 1;
+                        addTree(root[cats[i]], i + 1);
+                    }
+                };
+                addTree(catTree, 1);
+            }
+        });
+        console.log(catTree);
+        %>
+
+        <%
+        var walk = function(root, path, depth) {
+            var item;
+        %>
+
+            <%
+            for(item in root) {
+                if(item.length > 0 && item != 'posts_num'){
+                    var space = '';
+                    for(i = 0; i < depth; i++) {
+                        space += '--';
+                    } 
+            %>
+
+            <li collapse-level="<%= depth %>">
+                <a href="<%- config.root %><%- path + item + '/' %>" class="collapse-level-<%= depth %>">
+                    <i class="icon-caret-right"></i>
+                    <%= item + '(' + root[item]['posts_num'] + ')'%>
+                </a>
+            </li>
+
+            <%
+                walk(root[item], path + item + '/', depth + 1);
+                }
+            }
+            %>
+
+        <%
+        };
+        walk(catTree, 'categories/', 0);
+        %>
     </ul>
 </nav>
