@@ -29,17 +29,16 @@
             function showMainMenu() {
                 var $jPanelMenu = $('#jPanelMenu-menu');
                 $jPanelMenu.find('ul.category-menu').hide();
-                $jPanelMenu.find('ul.main-menu').show();  
+                $jPanelMenu.find('ul.main-menu').fadeIn();
             }
 
             function showCategoryMenu() {
                 var $jPanelMenu = $('#jPanelMenu-menu');
-                $jPanelMenu.find('ul.category-menu').show();
                 $jPanelMenu.find('ul.main-menu').hide();
+                $jPanelMenu.find('ul.category-menu').fadeIn();
             }
 
             $('.menu-category').click(function() {
-                
                 var jPM = $.jPanelMenu({
                     duration: 500,
                     beforeOpen: function() {
@@ -54,7 +53,6 @@
                 } else {
                     jPM.open();
                 }
-                // jPM.trigger();
             });
 
             $('.category-menu').on('click', '.btn-back', function() {
