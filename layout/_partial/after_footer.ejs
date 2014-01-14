@@ -4,15 +4,18 @@
     (function($) {
         //当内容区内容不够长时，设置内容区域的高度使footer沉底
         var resizeContentWrapper = function() {
-            var contentHeight = Math.floor($('#content-wrapper .container-center').height()),
+            //HACK: 用延时的方法使计算高度时候更加准确，会有一闪的情况
+            setTimeout(function() {
+                var contentHeight = Math.floor($('#content-wrapper .container-center').height()),
                 headerHeight = Math.floor($('#page-header').height()),
                 footerHeight = Math.floor($('#page-footer').height()),
                 minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
-            if(contentHeight < minHeight) {
-                $('#content-wrapper').height(minHeight);
-            } else {
-                $('#content-wrapper').css({height: 'auto'});
-            }
+                if(contentHeight < minHeight) {
+                    $('#content-wrapper').css({height: minHeight});                    
+                } else {
+                    $('#content-wrapper').css({height: 'auto'});
+                }
+            },500);
         };
 
         //响应式侧边栏
