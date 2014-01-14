@@ -1,7 +1,7 @@
 <%
 var title = '';
-if (page.category) title = page.posts.category;
-if (page.tag) title = page.posts.tag;
+if (page.category) title = '（分类）' + page.category; 
+if (page.tag) title = '（标签）' + page.tag;
 if (page.archive){
     if (page.year) {
         title = page.year + (page.month ? '/' + page.month : '');

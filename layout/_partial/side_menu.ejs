@@ -24,7 +24,6 @@
 
         site.categories.forEach(function(item) {
             if(item.posts.length > 0) {
-                console.log(item);
                 var cats = item.path.split('/');
                 var i, depth = 0;
 
@@ -41,7 +40,6 @@
                 addTree(catTree, 1);
             }
         });
-        console.log(catTree);
         %>
 
         <%
