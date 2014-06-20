@@ -52,6 +52,8 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.2.4(2014-1-7) 修复Furatto升级版本后侧滑栏样式的问题
 * 1.2.5(2014-1-8) 修复升级hexo版本到2.3.0后，归档的标题没有显示的问题
 * 1.2.6(2014-1-10) 添加分类目录菜单
+* 1.2.7(2014-5-4) 将读书栏目的书本封面固定宽高并按比例压缩，将详细展开标签置于封面右侧
+* 1.2.8(2014-6-20) 添加MathJax插件
 
 [Hexo]: http://zespia.tw/hexo/
 [主题预览]: http://raytaylorlin.com/
