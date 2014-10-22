@@ -7,6 +7,11 @@
         <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
     </div>
 
+    <div class="toc-wrap">
+        <div class="toc-title">目录</div>
+        <%- toc(item.content) %>
+    </div>
+
     <div class="entry">
         <%- item.content %>
     </div>
