@@ -6,7 +6,7 @@ prev: Prev
 next: Next
 comment: Comments
 archive_a: Archives
-archive_b: Archives: %s
+archive_b: "Archives: %s"
 page: Page %d
 recent_posts: Recent Posts
 blogroll: Links
