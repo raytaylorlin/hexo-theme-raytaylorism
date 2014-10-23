@@ -65,7 +65,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git
 * 1.0.1(2013-8-26) 使页面主内容在高度不够的时候可以自适应屏幕，让页脚沉底
 
 [Hexo]: http://zespia.tw/hexo/
-[主题预览]: http://raytaylorlin.com/
+[主题预览（我的博客）]: http://raytaylorlin.com/
 [Google-code-prettify]: https://code.google.com/p/google-code-prettify/
 [Google Analytics]: http://www.google.com/analytics/
 [Furatto]: http://icalialabs.github.io/furatto/
