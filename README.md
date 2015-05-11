@@ -4,6 +4,8 @@
 
 Raytaylorism is a clean, simple, responsive flat style [Hexo] theme by myself, based on [Furatto] and [Font Awesome]
 
+**Warning: The theme is not supported in Hexo 3.0. Please use Hexo 2.8.x**
+
 [Demo(my own blog in Chinese)]
 
 ## Snapshot
