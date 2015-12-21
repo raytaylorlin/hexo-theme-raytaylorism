@@ -33,11 +33,11 @@ google_plus_url: https://plus.google.com/113216251417550089742?rel=author
 blogrolls:
     - Ray Taylor Lin's Blog: http://raytaylorlin.com/
 
-google_analytics_track_id: UA-43460643-1
-google_analytics_website: http://raytaylorlin.com
+# Google分析track id
+google_analytics:
 
 # 是否开启prettify.js美化代码
 google_code_prettify: true
 # 高亮的主题，若为空则使用默认主题
-google_code_prettify_theme: prettify_raytaylorism
+google_code_prettify_theme:
 rss:

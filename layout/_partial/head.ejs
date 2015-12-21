@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <%
     var title = [];
     if (page.current > 1) title.push(__('page', page.current));
@@ -10,11 +12,12 @@
     if (page.category) title.push(page.category);
     if (page.tag) title.push(page.tag);
     if (page.archive){
-      if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
-      else title.push(__('archive_a'));
+        if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
+        else title.push(__('archive_a'));
     }
     title.push(config.title);
     %>
+
     <title><%= title.join(' | ') %></title>
     <% if (config.author){ %><meta name="author" content="<%= config.author %>"><% } %>
     <% if (page.description){ %>
@@ -27,26 +30,29 @@
     <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
     <% } %>
     <% if (page.keywords){ %><meta name="keywords" content="<%= page.keywords %>"><% } %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
-    <meta property="og:site_name" content="<%= config.meta_title || config.title %>"/>
+    <meta property="og:site_name" content="<%= config.title %>"/>
 
+    <% if(page.cover) { %>
+    <meta property="og:image" content="<%= page.cover %>" />
+    <% } else { %>
+    <meta property="og:image" content="<%= config.cover %>"/>
+    <% } %>
+
+    <link href="<%- config.root %>favicon.png" rel="icon">
     <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
-    <link rel="stylesheet" href="<%- config.root %>css/lib/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="<%- config.root %>css/lib/normalize.css" type="text/css">
-    <link rel="stylesheet" href="<%- config.root %>css/lib/furatto.css" type="text/css">
+    <link rel="stylesheet" href="<%- config.root %>css/lib/material.indigo-green.min.css">
     <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 
-    <% if(theme.google_code_prettify) { 
+    <% if(theme.google_code_prettify) {
         if(theme.google_code_prettify_theme) { %>
         <link rel="stylesheet" href="<%- config.root %>css/lib/<%= theme.google_code_prettify_theme %>.css" type="text/css">
         <% } else { %>
         <link rel="stylesheet" href="<%- config.root %>css/lib/prettify_default.css" type="text/css">
         <% } %>
     <% } %>
-    <link rel="icon" type="image/x-icon" href="<%- config.root %>favicon.ico">
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script src="<%- config.root %>js/jquery-1.10.2.min.js"></script>
-    <script src="<%- config.root %>js/jquery.jpanelmenu.js"></script>
+    <%- partial('google_analytics') %>
 </head>
