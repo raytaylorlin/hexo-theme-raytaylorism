@@ -6,11 +6,11 @@ menu:
     关于: /about
 
 menu_icon:
-    首页: icon-home
-    归档: icon-archive
-    分类: icon-archive
-    读书: icon-book
-    关于: icon-user
+    首页: home
+    归档: archive
+    分类: archive
+    读书: book
+    关于: user
 
 menu_class:
     首页: menu-home

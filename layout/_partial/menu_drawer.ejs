@@ -1,9 +1,11 @@
 <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
+    <span class="mdl-layout-title"><%= config.title %></span>
     <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+        <% for (var i in theme.menu){ %>
+            <a class="mdl-navigation__link" href="<%- theme.menu[i] %>">
+                <i class="material-icons" role="presentation"><%= theme.menu_icon[i] %></i>
+                <%= i %>
+            </a>
+        <% } %>
     </nav>
 </div>
