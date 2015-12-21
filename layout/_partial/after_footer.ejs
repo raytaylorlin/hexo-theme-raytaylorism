@@ -1,6 +1,10 @@
+<script src="<%- config.root %>js/jquery-2.0.3.min.js"></script>
+<script src="<%- config.root %>js/material.min.js"></script>
+
 <%- partial('plugin/google_analytics') %>
 <%- partial('plugin/google_code_prettify') %>
 <%- partial('plugin/mathjax') %>
+
 <script>
     (function($) {
         //当内容区内容不够长时，设置内容区域的高度使footer沉底
@@ -12,7 +16,7 @@
                 footerHeight = Math.floor($('#page-footer').height()),
                 minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
                 if(contentHeight < minHeight) {
-                    $('#content-wrapper').css({height: minHeight});                    
+                    $('#content-wrapper').css({height: minHeight});
                 } else {
                     $('#content-wrapper').css({height: 'auto'});
                 }
@@ -67,7 +71,7 @@
         $(document).ready(resizeContentWrapper);
         $(document).ready(initJPanelMenu);
         $(document).ready(initCategory);
-        
+
         $(window).resize(resizeContentWrapper);
     })(jQuery);
 </script>

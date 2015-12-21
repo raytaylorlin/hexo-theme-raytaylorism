@@ -43,7 +43,7 @@
 
     <link href="<%- config.root %>favicon.png" rel="icon">
     <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
-    <link rel="stylesheet" href="<%- config.root %>css/lib/material.indigo-green.min.css">
+    <link rel="stylesheet" href="<%- config.root %>css/lib/material.min.css">
     <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 
     <% if(theme.google_code_prettify) {
@@ -54,5 +54,4 @@
         <% } %>
     <% } %>
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <%- partial('google_analytics') %>
 </head>
