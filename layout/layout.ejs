@@ -1,15 +1,21 @@
 <%- partial('_partial/head') %>
 
-<body class="container-fluid">
-    <header id="page-header">
-        <%- partial('_partial/header') %>
-    </header>
-    <div id="content-wrapper">
-        <div class="container-center">
-        <%- body %>
+<body>
+    <!-- Sticky footer layout (https://css-tricks.com/snippets/css/sticky-footer/) -->
+    <div class="wrapper">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <%- partial('_partial/header') %>
+            <%- partial('_partial/menu_drawer') %>
+
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    <%- body %>
+                    <%- partial('_partial/footer') %>
+                </div>
+            </main>
         </div>
     </div>
-    <footer id="page-footer"><%- partial('_partial/footer') %></footer>
+
     <%- partial('_partial/after_footer') %>
 </body>
 </html>

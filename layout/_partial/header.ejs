@@ -1,17 +1,44 @@
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Title</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+    </div>
+</header>
+<div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+</div>
+
 <div class="navbar inverse-navbar">
     <div class="navbar-inner">
         <div class="container-center">
-            <a href="/index.html" class="menu-trigger" data-meteocon="M">
+            <a class="menu-trigger" data-meteocon="M" href="/index.html">
                 <i class="icon-reorder"></i>
             </a>
             <div class="nav-collapse navbar-responsive-collapse collapse">
                 <nav id="menu">
                     <ul class="nav">
-                        <li><a class="brand" id="blog-title" href="/index.html"><%= config.title %></a></li>
+                        <li>
+                            <a class="brand" href="/index.html" id="blog-title"><%= config.title %></a>
+                        </li>
                     </ul>
                     <div class="pull-right nav" id="nav-button-group">
                         <% for (var i in theme.menu){ %>
-                            <a href="<%- theme.menu[i] %>" class="<%- theme.menu_class[i] %> btn btn-primary btn-large">
+                            <a class="<%- theme.menu_class[i] %> btn btn-primary btn-large" href="<%- theme.menu[i] %>">
                                 <i class="<%- theme.menu_icon[i] %> icon-white"></i>
                                 <%= i %>
                             </a>

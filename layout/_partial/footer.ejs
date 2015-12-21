@@ -1,32 +1,51 @@
-<div class="footer-content">
-    <div class="container-center">
-        <div class="footer-text pull-left">
-            <div class="copyright">
-                <% if (config.author){ %>
-                Copyright &copy; <%= new Date().getFullYear() %> <a href="<%- config.root %>"><%= config.author %></a>
-                <% } else { %>
-                Copyright &copy; <%= new Date().getFullYear() %> <a href="<%- config.root %>"><%= config.title %></a>
+<footer>
+    <div class="footer-content">
+        <div class="container-center">
+            <div class="footer-text pull-left">
+                <div class="copyright">
+                    <% if (config.author){ %>
+                        Copyright &copy;
+                        <%= new Date().getFullYear() %>
+                        <a href="<%- config.root %>"><%= config.author %></a>
+                    <% } else { %>
+                        Copyright &copy;
+                        <%= new Date().getFullYear() %>
+                        <a href="<%- config.root %>"><%= config.title %></a>
+                    <% } %>
+                </div>
+                <div class="theme-copyright">
+                    <span>Blog powered by
+                        <a href="http://zespia.tw/hexo/zh-CN/">hexo</a>
+                    </span>
+                    Theme
+                    <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a>
+                    desgined by
+                    <strong>Nix</strong>
+                </div>
+            </div>
+            <div class="social-group pull-right">
+                <% if(theme.github_url){ %>
+                    <a href="<%=theme.github_url %>" target="_blank" title="github">
+                        <i class="icon-github"></i>
+                    </a>
+                <% } %>
+                <% if(theme.weibo_url){ %>
+                    <a href="<%= theme.weibo_url %>" target="_blank" title="新浪微博">
+                        <i class="icon-weibo"></i>
+                    </a>
+                <% } %>
+                <% if(theme.renren_url){ %>
+                    <a href="<%=theme.renren_url %>" target="_blank" title="人人网">
+                        <i class="icon-renren"></i>
+                    </a>
+                <% } %>
+                <% if(theme.google_plus_url){ %>
+                    <a href="<%=theme.google_plus_url %>" target="_blank" title="Google+">
+                        <i class="icon-google-plus-sign"></i>
+                    </a>
                 <% } %>
             </div>
-            <div class="theme-copyright">
-                <span>Blog powered by <a href="http://zespia.tw/hexo/zh-CN/">hexo</a></span>
-                Theme <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a> desgined by <strong>Nix</strong>
-            </div>
+            <div class="clearfix"></div>
         </div>
-        <div class="social-group pull-right">
-            <% if(theme.github_url){ %>
-            <a href="<%=theme.github_url %>" target="_blank" title="github"><i class="icon-github"></i></a>
-            <% } %>
-            <% if(theme.weibo_url){ %>
-            <a href="<%= theme.weibo_url %>" target="_blank" title="新浪微博"><i class="icon-weibo"></i></a>
-            <% } %>
-            <% if(theme.renren_url){ %>
-            <a href="<%=theme.renren_url %>" target="_blank" title="人人网"><i class="icon-renren"></i></a>
-            <% } %>
-            <% if(theme.google_plus_url){ %>
-            <a href="<%=theme.google_plus_url %>" target="_blank" title="Google+"><i class="icon-google-plus-sign"></i></a>
-            <% } %>
-        </div>
-        <div class="clearfix"></div>
     </div>
-</div>
+</footer>
