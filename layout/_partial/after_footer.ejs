@@ -8,6 +8,12 @@
 <script>
     (function($) {
         $(document).ready(function() {
+            var $imgs = $('img');
+            $imgs.addClass('materialboxed')
+                .each(function(i, el) {
+                    $(this).attr('data-caption', $(this).attr('alt'));
+                }).materialbox();
+            
             $('.slider').slider({
                 indicators: false,
                 full_width: true
