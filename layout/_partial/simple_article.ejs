@@ -1,4 +1,4 @@
-<article class="row">
+<article class="row simple-article">
     <div class="col s12">
         <div class="card hoverable">
             <div class="card-content">
@@ -7,7 +7,7 @@
                 <% if(showTags) { %>
                     <div class="tags-row">
                         <% item.tags.forEach(function(tag) { %>
-                            <a href="<%= config.root + tag.path %>" class="btn btn-info"><%= tag.name %></a>
+                            <a href="<%= config.root + tag.path %>" class="article-tag teal"><%= tag.name %></a>
                         <% }); %>
                     </div>
                 <% } %>
