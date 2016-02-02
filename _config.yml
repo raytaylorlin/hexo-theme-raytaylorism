@@ -39,5 +39,5 @@ google_analytics:
 # 是否开启prettify.js美化代码
 google_code_prettify: true
 # 高亮的主题，若为空则使用默认主题
-google_code_prettify_theme:
+google_code_prettify_theme: prettify-tomorrow-night-eighties
 rss:

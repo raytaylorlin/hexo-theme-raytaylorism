@@ -8,7 +8,7 @@
 <script>
     (function($) {
         $(document).ready(function() {
-            var $imgs = $('img');
+            var $imgs = $('img').not('.slider-image');
             $imgs.addClass('materialboxed')
                 .each(function(i, el) {
                     $(this).attr('data-caption', $(this).attr('alt'));
