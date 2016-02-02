@@ -8,18 +8,23 @@
 <script>
     (function($) {
         $(document).ready(function() {
+            // 图片缩放效果
             var $imgs = $('img').not('.slider-image');
             $imgs.addClass('materialboxed')
                 .each(function(i, el) {
                     $(this).attr('data-caption', $(this).attr('alt'));
                 }).materialbox();
             
+            // 首页幻灯片
             $('.slider').slider({
                 indicators: false,
                 full_width: true
             });
             
             $(".button-collapse").sideNav();
+            
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').scrollSpy();
         });
     })(jQuery);
 

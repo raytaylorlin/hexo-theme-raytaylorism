@@ -7,10 +7,8 @@
                 </div>
                 <%- partial('post/time') %>
                 <%- partial('post/tag') %>
-                <div class="toc-wrap">
-                    <div class="toc-title">目录</div>
-                    <%- toc(item.content) %>
-                </div>
+                <%- partial('post/tablecontents') %>
+                
 
                 <div class="entry">
                     <%- item.content %>
