@@ -1,3 +1,5 @@
+<%- partial('_partial/slider') %>
+
 <div id="article-list">
     <% page.posts.each(function(item){ %>
         <%- partial('_partial/simple_article', {item: item, index: true, showTags:true, showEntry: true}) %>

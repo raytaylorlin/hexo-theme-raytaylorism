@@ -1,27 +1,23 @@
-<article>
-    <div class="row">
-        <div class="col-2 date-tags">
-            <div class="date-row">
-                <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+<article class="simple-article mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__supporting-text">
+        <h1><%= item.title %></h1>
+        <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+        <% if(showTags) { %>
+            <div class="tags-row">
+            <% item.tags.forEach(function(tag) { %>
+                <a href="<%= config.root + tag.path %>" class="btn btn-info"><%= tag.name %></a>
+            <% }); %>
             </div>
-            <% if(showTags) { %>
-                <div class="tags-row">
-                <% item.tags.forEach(function(tag) { %>
-                    <a href="<%= config.root + tag.path %>" class="btn btn-info"><%= tag.name %></a>
-                <% }); %>
-                </div>
-            <% } %>
-        </div>
-        <div class="col-10">
-            <div class="article-title simple-article-title">
-                <%- partial('post/title') %>
+        <% } %>
+
+        <% if (showEntry && item.excerpt && index) { %>
+            <div class="entry">
+                <%- item.excerpt %>
             </div>
-            <% if (showEntry && item.excerpt && index) { %>
-                <div class="entry">
-                    <%- item.excerpt %>
-                </div>
-            <% } %>
-        </div>
+        <% } %>
     </div>
-    <div class="split-line"></div>
+
+    <div class="mdl-card__actions mdl-card--border">
+        <a href="<%- item.link %>" class="mdl-button mdl-button--colored">READ MORE</a>
+    </div>
 </article>

@@ -1,16 +1,13 @@
 <%- partial('_partial/head') %>
 
-<body>
+<body class="mdl-color--grey-100">
     <div class="wrapper">
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <%- partial('_partial/header') %>
-            <%- partial('_partial/menu_drawer') %>
 
-            <main class="mdl-layout__content">
-                <div class="page-content">
+            <main>
                     <%- body %>
                     <%- partial('_partial/footer') %>
-                </div>
             </main>
         </div>
     </div>

@@ -1,11 +1,22 @@
 <script src="<%- config.root %>js/jquery-2.0.3.min.js"></script>
-<script src="<%- config.root %>js/material.min.js"></script>
+<script src="<%- config.root %>js/materialize.min.js"></script>
 
 <%- partial('plugin/google_analytics') %>
 <%- partial('plugin/google_code_prettify') %>
 <%- partial('plugin/mathjax') %>
 
 <script>
+    (function($) {
+        $(document).ready(function() {
+            $('.slider').slider({
+                indicators: false,
+                full_width: true
+            });
+            
+            $(".button-collapse").sideNav();
+        });
+    })(jQuery);
+
     (function($) {
         //初始化目录按钮事件绑定
         var initCategory = function() {
