@@ -1,23 +1,29 @@
-<article class="simple-article mdl-card mdl-shadow--2dp">
-    <div class="mdl-card__supporting-text">
-        <h1><%= item.title %></h1>
-        <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
-        <% if(showTags) { %>
-            <div class="tags-row">
-            <% item.tags.forEach(function(tag) { %>
-                <a href="<%= config.root + tag.path %>" class="btn btn-info"><%= tag.name %></a>
-            <% }); %>
+<article class="row">
+    <div class="col s12">
+        <div class="card hoverable">
+            <div class="card-content">
+                <h1><%= item.title %></h1>
+                <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+                <% if(showTags) { %>
+                    <div class="tags-row">
+                        <% item.tags.forEach(function(tag) { %>
+                            <a href="<%= config.root + tag.path %>" class="btn btn-info"><%= tag.name %></a>
+                        <% }); %>
+                    </div>
+                <% } %>
+                
+                <% if (showEntry && item.excerpt && index) { %>
+                    <div class="entry">
+                        <%- item.excerpt %>
+                    </div>
+                <% } %>
             </div>
-        <% } %>
-
-        <% if (showEntry && item.excerpt && index) { %>
-            <div class="entry">
-                <%- item.excerpt %>
+            
+            <% if (item.excerpt) { %>
+            <div class="card-action">
+                <a href="<%= item.path %>">READ MORE</a>
             </div>
-        <% } %>
-    </div>
-
-    <div class="mdl-card__actions mdl-card--border">
-        <a href="<%- item.link %>" class="mdl-button mdl-button--colored">READ MORE</a>
+            <% } %>
+        </div>
     </div>
 </article>

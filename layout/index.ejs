@@ -1,7 +1,7 @@
 <%- partial('_partial/slider') %>
 
-<div id="article-list">
-    <% page.posts.each(function(item){ %>
+<div id="article-list" class="container">
+    <% page.posts.each(function(item){ console.log(item);%>
         <%- partial('_partial/simple_article', {item: item, index: true, showTags:true, showEntry: true}) %>
     <% }); %>
 </div>
