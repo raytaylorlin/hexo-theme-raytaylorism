@@ -2,15 +2,11 @@
     <div class="col s12">
         <div class="card hoverable">
             <div class="card-content">
-                <h1><%= item.title %></h1>
-                <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
-                <% if(showTags) { %>
-                    <div class="tags-row">
-                        <% item.tags.forEach(function(tag) { %>
-                            <a href="<%= config.root + tag.path %>" class="article-tag teal"><%= tag.name %></a>
-                        <% }); %>
-                    </div>
-                <% } %>
+                <div class="article-title">
+                    <h1><%= item.title %></h1>
+                </div>
+                <%- partial('post/time') %>
+                <%- partial('post/tag') %>
                 
                 <% if (showEntry && item.excerpt && index) { %>
                     <div class="entry">

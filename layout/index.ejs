@@ -2,7 +2,7 @@
 
 <div id="article-list" class="container">
     <% page.posts.each(function(item){ %>
-        <%- partial('_partial/simple_article', {item: item, index: true, showTags:true, showEntry: true}) %>
+        <%- partial('_partial/simple_article', {item: item, index: true, showEntry: true}) %>
     <% }); %>
 </div>
 <div>

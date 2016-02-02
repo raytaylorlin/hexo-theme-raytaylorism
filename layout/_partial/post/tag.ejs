@@ -1,11 +1,7 @@
 <% if (item.tags && item.tags.length > 0){ %>
-    <%
-        var tags = [];
-        item.tags.forEach(function(tag){
-            tags.push('<a class="btn btn-info" href="' + config.root + tag.path + '">' + tag.name + '</a>');
-        });
-    %>
     <div class="tags-row">
-        标签：<%- tags.join('') %>
+        <% item.tags.forEach(function(tag) { %>
+            <a href="<%= config.root + tag.path %>" class="article-tag teal"><%= tag.name %></a>
+        <% }); %>
     </div>
 <% } %>

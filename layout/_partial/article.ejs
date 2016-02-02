@@ -5,20 +5,21 @@
                 <div class="article-title">
                     <%- partial('post/title') %>
                 </div>
-                     <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
-                 <div class="toc-wrap">
-                     <div class="toc-title">目录</div>
-                     <%- toc(item.content) %>
-                 </div>
-                 
-                 <div class="entry">
-                     <%- item.content %>
-                 </div>
-             </div>
-         </div>
-     </div>
+                <%- partial('post/time') %>
+                <%- partial('post/tag') %>
+                <div class="toc-wrap">
+                    <div class="toc-title">目录</div>
+                    <%- toc(item.content) %>
+                </div>
+
+                <div class="entry">
+                    <%- item.content %>
+                </div>
+            </div>
+        </div>
+    </div>
 </article>
 
 <% if (!extra) { %>
-<%- partial('plugin/comment') %>
+    <%- partial('plugin/comment') %>
 <% } %>
