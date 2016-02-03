@@ -1,14 +1,38 @@
 <%
 var title = '';
-if (page.category) title = '（分类）' + page.category; 
-if (page.tag) title = '（标签）' + page.tag;
+var archiveHtml = null;
+if (page.category) {
+    title = '（分类）'; 
+    archiveHtml = '<a class="breadcrumb" href="' + page.base + '">' + page.category + '</a>';
+}
+if (page.tag) {
+    title = '（标签）';
+    archiveHtml = '<a class="breadcrumb" href="' + page.base + '">' + page.tag + '</a>';
+}
 if (page.archive){
     if (page.year) {
         title = page.year + (page.month ? '/' + page.month : '');
     } else {
-        title = __('archive_a');
+        title = '（归档）';
     }
 }
 %>
 
-<%- partial('pagenav', {nav_head: '当前位置' + title, partial_path: 'post/category'}) %>
+<%- partial('pagenav', {nav_head: '当前位置' + title, partial_path: null, archive_html: archiveHtml}) %>
+
+<% if (pagination == 2){ %>
+    <% page.posts.each(function(item){ %>
+        <%- partial('simple_article', {item: item, index: true, showEntry: false, showTags: false}) %>
+    <% }); %>
+  <%- partial('pagination') %>
+<% } else { %>
+    <div class="collection">
+        <% page.posts.each(function(item) { %>
+            <a href="<%- config.root %><%- item.path %>" class="collection-item">
+                <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                <%- item.title %>
+            </a>
+        <% }); %>
+    </div>
+<% } %>
