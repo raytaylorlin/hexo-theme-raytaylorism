@@ -3,7 +3,7 @@
         <div class="card hoverable">
             <div class="card-content">
                 <div class="article-title">
-                    <h1><%= item.title %></h1>
+                    <a href="<%= item.path %>"><h1><%= item.title %></h1></a>
                 </div>
                 <%- partial('post/time') %>
                 <%- partial('post/tag') %>
