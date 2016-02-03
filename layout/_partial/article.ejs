@@ -8,7 +8,6 @@
                 <%- partial('post/time') %>
                 <%- partial('post/tag') %>
                 <%- partial('post/tablecontents') %>
-                
 
                 <div class="entry">
                     <%- item.content %>
@@ -18,6 +17,4 @@
     </div>
 </article>
 
-<% if (!extra) { %>
-    <%- partial('plugin/comment') %>
-<% } %>
+<%- partial('plugin/comment') %>
