@@ -10,24 +10,5 @@ if (page.archive){
     }
 }
 %>
-<% var prefixTitle = '你当前所在的位置：'; %>
-<h2 class="page-sub-title archive-title"><%= prefixTitle + title %></h2>
 
-<% if (pagination == 2){ %>
-    <% page.posts.each(function(item){ %>
-        <%- partial('simple_article', {item: item, index: true, showEntry: false, showTags: false}) %>
-    <% }); %>
-  <%- partial('pagination') %>
-<% } else { %>
-    <div class="archive">
-        <% for (var i = 0, len = years.length; i < len; i++) { %>
-            <div class="archive-year">
-                <a href="./<%= years[i] %>/"><%= years[i] %></a>
-                <div class="sep"></div>
-            </div>
-        <% page_grouped[years[i]].forEach(function(item){ %>
-            <%- partial('archive_title', {item: item}) %>
-        <% }); %>
-    <% } %>
-    </div>
-<% } %>
+<%- partial('pagenav', {nav_head: '当前位置' + title, partial_path: 'post/category'}) %>

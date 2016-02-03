@@ -1,0 +1,10 @@
+<nav>
+    <div class="nav-wrapper indigo">
+        <div class="col s12">
+            <span class="breadcrumb"><%= nav_head %></span>
+            <% if (partial_path) { %>
+                <%- partial(partial_path) %>
+            <% } %>
+        </div>
+    </div>
+</nav>
