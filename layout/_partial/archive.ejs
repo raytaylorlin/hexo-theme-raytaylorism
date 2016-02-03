@@ -24,9 +24,49 @@ if (page.archive){
     <% page.posts.each(function(item){ %>
         <%- partial('simple_article', {item: item, index: true, showEntry: false, showTags: false}) %>
     <% }); %>
-  <%- partial('pagination') %>
+    <%- partial('pagination') %>
+<% } else if (page.archive) { %>
+    <ul class="collapsible mt-0" data-collapsible="accordion">
+        <% 
+            // 将各年份的文章汇总，数据结构为
+            // [{year: 2016, posts: [item1, item2]}, {year: 2015, posts: [item3, item4, item5]}]
+            var yearPosts = [];
+            page.posts.each(function(item) {
+                var y = item.date.year();
+                var yp;
+                if (yearPosts.length == 0 || yearPosts[yearPosts.length - 1].year != y) {
+                    yp = {
+                        year: y,
+                        posts: [item]
+                    };
+                    yearPosts.push(yp);
+                } else {
+                    yp = yearPosts[yearPosts.length - 1];
+                    yp.posts.push(item);
+                }
+            });
+        %>
+        <% yearPosts.forEach(function(yearPost) { %>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">filter_drama</i><%= yearPost.year + '年' %>
+                </div>
+                <div class="collapsible-body">
+                    <div class="collection">
+                        <% yearPost.posts.forEach(function(item) { %>
+                            <a href="<%- config.root %><%- item.path %>" class="collection-item">
+                                <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                <%- item.title %>
+                            </a>
+                        <% }); %>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
 <% } else { %>
-    <div class="collection">
+    <div class="collection mt-0">
         <% page.posts.each(function(item) { %>
             <a href="<%- config.root %><%- item.path %>" class="collection-item">
                 <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
