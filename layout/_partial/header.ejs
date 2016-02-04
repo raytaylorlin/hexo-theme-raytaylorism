@@ -1,22 +1,24 @@
 <nav class="indigo">
     <div class="nav-wrapper">
-        <a href="/" class="brand-logo hide-on-small-only"><%= config.title %></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse">
-            <i class="material-icons">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-            <% for (var i in theme.menu){ %>
-                <li>
-                    <a href="<%- theme.menu[i] %>"><%= i %></a>
-                </li>
-            <% } %>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-            <% for (var i in theme.menu){ %>
-                <li>
-                    <a href="<%- theme.menu[i] %>"><%= i %></a>
-                </li>
-            <% } %>
-        </ul>
+        <div class="container">
+            <a href="/" class="brand-logo hide-on-small-only"><%= config.title %></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <% for (var i in theme.menu){ %>
+                    <li>
+                        <a href="<%- theme.menu[i] %>"><%= i %></a>
+                    </li>
+                <% } %>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <% for (var i in theme.menu){ %>
+                    <li>
+                        <a href="<%- theme.menu[i] %>"><%= i %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
     </div>
 </nav>
