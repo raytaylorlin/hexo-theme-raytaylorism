@@ -30,6 +30,7 @@ if (page.archive){
         <% 
             // 将各年份的文章汇总，数据结构为
             // [{year: 2016, posts: [item1, item2]}, {year: 2015, posts: [item3, item4, item5]}]
+            var activeFlag = true;
             var yearPosts = [];
             page.posts.each(function(item) {
                 var y = item.date.year();
@@ -48,8 +49,8 @@ if (page.archive){
         %>
         <% yearPosts.forEach(function(yearPost) { %>
             <li>
-                <div class="collapsible-header">
-                    <i class="material-icons">filter_drama</i><%= yearPost.year + '年' %>
+                <div class="collapsible-header <%= activeFlag ? 'active' : '' %><% activeFlag = false; %>">
+                    <i class="material-icons">description</i><%= yearPost.year + '年' %>
                 </div>
                 <div class="collapsible-body">
                     <div class="collection">
