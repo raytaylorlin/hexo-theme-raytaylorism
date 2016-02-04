@@ -1,26 +1,19 @@
 <footer class="page-footer indigo darken-1">
     <div class="container">
         <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <div class="social-group col l3 s12">
+                <h5 class="white-text">社交</h5>
+                <% for (var type in theme.social) { %>
+                    <a class="social-link" href="<%= theme.social[type] %>" target="_blank">
+                        <i class="fa fa-2x fa-<%= type %>"></i>
+                    </a>
+                <% } %>
             </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Link 4</a>
-                    </li>
-                </ul>
+            <div class="col l9 s12">
+                <h5 class="white-text">友情链接</h5>
+                <% for (var name in site.data.link.extern) { %>
+                    <a class="social-link" href="<%= site.data.link.extern[name] %>" target="_blank"><%= name %></a>
+                <% } %>
             </div>
         </div>
     </div>

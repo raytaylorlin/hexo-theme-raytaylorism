@@ -26,8 +26,9 @@ archive_yearly: true
 #     - category
 copyright: © 2016 raytaylorlin.com, All rights reserved.
 
-weibo_url: http://weibo.com/1956184117
-github_url: https://github.com/raytaylorlin
+social:
+  weibo: http://weibo.com/1956184117
+  github: https://github.com/raytaylorlin
 
 disqus_shortname:
 duoshuo_shortname: raytaylorlin

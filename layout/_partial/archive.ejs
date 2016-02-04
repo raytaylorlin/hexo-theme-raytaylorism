@@ -50,7 +50,7 @@ if (page.archive){
         <% yearPosts.forEach(function(yearPost) { %>
             <li>
                 <div class="collapsible-header <%= activeFlag ? 'active' : '' %><% activeFlag = false; %>">
-                    <i class="material-icons">description</i><%= yearPost.year + '年' %>
+                    <i class="fa fa-archive"></i><%= yearPost.year + '年' %>
                 </div>
                 <div class="collapsible-body">
                     <div class="collection">
