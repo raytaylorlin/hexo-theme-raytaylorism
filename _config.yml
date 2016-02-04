@@ -1,7 +1,7 @@
 menu:
     首页: /
     归档: /archives
-    分类: javascript:void(0);
+    分类: javascript:;
     读书: /reading
     关于: /about
 
@@ -27,9 +27,7 @@ archive_yearly: true
 copyright: © 2016 raytaylorlin.com, All rights reserved.
 
 weibo_url: http://weibo.com/1956184117
-renren_url: http://www.renren.com/309069699
 github_url: https://github.com/raytaylorlin
-google_plus_url: https://plus.google.com/113216251417550089742?rel=author
 
 disqus_shortname:
 duoshuo_shortname: raytaylorlin
