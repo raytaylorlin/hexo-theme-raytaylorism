@@ -7,6 +7,7 @@ menu:
     icon: archive
   - text: 分类
     link: javascript:;
+    category: true
     icon: bookmark
   - text: 读书
     link: /book

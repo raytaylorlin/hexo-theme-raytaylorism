@@ -1,9 +1,7 @@
 <script src="<%- config.root %>js/jquery-2.0.3.min.js"></script>
 <script src="<%- config.root %>js/materialize.min.js"></script>
 
-<%- partial('plugin/google_analytics') %>
-<%- partial('plugin/google_code_prettify') %>
-<%- partial('plugin/mathjax') %>
+
 
 <script>
     (function($) {
@@ -22,6 +20,7 @@
             });
             
             $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
             
             // 文章目录
             $('article').not('.simple-article').find('h1').add('h2').add('h3').scrollSpy();
@@ -32,32 +31,32 @@
         //初始化目录按钮事件绑定
         var initCategory = function() {
             function showMainMenu() {
-                var $jPanelMenu = $('#jPanelMenu-menu');
-                $jPanelMenu.find('ul.category-menu').hide();
-                $jPanelMenu.find('ul.main-menu').fadeIn();
+                $('#category-menu').hide();
+                $('Emain-menu').fadeIn();
             }
 
             function showCategoryMenu() {
-                var $jPanelMenu = $('#jPanelMenu-menu');
-                $jPanelMenu.find('ul.main-menu').hide();
-                $jPanelMenu.find('ul.category-menu').fadeIn();
+                $('#main-menu').hide();
+                $('#category-menu').fadeIn();
             }
 
-            $('.menu-category').click(function() {
-                var jPM = $.jPanelMenu({
-                    duration: 500,
-                    beforeOpen: function() {
-                        showCategoryMenu();
-                    },
-                    afterClose: function() {
-                        showMainMenu();
-                    }
-                });
-                if(jPM.isOpen()) {
-                    showCategoryMenu();
-                } else {
-                    jPM.open();
-                }
+            $('.category-menu').click(function() {
+                // $('.button-collapse').first().sideNav('show');
+                // showCategoryMenu();
+                // var jPM = $.jPanelMenu({
+                //     duration: 500,
+                //     beforeOpen: function() {
+                //         showCategoryMenu();
+                //     },
+                //     afterClose: function() {
+                //         showMainMenu();
+                //     }
+                // });
+                // if(jPM.isOpen()) {
+                //     showCategoryMenu();
+                // } else {
+                //     jPM.open();
+                // }
             });
 
             $('.category-menu').on('click', '.btn-back', function() {
@@ -65,10 +64,10 @@
             });
         };
 
-        $(document).ready(resizeContentWrapper);
-        $(document).ready(initJPanelMenu);
         $(document).ready(initCategory);
-
-        $(window).resize(resizeContentWrapper);
     })(jQuery);
 </script>
+
+<%- partial('plugin/google_analytics') %>
+<%- partial('plugin/google_code_prettify') %>
+<%- partial('plugin/mathjax') %>

@@ -10,6 +10,10 @@ img
 
 strong
     font-weight bold
+    
+nav ul
+    a:hover
+        background-color rgba(0, 0, 0, 0)
 
 .card
     margin-top 0
@@ -31,7 +35,12 @@ strong
     
 .mt-0
     margin-top 0
-    
+
+// 将默认的图标字体换为FontAwesome
+.breadcrumb:before
+    content "\f105"
+    font-family: FontAwesome
+
 // FontAwesome
 .fa
     margin-right 5px

@@ -45,3 +45,15 @@ item-height = 48px
         background-size: cover;
 
         margin-bottom: 10px;
+    
+    
+    
+    // 分类目录
+    collapse-base-padding = 15px
+    collapse-step-padding = 15px
+    .collapse-level-0
+        padding-left collapse-base-padding
+    .collapse-level-1
+        padding-left collapse-base-padding + collapse-step-padding * 1
+    .collapse-level-2
+        padding-left collapse-base-padding + collapse-step-padding * 2

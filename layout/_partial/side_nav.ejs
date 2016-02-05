@@ -1,5 +1,5 @@
 <div>
-    <ul class="side-nav" id="mobile-side-nav">
+    <ul class="side-nav" id="main-menu">
         <li class="side-user">
             <div class="row">
                 <div class="col s4">
@@ -14,8 +14,8 @@
             </div>
         </li>
         <% for (var i in theme.menu){ %>
-            <li>
-                <a href="<%= theme.menu[i].link %>">
+            <li class="no-padding">
+                <a class="waves-effect <%= theme.menu[i].class || '' %>" href="<%= theme.menu[i].link %>">
                     <i class="fa fa-<%= theme.menu[i].icon %> "></i>
                     <%= theme.menu[i].text %>
                 </a>
@@ -23,15 +23,12 @@
         <% } %>
     </ul>
 
-    <ul class="nav category-menu hide">
-        <li>
-            <span><a class="brand" href="javascript:void(0);">分类目录</a></span>
-            <span><a class="btn-back brand pull-right" href="javascript:void(0);">
-                <i class="icon-arrow-left"></i>
-            </a></span>
+    <ul class="side-nav collection with-header" id="category-menu">
+        <li class="collection-header">
+            <h5 class="black-text">分类目录</h5>
         </li>
 
-        <% 
+    <% 
         var catTree = {};
 
         site.categories.forEach(function(item) {
@@ -54,36 +51,30 @@
         });
         %>
 
-        <%
-        var walk = function(root, path, depth) {
-            var item;
-        %>
-
             <%
-            for(item in root) {
-                if(item.length > 0 && item != 'posts_num'){
-                    var space = '';
-                    for(i = 0; i < depth; i++) {
-                        space += '--';
-                    } 
+            var walk = function(root, path, depth) {
+                for(var item in root) {
+                    if(item.length > 0 && item != 'posts_num') {
+                        var space = '';
+                        for(i = 0; i < depth; i++) {
+                            space += '--';
+                        }
             %>
 
-            <li collapse-level="<%= depth %>">
-                <a href="<%- config.root %><%- path + item + '/' %>" class="collapse-level-<%= depth %>">
-                    <i class="icon-caret-right"></i>
-                    <%= item + '(' + root[item]['posts_num'] + ')'%>
+            <li class="collection-item no-padding" collapse-level="<%= depth %>">
+                <a class="waves-effect collapse-level-<%= depth %>" href="<%- config.root %><%- path + item %>">
+                    <%= item %> <span class="right"><%= root[item]['posts_num'] %> 篇</span></a>
                 </a>
             </li>
 
-            <%
-                walk(root[item], path + item + '/', depth + 1);
-                }
-            }
-            %>
-
         <%
-        };
+                        walk(root[item], path + item + '/', depth + 1);
+                    }  // if
+                }  // for
+            };  // function work
+            
         walk(catTree, 'categories/', 0);
         %>
+        
     </ul>
 </div>
