@@ -5,7 +5,7 @@
                 <div class="article-title">
                     <a href="<%= item.path %>"><h1><%= item.title %></h1></a>
                 </div>
-                <%- partial('post/time') %>
+                <a href="<%= item.path %>"><%- partial('post/time') %></a>
                 <%- partial('post/tag') %>
                 
                 <% if (showEntry && item.excerpt && index) { %>
