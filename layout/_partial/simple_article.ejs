@@ -3,9 +3,10 @@
         <div class="card hoverable">
             <div class="card-content">
                 <div class="article-title">
-                    <a href="<%= item.path %>"><h1><%= item.title %></h1></a>
+                    <%- partial('post/title') %>
                 </div>
-                <a href="<%= item.path %>"><%- partial('post/time') %></a>
+                
+                <%- partial('post/time') %>
                 <%- partial('post/tag') %>
                 
                 <% if (showEntry && item.excerpt && index) { %>
