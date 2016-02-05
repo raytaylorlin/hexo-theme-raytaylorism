@@ -7,7 +7,9 @@
     (function($) {
         $(document).ready(function() {
             // 图片缩放效果
-            var $imgs = $('img').not('.slider-image').not('.avatar-image');
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image');
+            
+            // 给图片加上点击放大效果（materialbox插件）
             $imgs.addClass('materialboxed')
                 .each(function(i, el) {
                     $(this).attr('data-caption', $(this).attr('alt'));
@@ -21,6 +23,15 @@
             
             $(".button-collapse").sideNav();
             $(".category-menu").sideNav();
+            
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
             
             // 文章目录
             $('article').not('.simple-article').find('h1').add('h2').add('h3').scrollSpy();

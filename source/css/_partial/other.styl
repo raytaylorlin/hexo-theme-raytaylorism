@@ -9,3 +9,47 @@
     
     .btn
         margin-top 20px
+
+// gallery
+article .gallery .control {
+    opacity: 0;
+    transition: 0.3s;
+}
+article .gallery:hover .control {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+article .gallery .prev,
+article .gallery .next {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+article .gallery .prev:before,
+article .gallery .next:before {
+    position: absolute;
+    font: 24px/1 FontAwesome;
+    text-align: center;
+    width: 24px;
+    text-shadow: 0 0 15px rgba(0,0,0,0.5);
+    color: #fff;
+    margin-top: -12px;
+    top: 50%;
+}
+article .gallery .prev {
+    left: 0;
+}
+article .gallery .prev:before {
+    content: '\f053';
+    left: 10px;
+}
+article .gallery .next {
+    right: 0;
+}
+article .gallery .next:before {
+    content: '\f054';
+    right: 10px;
+}

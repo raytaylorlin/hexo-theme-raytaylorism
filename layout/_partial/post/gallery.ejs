@@ -1,15 +1,18 @@
-<div class="gallery">
-  <div class="photoset">
+<div class="gallery carousel carousel-slider">
     <% if (item.photos.length){ %>
       <% item.photos.forEach(function(photo){ %>
-        <img src="<%- photo %>">
+        <span class="carousel-item"><img class="carousel-image" src="<%- photo %>"></span>
       <% }); %>
     <% } else { %>
-      <img src="<%- item.photos %>">
+      <img class="carousel-item" src="<%- item.photos %>">
     <% } %>
-  </div>
   <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
+    <div class="carousel-control prev">
+        <i class="fa fa-left"></i>
+
+    </div>
+    <div class="carousel-control next">
+        <i class="fa fa-right"></i>
+    </div>
   </div>
 </div>

@@ -2,6 +2,10 @@
 <article>
     <div class="card">
         <div class="card-content">
+            <% if (item.photos && item.photos.length) { %>
+                <%- partial('post/gallery') %>
+            <% } %>
+            
             <div class="article-title">
                 <%- partial('post/title') %>
             </div>
