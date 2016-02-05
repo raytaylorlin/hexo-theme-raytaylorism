@@ -1,11 +1,23 @@
-<nav id="jPanelMenu-menu-side">
-    <ul class="nav main-menu">
-        <li><a class="brand" href="index.html"><%= config.title %></a></li>
+<div>
+    <ul class="side-nav" id="mobile-side-nav">
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4">
+                    <img class="avatar-image circle responsive-img" src="<%= theme.user.avatar %>" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper">
+                    <div class="valign">
+                        <p class="name"><%= theme.user.name %></p>
+                        <p class="desc"><%= theme.user.desc %></p>
+                    </div>
+                </div>
+            </div>
+        </li>
         <% for (var i in theme.menu){ %>
             <li>
-                <a href="<%- theme.menu[i] %>" class="<%- theme.menu_class[i] %>">
-                    <i class="<%- theme.menu_icon[i] %> icon-white"></i>
-                    <%= i %>
+                <a href="<%= theme.menu[i].link %>">
+                    <i class="fa fa-<%= theme.menu[i].icon %> "></i>
+                    <%= theme.menu[i].text %>
                 </a>
             </li>
         <% } %>
@@ -74,4 +86,4 @@
         walk(catTree, 'categories/', 0);
         %>
     </ul>
-</nav>
+</div>

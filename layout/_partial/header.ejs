@@ -2,23 +2,20 @@
     <div class="nav-wrapper">
         <div class="container">
             <a href="/" class="brand-logo hide-on-small-only"><%= config.title %></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <a href="#" data-activates="mobile-side-nav" class="button-collapse">
                 <i class="material-icons">menu</i>
             </a>
             <ul class="right hide-on-med-and-down">
                 <% for (var i in theme.menu){ %>
                     <li>
-                        <a href="<%- theme.menu[i] %>"><%= i %></a>
+                        <a href="<%= theme.menu[i].link %>">
+                            <i class="fa fa-<%= theme.menu[i].icon %> "></i>
+                            <%= theme.menu[i].text %>
+                        </a>
                     </li>
                 <% } %>
             </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <% for (var i in theme.menu){ %>
-                    <li>
-                        <a href="<%- theme.menu[i] %>"><%= i %></a>
-                    </li>
-                <% } %>
-            </ul>
+            <%- partial('side_nav') %>
         </div>
     </div>
 </nav>

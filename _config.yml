@@ -1,29 +1,28 @@
 menu:
-    首页: /
-    归档: /archives
-    分类: javascript:;
-    读书: /reading
-    关于: /about
-
-menu_icon:
-    首页: home
-    归档: archive
-    分类: archive
-    读书: book
-    关于: user
-
-menu_class:
-    首页: menu-home
-    归档: menu-archive
-    分类: menu-category
-    读书: menu-reading
-    关于: menu-about
+  - text: 首页
+    link: /
+    icon: home
+  - text: 归档
+    link: /archive
+    icon: archive
+  - text: 分类
+    link: javascript:;
+    icon: bookmark
+  - text: 读书
+    link: /book
+    icon: book
+  - text: 关于
+    link: /about
+    icon: user
 
 excerpt_link: Read More
 archive_yearly: true
 
-# widgets:
-#     - category
+user:
+  name: 林寿山
+  desc: Web前端/游戏开发
+  avatar: http://tp2.sinaimg.cn/1956184117/180/5674436546/1
+  
 copyright: © 2016 raytaylorlin.com, All rights reserved.
 
 social:
