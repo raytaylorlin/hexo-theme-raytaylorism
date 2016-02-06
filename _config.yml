@@ -20,7 +20,7 @@ menu:
 color:
   header: indigo
   footer: indigo
-  page_nav: green
+  page_nav: indigo
   tag: green
   pagination: green
   archive_item: grey
