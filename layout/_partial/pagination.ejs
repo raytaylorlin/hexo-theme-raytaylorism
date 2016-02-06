@@ -1,9 +1,13 @@
-<nav id="pagination">
-  <% if (page.prev){ %>
-    <a href="<%- config.root %><%- page.prev_link %>" class="prev"><%= __('prev') %></a>
-  <% } %>
-  <% if (page.next){ %>
-    <a href="<%- config.root %><%- page.next_link %>" class="next"><%= __('next') %></a>
-  <% } %>
-  <div class="clearfix"></div>
-</nav>
+<ul class="pagination center-align">
+    <li class="<%= page.current === 1 ? 'disabled' : '' %>">
+        <a href="<%- config.root %><%- page.prev_link %>"><i class="fa fa-angle-left"></i></a>
+    </li>
+    
+    <% for (var i = 1; i <= page.total; i++) { %>
+        <li class="<%= page.current == i ? 'active' : 'waves-effect' %>"><a href="<%= i == 1 ? '/' : '/page/' + i %>"><%= i %></a></li>
+    <% } %>
+    
+    <li class="<%= page.next_link === '' ? 'disabled' : '' %>">
+        <a href="<%- config.root %><%- page.next_link %>"><i class="fa fa-angle-right"></i></a>
+    </li>
+ </ul>
