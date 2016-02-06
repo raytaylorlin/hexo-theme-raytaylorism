@@ -3,14 +3,14 @@ menu:
     link: /
     icon: home
   - text: 归档
-    link: /archive
+    link: /archives
     icon: archive
   - text: 分类
     link: javascript:;
     category: true
     icon: bookmark
   - text: 读书
-    link: /book
+    link: /reading
     icon: book
   - text: 关于
     link: /about
