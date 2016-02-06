@@ -1,7 +1,7 @@
 <footer class="page-footer indigo darken-1">
     <div class="container">
         <div class="row">
-            <div class="social-group col l3 s12">
+            <div class="social-group col m3 s12">
                 <h5 class="white-text">社交</h5>
                 <% for (var type in theme.social) { %>
                     <a class="social-link" href="<%= theme.social[type] %>" target="_blank">
@@ -9,7 +9,7 @@
                     </a>
                 <% } %>
             </div>
-            <div class="col l9 s12">
+            <div class="col m9 s12">
                 <h5 class="white-text">友情链接</h5>
                 <% for (var name in site.data.link.extern) { %>
                     <a class="social-link" href="<%= site.data.link.extern[name] %>" target="_blank"><%= name %></a>
