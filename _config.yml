@@ -16,6 +16,18 @@ menu:
     link: /about
     icon: user
 
+# 颜色配置
+color:
+  header: indigo
+  footer: indigo
+  page_nav: green
+  tag: green
+  pagination: green
+  archive_item: grey
+  fab: green
+  fab_2: blue
+  fab_3: orange
+
 excerpt_link: Read More
 archive_yearly: true
 

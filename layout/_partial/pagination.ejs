@@ -4,7 +4,7 @@
     </li>
     
     <% for (var i = 1; i <= page.total; i++) { %>
-        <li class="<%= page.current == i ? 'active' : 'waves-effect' %>"><a href="<%= i == 1 ? '/' : '/page/' + i %>"><%= i %></a></li>
+        <li class="<%= page.current == i ? 'active ' + theme.color.pagination : 'waves-effect' %>"><a href="<%= i == 1 ? '/' : '/page/' + i %>"><%= i %></a></li>
     <% } %>
     
     <li class="<%= page.next_link === '' ? 'disabled' : '' %>">
