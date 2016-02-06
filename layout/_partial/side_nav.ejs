@@ -15,7 +15,7 @@
         </li>
         <% for (var i in theme.menu){ %>
             <li class="no-padding">
-                <a class="waves-effect <%= theme.menu[i].class || '' %>" href="<%= theme.menu[i].link %>">
+                <a class="waves-effect <%= theme.menu[i].category ? 'category-menu' : '' %>" href="<%= theme.menu[i].link %>" <% if (theme.menu[i].category) { %>data-activates="category-menu" <% } %>>
                     <i class="fa fa-<%= theme.menu[i].icon %> "></i>
                     <%= theme.menu[i].text %>
                 </a>

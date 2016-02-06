@@ -42,46 +42,6 @@
             });
         });
     })(jQuery);
-
-    (function($) {
-        //初始化目录按钮事件绑定
-        var initCategory = function() {
-            function showMainMenu() {
-                $('#category-menu').hide();
-                $('Emain-menu').fadeIn();
-            }
-
-            function showCategoryMenu() {
-                $('#main-menu').hide();
-                $('#category-menu').fadeIn();
-            }
-
-            $('.category-menu').click(function() {
-                // $('.button-collapse').first().sideNav('show');
-                // showCategoryMenu();
-                // var jPM = $.jPanelMenu({
-                //     duration: 500,
-                //     beforeOpen: function() {
-                //         showCategoryMenu();
-                //     },
-                //     afterClose: function() {
-                //         showMainMenu();
-                //     }
-                // });
-                // if(jPM.isOpen()) {
-                //     showCategoryMenu();
-                // } else {
-                //     jPM.open();
-                // }
-            });
-
-            $('.category-menu').on('click', '.btn-back', function() {
-                showMainMenu();
-            });
-        };
-
-        $(document).ready(initCategory);
-    })(jQuery);
 </script>
 
 <%- partial('plugin/google_analytics') %>
