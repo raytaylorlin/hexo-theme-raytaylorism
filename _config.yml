@@ -24,6 +24,7 @@ color:
   tag: green
   pagination: green
   archive_item: grey
+  readmore: blue
   fab: green
   fab_2: blue
   fab_3: orange
@@ -48,4 +49,3 @@ google_analytics:
 google_code_prettify: true
 # 高亮的主题，若为空则使用默认主题
 google_code_prettify_theme: prettify-tomorrow-night-eighties
-rss:
