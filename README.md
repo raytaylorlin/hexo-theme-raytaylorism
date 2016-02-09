@@ -25,15 +25,26 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git themes/ray
 
 1. 修改 `_config.yml` 中的`theme`一项的值为`raytaylorism`
 2. 由于本主题使用了[Data Files]数据文件，所以**请复制`yourblog/themes/raytaylorism/_data`文件夹到`yourblog/source`目录下**，否则在启动server时会报错
-3. 
+3. 在你的`yourblog/_config.yml`配置文件的`#pagination`的位置添加下面配置（禁用归档、标签、目录页面的分页功能）
+
+```
+archive_generator:
+  per_page: 0
+tag_generator:
+  per_page: 0
+category_generator:
+  per_page: 0
+```
 
 ## 配置指南（重要）
 
-* 主题颜色配置：如果对主题的配色不满意，可以自行在`yourblog/themes/raytaylorism/_config.yml`中的`color`一项进行配置。其中各部件的颜色字符串命名遵循[Google Material Design色板]规范。
-* 外部链接：在`yourblog/source/_data/link.json`数据文件中进行配置
+* **主题颜色配置**：如果对主题的配色不满意，可以自行在`yourblog/themes/raytaylorism/_config.yml`中的`color`一项进行配置。其中各部件的颜色字符串命名遵循[Google Material Design色板]规范。
+* **外部链接**：在`yourblog/source/_data/link.json`数据文件中进行配置
     * 社交平台：对应`social`项，预设有`weibo`和`github`两种，如果需要其他社交平台可自行追加，但要注意**key值必须与[Font Awesome图标]相对应，否则可能无法正常显示**。
     * 友情链接：对应`extern`项，其中key值为链接文字，value值为外链URL
-* 首页幻灯片：在`yourblog/source/_data/slider.json`数据文件中进行配置。可以配置背景图、标题、副标题、对齐方式。如果不需要幻灯片，直接把`slider.json`删除即可。
+* **首页幻灯片**：在`yourblog/source/_data/slider.json`数据文件中进行配置。可以配置背景图、标题、副标题、对齐方式。如果不需要幻灯片，直接把`slider.json`删除即可。
+* **代码语法高亮**：语法高亮的主题默认由CSS文件`yourblog/themes/raytaylorism/source/css/lib/prettify-tomorrow-night-eighties.css`。如果需要替换，可以到[Prettify Theme]选择你喜欢的主题，下载主题的CSS文件并存放到相同的目录下，并将`yourblog/themes/raytaylorism/_config.yml`中的`google_code_prettify_theme`一项改为对应的文件名。
+* **评论**：评论插件默认使用[多说]，需要自行配置`yourblog/themes/raytaylorism/_config.yml`中的`duoshuo_shortname`为你自己站点的shortname
 
 ## 使用的插件
 
@@ -77,12 +88,12 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git themes/ray
 
 [Hexo]: http://hexo.io/
 [我的博客]: http://raytaylorlin.com/
-[Google Material Design色板]： https://www.google.com/design/spec/style/color.html#color-color-palette
+[Google Material Design色板]: https://www.google.com/design/spec/style/color.html#color-color-palette
 [Font Awesome图标]: https://fortawesome.github.io/Font-Awesome/icons/
+[Prettify Theme]: http://jmblog.github.io/color-themes-for-google-code-prettify/
 [Materialize]: http://materializecss.com/
 [Google-code-prettify]: https://code.google.com/p/google-code-prettify/
 [Google Analytics]: http://www.google.com/analytics/
 [Furatto]: http://icalialabs.github.io/furatto/
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
 [多说]: http://duoshuo.com/
-[jQuery.jPanelMenu.js]: http://jpanelmenu.com/
