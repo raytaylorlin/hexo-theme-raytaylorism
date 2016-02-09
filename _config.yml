@@ -24,6 +24,7 @@ color:
   tag: green
   pagination: green
   archive_item: grey
+  readmore: blue
   fab: green
   fab_2: blue
   fab_3: orange
