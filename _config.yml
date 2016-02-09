@@ -49,4 +49,3 @@ google_analytics:
 google_code_prettify: true
 # 高亮的主题，若为空则使用默认主题
 google_code_prettify_theme: prettify-tomorrow-night-eighties
-rss:

@@ -1,7 +1,8 @@
 {
     "social": {
         "weibo": "http://weibo.com/1956184117",
-        "github": "https://github.com/raytaylorlin"
+        "github": "https://github.com/raytaylorlin",
+		"rss": "/atom.xml"
     },
     "extern": {
 	    "土土哥的技术博客": "http://tutuge.me/",
