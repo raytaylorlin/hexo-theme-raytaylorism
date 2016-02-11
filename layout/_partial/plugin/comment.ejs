@@ -11,7 +11,7 @@
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="<%= item.slug.substr(item.slug.lastIndexOf('/') + 1) %>" data-title="<%= item.title %>"></div>
+                <div class="ds-thread" data-thread-key="<%= item.slug.substr(item.slug.lastIndexOf('/') + 1) %>" data-title="<%= item.title %>" data-url="<%= config.url + '/' + item.path %>"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));
