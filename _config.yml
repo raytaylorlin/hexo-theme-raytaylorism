@@ -23,6 +23,7 @@ color:
   page_nav: indigo
   tag: green
   pagination: green
+  tab: green
   archive_item: grey
   readmore: blue
   fab: green
