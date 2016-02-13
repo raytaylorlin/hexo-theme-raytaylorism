@@ -1,82 +1,27 @@
-.reading-page ul
-    list-style none
-    margin 0
-
-.reading-page ul>li
-    display inline-block
-    margin 5px 20px 0 0
-
 .book-item
+    display inline-block
     position relative
 
-.book-item .book-item-head img
-    max-width book-width
-    max-height book-height
+    img
+        padding 0
+        transition all 0.3s ease-out
 
-.book-item:hover .book-item-body
-    opacity 1
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    -webkit-transition: -webkit-transform 0.4s, opacity 0.3s;
-    -moz-transition: -moz-transform 0.4s, opacity 0.3s;
-    transition: transform 0.4s, opacity 0.3s;
+    &:hover img
+        transform scale(1.05)
 
-.book-item .book-cover span
-    width: book-width;
-    height: book-height;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+    .card-content
+        padding 15px
 
-    max-width: 98%;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    background: #fff;
-    -webkit-box-shadow: 0 0 8px #aaa;
-    box-shadow: 0 0 8px #aaa;
+        .card-title
+            line-height initial
+            font-size 1.4em
 
-.book-item-body
-    position absolute
-    top 0
-    left 0
-    margin-left book-width
-    padding 10px
-    background #2c3e50
-    min-height 320px
-    min-width 360px
-    z-index 2
+    .card.small
+        .card-image
+            min-height 70%
+            max-height 70%
+        .card-content
+            max-height 30%
 
-    opacity 0
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: rotateY(-90deg);
-    -moz-transform: rotateY(-90deg);
-    transform: rotateY(-90deg);
-    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
-    -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
-    transition: transform 0.4s, opacity 0.1s 0.3s;
-
-.book-item-body p
-    color #fff
-    font-size 0.9em
-    margin-bottom 0
-
-.book-item-body .book-title
-    color #3498db
-    margin-bottom 10px
-    font-size 1.2em
-
-.book-item-body .book-score
-    color #2ecc71
-    margin-bottom 20px
-
-.book-item-body .btn-to-douban
-    position absolute
-    right 0
-    bottom 0
-    margin 15px
+    .external-link
+        font-size 1.2em

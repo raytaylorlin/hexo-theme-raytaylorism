@@ -2,19 +2,24 @@ menu:
   - text: 首页
     link: /
     icon: home
+    class: menu-home
   - text: 归档
     link: /archives
     icon: archive
+    class: menu-archive
   - text: 分类
     link: javascript:;
     category: true
     icon: bookmark
+    class: menu-category
   - text: 读书
     link: /reading
     icon: book
+    class: menu-reading
   - text: 关于
     link: /about
     icon: user
+    class: menu-about
 
 # 颜色配置
 color:
@@ -23,11 +28,13 @@ color:
   page_nav: indigo
   tag: green
   pagination: green
+  tab: green
   archive_item: grey
   readmore: blue
   fab: green
   fab_2: blue
   fab_3: orange
+  new: pink
 
 excerpt_link: Read More
 archive_yearly: true
@@ -36,16 +43,17 @@ user:
   name: 林寿山
   desc: Web前端/游戏开发
   avatar: http://tp2.sinaimg.cn/1956184117/180/5674436546/1
-  
+
 copyright: © 2016 raytaylorlin.com, All rights reserved.
 
 disqus_shortname:
 duoshuo_shortname: raytaylorlin
 
-# Google分析track id
+# Google分析track id，若为空则不启用
 google_analytics:
 
-# 是否开启prettify.js美化代码
-google_code_prettify: true
 # 高亮的主题，若为空则使用默认主题
-google_code_prettify_theme: prettify-tomorrow-night-eighties
+google_code_prettify: prettify-tomorrow-night-eighties
+
+# 是否启用MathJax数学公式渲染。如果你确认整个站点的博文都不会用到Latex数学公式，可以将其该项设为false提高页面加载速度
+mathjax: true

@@ -15,7 +15,7 @@
         </li>
         <% for (var i in theme.menu){ %>
             <li class="no-padding">
-                <a class="waves-effect <%= theme.menu[i].category ? 'category-menu' : '' %>" href="<%= theme.menu[i].link %>" <% if (theme.menu[i].category) { %>data-activates="category-menu" <% } %>>
+                <a class="waves-effect <%= theme.menu[i].class %> <%= theme.menu[i].category ? 'category-menu' : '' %>" href="<%= theme.menu[i].link %>" <% if (theme.menu[i].category) { %>data-activates="category-menu" <% } %>>
                     <i class="fa fa-<%= theme.menu[i].icon %> "></i>
                     <%= theme.menu[i].text %>
                 </a>
@@ -28,7 +28,7 @@
             <h5 class="black-text">分类目录</h5>
         </li>
 
-    <% 
+    <%
         var catTree = {};
 
         site.categories.forEach(function(item) {
@@ -62,7 +62,7 @@
             %>
 
             <li class="collection-item no-padding" collapse-level="<%= depth %>">
-                <a class="waves-effect collapse-level-<%= depth %>" href="<%- config.root %><%- path + item %>">
+                <a class="waves-effect collapse-level-<%= depth %>" href="<%- config.root %><%- path + item %>/">
                     <%= item %> <span class="right"><%= root[item]['posts_num'] %> 篇</span></a>
                 </a>
             </li>
@@ -72,9 +72,9 @@
                     }  // if
                 }  // for
             };  // function work
-            
+
         walk(catTree, 'categories/', 0);
         %>
-        
+
     </ul>
 </div>

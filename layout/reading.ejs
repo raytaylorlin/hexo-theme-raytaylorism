@@ -1,5 +1,54 @@
-<% var item = page; %>
+<% var readingData = site.data.reading;
+    var tabCount = Object.keys(readingData.define).length;
+%>
 
 <div class="container main-container">
-    <%- partial('_partial/construction') %>
+    <% if (readingData) { %>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <% for (var key in readingData.define) { %>
+                        <li class="tab col s<%= 12 / tabCount %> ">
+                            <a class="<%= theme.color.tab %>-text " href="#<%= key %>"><%= readingData.define[key] + '(' + readingData.contents[key].length + ')'%></a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <% for (var key in readingData.contents) { %>
+                <div id="<%= key %>" class="col s12" style="margin-top: 20px;">
+                    <% var bookList = readingData.contents[key]; %>
+                    <% for (var i in bookList) { %>
+                        <div class="book-item col s12 m4">
+                            <div class="card small hoverable">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="card-cover-image activator" src="<%= bookList[i].cover %>">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title truncate activator grey-text text-darken-4"><%= bookList[i].title %>
+                                    </span>
+                                    <p>评分：<%= bookList[i].score || '暂无' %>
+                                        <a class="external-link right" href="<%= bookList[i].doubanLink %>" target="_blank">
+
+                                            <i class="fa fa-external-link"></i>
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">
+                                        简评
+                                        <i class="fa fa-times-circle-o right"></i>
+                                    </span>
+
+                                    <p><%= bookList[i].review %></p>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+        </div>
+    <% } else { %>
+        <%- partial('_partial/construction') %>
+    <% } %>
 </div>
