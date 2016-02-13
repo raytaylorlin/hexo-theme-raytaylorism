@@ -24,7 +24,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git themes/ray
 ## 启用（重要）
 
 1. 修改 `_config.yml` 中的`theme`一项的值为`raytaylorism`
-2. 由于本主题使用了[Data Files]数据文件，所以**请复制`yourblog/themes/raytaylorism/_data`文件夹到`yourblog/source`目录下**，否则在启动server时会报错
+2. 由于本主题使用了[Data Files]数据文件，所以**请复制`yourblog/themes/raytaylorism/_data`文件夹到`yourblog/source`目录下**，否则在启动server时可能会报错
 3. 在你的`yourblog/_config.yml`配置文件的`#pagination`的位置添加下面配置（禁用归档、标签、目录页面的分页功能）
 
 ```
@@ -38,12 +38,21 @@ category_generator:
 
 ## 配置指南（重要）
 
+### 样式
+
 * **主题颜色配置**：如果对主题的配色不满意，可以自行在`yourblog/themes/raytaylorism/_config.yml`中的`color`一项进行配置。其中各部件的颜色字符串命名遵循[Google Material Design色板]规范。
+
+### 数据
+
 * **外部链接**：在`yourblog/source/_data/link.json`数据文件中进行配置
     * 社交平台：对应`social`项，预设有`weibo`和`github`两种，如果需要其他社交平台可自行追加，但要注意**key值必须与[Font Awesome图标]相对应，否则可能无法正常显示**。
     * 友情链接：对应`extern`项，其中key值为链接文字，value值为外链URL
 * **首页幻灯片**：在`yourblog/source/_data/slider.json`数据文件中进行配置。可以配置背景图、标题、副标题、对齐方式。如果不需要幻灯片，直接把`slider.json`删除即可。
+* **读书页面**：在`yourblog/source/_data/reading.json`数据文件中进行配置。读书页面有“已读”“在读”和“想读”三栏，分别对应`contents`项中的`readed`、`reading`和`wanted`字段，每个字段对应一个书籍列表，按照例子进行修改即可。
 * **侧滑栏头部**：在`yourblog/themes/raytaylorism/_config.yml`中的`user`一项配置移动端的侧滑栏头部样式和文字。
+
+### 插件
+
 * **代码语法高亮**：语法高亮的主题默认由CSS文件`yourblog/themes/raytaylorism/source/css/lib/prettify-tomorrow-night-eighties.css`。如果需要替换，可以到[Prettify Theme]选择你喜欢的主题，下载主题的CSS文件并存放到相同的目录下，并将`yourblog/themes/raytaylorism/_config.yml`中的`google_code_prettify_theme`一项改为对应的文件名。
 * **评论**：评论插件默认使用[多说]，需要自行配置`yourblog/themes/raytaylorism/_config.yml`中的`duoshuo_shortname`为你自己站点的shortname
 * **RSS**：安装[hexo-generator-feed]，并按照说明配置（`atom.xml`的链接写在`yourblog/source/_data/link.json`的social项中，一般无需更改）
