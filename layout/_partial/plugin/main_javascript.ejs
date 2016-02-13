@@ -1,3 +1,4 @@
+<script>
 (function($) {
     $(document).ready(function() {
         // 图片缩放效果
@@ -48,5 +49,9 @@
             $(this).toggleClass('text-lighten-4');
         });
         $('.indicator').addClass('<%= theme.color.tab %> lighten-2');
+
+        // 添加new标签
+        $('<%= site.data.hint.new.selector.join(',') %>').append('<span class="new badge <%= theme.color.new %>"></span>');
     });
 })(jQuery);
+</script>

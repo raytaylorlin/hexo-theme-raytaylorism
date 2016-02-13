@@ -2,19 +2,24 @@ menu:
   - text: 首页
     link: /
     icon: home
+    class: menu-home
   - text: 归档
     link: /archives
     icon: archive
+    class: menu-archive
   - text: 分类
     link: javascript:;
     category: true
     icon: bookmark
+    class: menu-category
   - text: 读书
     link: /reading
     icon: book
+    class: menu-reading
   - text: 关于
     link: /about
     icon: user
+    class: menu-about
 
 # 颜色配置
 color:
@@ -29,6 +34,7 @@ color:
   fab: green
   fab_2: blue
   fab_3: orange
+  new: pink
 
 excerpt_link: Read More
 archive_yearly: true

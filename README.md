@@ -49,6 +49,7 @@ category_generator:
     * 友情链接：对应`extern`项，其中key值为链接文字，value值为外链URL
 * **首页幻灯片**：在`yourblog/source/_data/slider.json`数据文件中进行配置。可以配置背景图、标题、副标题、对齐方式。如果不需要幻灯片，直接把`slider.json`删除即可。
 * **读书页面**：在`yourblog/source/_data/reading.json`数据文件中进行配置。读书页面有“已读”“在读”和“想读”三栏，分别对应`contents`项中的`readed`、`reading`和`wanted`字段，每个字段对应一个书籍列表，按照例子进行修改即可。
+* **new标签**：在`yourblog/source/_data/hint.json`数据文件中进行配置。`selector`项是一个数组，里面可以包含若干个CSS选择器用于选择要添加new标签的DOM元素。
 * **侧滑栏头部**：在`yourblog/themes/raytaylorism/_config.yml`中的`user`一项配置移动端的侧滑栏头部样式和文字。
 
 ### 插件
