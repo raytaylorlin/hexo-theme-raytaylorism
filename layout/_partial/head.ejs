@@ -47,12 +47,10 @@
     <link rel="stylesheet" href="<%- config.root %>css/lib/font-awesome.min.css">
     <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 
-    <% if(theme.google_code_prettify) {
-        if(theme.google_code_prettify_theme) { %>
-        <link rel="stylesheet" href="<%- config.root %>css/lib/<%= theme.google_code_prettify_theme %>.css" type="text/css">
-        <% } else { %>
+    <% if (theme.google_code_prettify) { %>
+        <link rel="stylesheet" href="<%- config.root %>css/lib/<%= theme.google_code_prettify %>.css" type="text/css">
+    <% } else { %>
         <link rel="stylesheet" href="<%- config.root %>css/lib/prettify_default.css" type="text/css">
-        <% } %>
     <% } %>
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
