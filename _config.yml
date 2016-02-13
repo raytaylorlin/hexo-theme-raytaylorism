@@ -48,3 +48,6 @@ google_analytics:
 
 # 高亮的主题，若为空则使用默认主题
 google_code_prettify: prettify-tomorrow-night-eighties
+
+# 是否启用MathJax数学公式渲染。如果你确认整个站点的博文都不会用到Latex数学公式，可以将其该项设为false提高页面加载速度
+mathjax: true
