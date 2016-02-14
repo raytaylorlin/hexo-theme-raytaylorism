@@ -2,15 +2,18 @@
     "image": "http://lorempixel.com/580/250/nature/1",
     "align": "center",
     "title": "This is our big Tagline!",
-    "subtitle": "Here's our small slogan."
+    "subtitle": "Here's our small slogan.",
+	"link": "/"
 }, {
     "image": "http://lorempixel.com/580/250/nature/2",
     "align": "left",
     "title": "Left Aligned Caption",
-    "subtitle": "Here's our small slogan."
+    "subtitle": "Here's our small slogan.",
+	"link": null
 }, {
     "image": "http://lorempixel.com/580/250/nature/3",
     "align": "right",
     "title": "Right Aligned Caption",
-    "subtitle": "Here's our small slogan."
+    "subtitle": "Here's our small slogan.",
+	"link": null
 }]
