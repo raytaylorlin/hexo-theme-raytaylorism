@@ -1,13 +1,15 @@
 <%- partial('_partial/head') %>
 
 <body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
     <%- partial('_partial/header') %>
     <main>
         <%- body %>
         <%- partial('_partial/float') %>
     </main>
     <%- partial('_partial/footer') %>
-    
+
     <%- partial('_partial/after_footer') %>
 </body>
 </html>
