@@ -2,7 +2,7 @@
     position fixed
     right 45px
     bottom 50px
-    
+
     @media only screen and (max-width: 600px)
         right 10px
         bottom 15px
@@ -10,7 +10,7 @@
 .construction-container
     display inline-block
     margin-top 40px
-    
+
     .btn
         margin-top 20px
 
@@ -63,4 +63,31 @@ article .gallery .next {
 article .gallery .next:before {
     content: '\f054';
     right: 10px;
+}
+
+// 无JS（一般是微信页）的样式
+.noscript
+    background rgba(0, 0, 0, 0.5)
+    position fixed
+    left 0
+    top 0
+    width 100%
+    z-index 9999
+
+    animation-duration: 6s;
+    animation-name: noscript-slide;
+
+    p
+        margin 0
+        padding 0 30px
+        color white
+
+@keyframes noscript-slide {
+    50% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0;
+    }
 }
