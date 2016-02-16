@@ -7,10 +7,10 @@ raytaylorism（Ray Taylor主义）是我自己设计并制作的一款清新的�
 ## 预览
 
 * [我的博客]
-* [主题截图1](http://raytaylorlin-blog.qiniudn.com/%E4%B8%BB%E9%A2%98%E6%88%AA%E5%9B%BE1.jpg)
-* [主题截图2](http://raytaylorlin-blog.qiniudn.com/%E4%B8%BB%E9%A2%98%E6%88%AA%E5%9B%BE2.jpg)
-* [主题截图3](http://raytaylorlin-blog.qiniudn.com/%E4%B8%BB%E9%A2%98%E6%88%AA%E5%9B%BE3.jpg)
-* [主题截图4](http://raytaylorlin-blog.qiniudn.com/%E4%B8%BB%E9%A2%98%E6%88%AA%E5%9B%BE4.jpg)
+* [主题截图1](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot1.jpg)
+* [主题截图2](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot2.jpg)
+* [主题截图3](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot3.jpg)
+* [主题截图4](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot4.jpg)
 
 ## 安装
 
@@ -41,6 +41,8 @@ category_generator:
 ### 样式
 
 * **主题颜色配置**：如果对主题的配色不满意，可以自行在`yourblog/themes/raytaylorism/_config.yml`中的`color`一项进行配置。其中各部件的颜色字符串命名遵循[Google Material Design色板]规范。
+* **页面标题**：在`yourblog/_config.yml`中，`title`项决定了页面header中显示的标题，`subtitle`决定了浏览器的`<title>`标签内容。
+* **favicon**：请将`yourblog/themes/raytaylorism/source/favicon.png`替换为你自己的图标文件，**保持`favicon.png`命名不变**。
 
 ### 数据
 
