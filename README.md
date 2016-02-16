@@ -103,6 +103,7 @@ category_generator:
 
 [Hexo]: http://hexo.io/
 [我的博客]: http://raytaylorlin.com/
+[Data Files]: https://hexo.io/docs/data-files.html
 [Google Material Design色板]: https://www.google.com/design/spec/style/color.html#color-color-palette
 [Font Awesome图标]: https://fortawesome.github.io/Font-Awesome/icons/
 [Prettify Theme]: http://jmblog.github.io/color-themes-for-google-code-prettify/
