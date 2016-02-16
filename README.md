@@ -7,10 +7,10 @@ raytaylorism（Ray Taylor主义）是我自己设计并制作的一款清新的�
 ## 预览
 
 * [我的博客]
-* [主题截图1](http://raytaylorlin-blog.qiniudn.com/%E4%B8%BB%E9%A2%98%E6%88%AA%E5%9B%BE1.jpg)
-* [主题截图2](http://raytaylorlin-blog.qiniudn.com/%E4%B8%BB%E9%A2%98%E6%88%AA%E5%9B%BE2.jpg)
-* [主题截图3](http://raytaylorlin-blog.qiniudn.com/%E4%B8%BB%E9%A2%98%E6%88%AA%E5%9B%BE3.jpg)
-* [主题截图4](http://raytaylorlin-blog.qiniudn.com/%E4%B8%BB%E9%A2%98%E6%88%AA%E5%9B%BE4.jpg)
+* [主题截图1](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot1.jpg)
+* [主题截图2](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot2.jpg)
+* [主题截图3](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot3.jpg)
+* [主题截图4](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot4.jpg)
 
 ## 安装
 
@@ -103,6 +103,7 @@ category_generator:
 
 [Hexo]: http://hexo.io/
 [我的博客]: http://raytaylorlin.com/
+[Data Files]: https://hexo.io/docs/data-files.html
 [Google Material Design色板]: https://www.google.com/design/spec/style/color.html#color-color-palette
 [Font Awesome图标]: https://fortawesome.github.io/Font-Awesome/icons/
 [Prettify Theme]: http://jmblog.github.io/color-themes-for-google-code-prettify/
