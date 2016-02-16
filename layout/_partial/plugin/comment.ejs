@@ -1,6 +1,12 @@
 <%
 var pageUrl = config.url + '/' + page.path;
-var pageId = page.slug.substr(page.slug.lastIndexOf('/') + 1);
+if (typeof page_id !== 'undefined') {
+    var pageId = page_id;
+} else if (typeof page.slug !== 'undefined') {
+    var pageId = page.slug.substr(page.slug.lastIndexOf('/') + 1);
+} else {
+    var pageId = page.title;
+}
 %>
 
 <% if (theme.disqus_shortname && page.comments){ %>
