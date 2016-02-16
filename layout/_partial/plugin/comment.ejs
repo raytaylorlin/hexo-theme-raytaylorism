@@ -1,22 +1,39 @@
+<%
+var pageUrl = config.url + '/' + page.path;
+var pageId = page.slug.substr(page.slug.lastIndexOf('/') + 1);
+%>
+
 <% if (theme.disqus_shortname && page.comments){ %>
     <section id="comment">
-        <div id="disqus_thread">
-            <noscript>Please enable JavaScript to view the
-                <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
-        </div>
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function() {
+                this.page.url = '<%= pageUrl %>';
+                this.page.identifier = '<%= pageId %>';
+            };
+            (function() {
+                var d = document,
+                    s = d.createElement('script');
+                s.src = '//<%= theme.disqus_shortname %>disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+        </noscript>
     </section>
 <% } else if (theme.duoshuo_shortname && page.comments){ %>
     <section id="comment">
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="<%= item.slug.substr(item.slug.lastIndexOf('/') + 1) %>" data-title="<%= item.title %>" data-url="<%= config.url + '/' + item.path %>"></div>
+                <div class="ds-thread" data-thread-key="<%= pageId %>" data-title="<%= page.title %>" data-url="<%= pageUrl %>"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));
                     var duoshuoQuery = {
-                        short_name: "<%= theme.duoshuo_shortname %>"
+                        short_name: '<%= theme.duoshuo_shortname %>'
                     };
                     (function() {
                         var ds = document.createElement('script');
