@@ -1,5 +1,65 @@
 <% var item = page; %>
+<% var aboutData = site.data.about; %>
 
 <div class="container main-container">
-    <%- partial('_partial/construction') %>
+    <div class="card about-page row">
+        <div class="col s12 m3 <%= theme.color.about_header %>">
+            <div class="header">
+                <div class="avatar-wrapper center-align">
+                    <img class="avatar-image circle responsive-img" src="<%= aboutData.avatar %>" alt="User Avatar">
+                </div>
+                <div class="info center-align">
+                    <p class="name"><%= aboutData.name %></p>
+                    <p class="desc"><%= aboutData.desc %></p>
+                </div>
+
+                <% if (site.data.link && site.data.link.social) { %>
+                    <div class="social-group center-align">
+                        <% for (var type in site.data.link.social) { %>
+                            <a class="social-link" href="<%= site.data.link.social[type] %>" target="_blank">
+                                <i class="fa fa-2x fa-<%= type %>"></i>
+                            </a>
+                        <% } %>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="col s12 m9">
+            <div class="card-content">
+                <div class="about-me">
+                    <h1 class="<%= theme.color.about_title %>-text">
+                        <i class="fa fa-street-view"></i>&nbsp;About Me</h1>
+                    <%- item.content %>
+                </div>
+
+                <div class="skills">
+                    <h1 class="<%= theme.color.about_title %>-text">
+                        <i class="fa fa-tasks"></i>&nbsp;Skills</h1>
+                    <ul class="row">
+                        <% for (var skill in aboutData.skills) { %>
+                            <% if (aboutData.skills[skill] > 0) { %>
+                            <li>
+                                <div class="col s2"><%= skill %></div>
+                                <div class="col s10">
+                                    <% for (var i = 1; i <= aboutData.skills[skill]; i++) { %>
+                                    <i class="fa fa-star"></i>
+                                    <% } %>
+                                    <% for (; i <= 10; i++) { %>
+                                    <i class="fa fa-star-o"></i>
+                                    <% } %>
+                                </div>
+                            </li>
+                            <% } else { %>
+                            <li>&nbsp;</li>
+                            <% } %>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <%- partial('_partial/plugin/comment', {page_id: 'about'}) %>
 </div>
