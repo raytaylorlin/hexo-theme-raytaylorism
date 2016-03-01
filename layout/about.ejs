@@ -2,8 +2,8 @@
 <% var aboutData = site.data.about; %>
 
 <div class="container main-container">
-    <div class="card about-page row">
-        <div class="col s12 m3 <%= theme.color.about_header %>">
+    <div class="card about-page row <%= theme.color.about_header %>">
+        <div class="col s12 m3">
             <div class="header">
                 <div class="avatar-wrapper center-align">
                     <img class="avatar-image circle responsive-img" src="<%= aboutData.avatar %>" alt="User Avatar">
@@ -25,21 +25,21 @@
             </div>
         </div>
 
-        <div class="col s12 m9">
+        <div class="col s12 m9 white">
             <div class="card-content">
-                <div class="about-me">
+                <section class="about-me">
                     <h1 class="<%= theme.color.about_title %>-text">
                         <i class="fa fa-street-view"></i>&nbsp;About Me</h1>
                     <%- item.content %>
-                </div>
+                </section>
 
-                <div class="skills">
+                <section class="skills">
                     <h1 class="<%= theme.color.about_title %>-text">
-                        <i class="fa fa-tasks"></i>&nbsp;Skills</h1>
-                    <ul class="row">
+                        <i class="fa fa-tasks"></i>&nbsp;技能</h1>
+                    <ul>
                         <% for (var skill in aboutData.skills) { %>
                             <% if (aboutData.skills[skill] > 0) { %>
-                            <li>
+                            <li class="row">
                                 <div class="col s2"><%= skill %></div>
                                 <div class="col s10">
                                     <% for (var i = 1; i <= aboutData.skills[skill]; i++) { %>
@@ -55,10 +55,13 @@
                             <% } %>
                         <% } %>
                     </ul>
-                </div>
+                </section>
+
+                <section class="reward">
+                    <%- partial('_partial/plugin/reward') %>
+                </section>
             </div>
         </div>
-
     </div>
 
     <%- partial('_partial/plugin/comment', {page_id: 'about'}) %>
