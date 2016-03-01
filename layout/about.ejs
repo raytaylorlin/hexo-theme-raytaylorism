@@ -3,7 +3,7 @@
 
 <div class="container main-container">
     <div class="card about-page row <%= theme.color.about_header %>">
-        <div class="col s12 m3">
+        <div class="col s12 m4 l3">
             <div class="header">
                 <div class="avatar-wrapper center-align">
                     <img class="avatar-image circle responsive-img" src="<%= aboutData.avatar %>" alt="User Avatar">
@@ -25,11 +25,11 @@
             </div>
         </div>
 
-        <div class="col s12 m9 white">
+        <div class="col s12 m8 l9 white">
             <div class="card-content">
                 <section class="about-me">
                     <h1 class="<%= theme.color.about_title %>-text">
-                        <i class="fa fa-street-view"></i>&nbsp;About Me</h1>
+                        <i class="fa fa-street-view"></i>&nbsp;关于</h1>
                     <%- item.content %>
                 </section>
 
@@ -40,8 +40,8 @@
                         <% for (var skill in aboutData.skills) { %>
                             <% if (aboutData.skills[skill] > 0) { %>
                             <li class="row">
-                                <div class="col s2"><%= skill %></div>
-                                <div class="col s10">
+                                <div class="col s4 m3 l2"><%= skill %></div>
+                                <div class="col s8 m9 l10">
                                     <% for (var i = 1; i <= aboutData.skills[skill]; i++) { %>
                                     <i class="fa fa-star"></i>
                                     <% } %>
