@@ -24,7 +24,9 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git themes/ray
 ## 启用（重要）
 
 1. 修改 `_config.yml` 中的`theme`一项的值为`raytaylorism`
-2. 由于本主题使用了[Data Files]数据文件，所以**请复制`yourblog/themes/raytaylorism/_data`文件夹到`yourblog/source`目录下**，否则在启动server时可能会报错
+2. 由于本主题使用了[Data Files]数据文件和额外的layout文件，所以请复制以下文件到你的博客目录中，否则在启动server时可能会报错
+    * **复制`yourblog/themes/raytaylorism/_data`文件夹到`yourblog/source`目录下**
+    * **复制`yourblog/themes/raytaylorism/_md/about`文件夹到`yourblog/source`目录下**
 3. 在你的`yourblog/_config.yml`配置文件的`#pagination`的位置添加下面配置（禁用归档、标签、目录页面的分页功能）
 
 ```
@@ -50,6 +52,13 @@ category_generator:
     * 社交平台：对应`social`项，预设有`weibo`和`github`两种，如果需要其他社交平台可自行追加，但要注意**key值必须与[Font Awesome图标]相对应，否则可能无法正常显示**。
     * 友情链接：对应`extern`项，其中key值为链接文字，value值为外链URL
 * **首页幻灯片**：在`yourblog/source/_data/slider.json`数据文件中进行配置。可以配置背景图、标题、副标题、对齐方式。如果不需要幻灯片，直接把`slider.json`删除即可。
+* **关于页面**：`yourblog/themes/raytaylorism/_md/about/index.md`文件为自我介绍的正文，只需要像平时写博文一样正常地书写markdown即可。在`yourblog/source/_data/about.json`数据文件中配置关于页面的其他项。
+    * `avatar`：String类型，头像图片链接
+    * `name`：String类型，自己的姓名
+    * `desc`：String类型，对自己的简短描述
+    * `skills`：Object类型，对象技能展示。对象key值为技能名，value值为评分（取值为0-10的整数），取值为-1为分隔线。若不需要则将该字段设为null
+    * `projects`：Array类型，作品与项目展示，内含多个Object，每个Object都有`name`作品名、`image`封面、`description`作品描述、`link_text`链接文字、`link`链接地址。若不需要则将该字段设为null
+    * `reward`：Array类型，打赏二维码图片列表。例子中两个图片分别为微信和支付宝的二维码图片链接。若不需要则将该字段设为null
 * **读书页面**：在`yourblog/source/_data/reading.json`数据文件中进行配置。读书页面有“已读”“在读”和“想读”三栏，分别对应`contents`项中的`readed`、`reading`和`wanted`字段，每个字段对应一个书籍列表，按照例子进行修改即可。
 * **new标签**：在`yourblog/source/_data/hint.json`数据文件中进行配置。`selector`项是一个数组，里面可以包含若干个CSS选择器用于选择要添加new标签的DOM元素。
 * **侧滑栏头部**：在`yourblog/themes/raytaylorism/_config.yml`中的`user`一项配置移动端的侧滑栏头部样式和文字。

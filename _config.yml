@@ -35,6 +35,8 @@ color:
   fab_2: blue
   fab_3: orange
   new: pink
+  about_header: indigo
+  about_title: indigo
 
 excerpt_link: Read More
 archive_yearly: true
