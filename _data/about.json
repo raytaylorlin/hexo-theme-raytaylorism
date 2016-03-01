@@ -15,9 +15,13 @@
 		"Cocos2D-x": 4,
 		"Node.js": 4
     },
-    "projects": [
-        
-    ],
+    "projects": [{
+		"name": "青桔音乐",
+		"image": "http://raytaylorlin-blog.qiniudn.com/image%2Fabout%2Fp_qingvoice.jpg",
+		"description": "青桔网是一个校园音乐娱乐平台，为全国高校“校园好声音”网络大赛提供选手和音乐展示服务。平台和大赛页面有近3亿网络传播，目前有约4万用户，历史单日PV峰值约10万。本人在项目担任Web前端负责人。",
+		"link_text": "网站链接",
+		"link": "http://www.qingvoice.com"
+	}],
 	"reward": [
 	    "http://raytaylorlin-blog.qiniudn.com/image%2Freward%2Fweixin_reward.png",
 		"http://raytaylorlin-blog.qiniudn.com/image%2Freward%2Fzhifubao_reward.png"

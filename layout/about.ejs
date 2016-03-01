@@ -33,33 +33,64 @@
                     <%- item.content %>
                 </section>
 
+                <% if (aboutData.skills) { %>
                 <section class="skills">
                     <h1 class="<%= theme.color.about_title %>-text">
                         <i class="fa fa-tasks"></i>&nbsp;技能</h1>
                     <ul>
                         <% for (var skill in aboutData.skills) { %>
                             <% if (aboutData.skills[skill] > 0) { %>
-                            <li class="row">
-                                <div class="col s4 m3 l2"><%= skill %></div>
-                                <div class="col s8 m9 l10">
-                                    <% for (var i = 1; i <= aboutData.skills[skill]; i++) { %>
-                                    <i class="fa fa-star"></i>
-                                    <% } %>
-                                    <% for (; i <= 10; i++) { %>
-                                    <i class="fa fa-star-o"></i>
-                                    <% } %>
-                                </div>
-                            </li>
+                                <li class="row">
+                                    <div class="col s4 m3 l2"><%= skill %></div>
+                                    <div class="col s8 m9 l10">
+                                        <% for (var i = 1; i <= aboutData.skills[skill]; i++) { %>
+                                            <i class="fa fa-star"></i>
+                                        <% } %>
+                                        <% for (; i <= 10; i++) { %>
+                                            <i class="fa fa-star-o"></i>
+                                        <% } %>
+                                    </div>
+                                </li>
                             <% } else { %>
-                            <li>&nbsp;</li>
+                                <li>&nbsp;</li>
                             <% } %>
                         <% } %>
                     </ul>
                 </section>
+                <% } %>
 
+                <% if (aboutData.projects && aboutData.projects.length > 0) { %>
+                <section class="projects">
+                    <h1 class="<%= theme.color.about_title %>-text">
+                        <i class="fa fa-code"></i>&nbsp;作品与项目</h1>
+                        <div class="row">
+                            <% for (var i in aboutData.projects) { %>
+                                <div class="project-item col">
+                                    <div class="">
+                                        <div class="card medium">
+                                            <div class="card-image">
+                                                <img class="card-cover-image" src="<%= aboutData.projects[i].image %>">
+                                                <span class="card-title"><%= aboutData.projects[i].name %></span>
+                                            </div>
+                                            <div class="card-content">
+                                                <%= aboutData.projects[i].description %>
+                                            </div>
+                                            <div class="card-action">
+                                                <a class="<%= theme.color.readmore %>-text" href="<%= aboutData.projects[i].link %>"><%= aboutData.projects[i].link_text %></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                </section>
+                <% } %>
+
+                <% if (aboutData.reward && aboutData.reward.length > 0) { %>
                 <section class="reward">
                     <%- partial('_partial/plugin/reward') %>
                 </section>
+                <% } %>
             </div>
         </div>
     </div>
