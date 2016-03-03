@@ -68,13 +68,16 @@ category_generator:
 * **代码语法高亮**：语法高亮的主题默认由CSS文件`yourblog/themes/raytaylorism/source/css/lib/prettify-tomorrow-night-eighties.css`。如果需要替换，可以到[Prettify Theme]选择你喜欢的主题，下载主题的CSS文件并存放到相同的目录下，并将`yourblog/themes/raytaylorism/_config.yml`中的`google_code_prettify_theme`一项改为对应的文件名。
 * **评论**：评论插件默认使用[多说]，需要自行配置`yourblog/themes/raytaylorism/_config.yml`中的`duoshuo_shortname`为你自己站点的shortname
 * **RSS**：安装[hexo-generator-feed]，并按照说明配置（`atom.xml`的链接写在`yourblog/source/_data/link.json`的social项中，一般无需更改）
-* **Google分析**：`yourblog/themes/raytaylorism/_config.yml`中的`google_analytics`一项改为你的**Google分析track id**，留空则不启用
+* **站点分析**：
+    * Google分析：`yourblog/themes/raytaylorism/_config.yml`中的`google_analytics`一项改为你的**Google分析track id**，留空则不启用
+    * 腾讯分析：（国内用户有Google分析被墙的可能）`yourblog/themes/raytaylorism/_config.yml`中的`tencent_analytics`一项改为你的**sId**（在腾讯分析添加站点后，复制代码中`sId=xxxxxxxx`那串数字就是sId），留空则不启用
+    * 如果你需要其他第三方的站点统计，可以仿照上面的例子添加配置，并在`yourblog/themes/raytaylorism/layout/_partial/plugin/analytics.ejs`中添加相应的统计代码
 
 ## 使用的插件
 
 * 样式框架：[Materialize]
 * 代码语法高亮：[Google-code-prettify]
-* 流量分析：[Google Analytics]
+* 流量分析：[Google Analytics]、[腾讯分析]
 * 第三方社会化评论：[多说]
 
 ## 更新日志
@@ -119,6 +122,7 @@ category_generator:
 [Materialize]: http://materializecss.com/
 [Google-code-prettify]: https://code.google.com/p/google-code-prettify/
 [Google Analytics]: http://www.google.com/analytics/
+[腾讯分析]:
 [Furatto]: http://icalialabs.github.io/furatto/
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
 [多说]: http://duoshuo.com/

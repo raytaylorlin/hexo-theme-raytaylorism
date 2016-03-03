@@ -53,6 +53,8 @@ duoshuo_shortname: raytaylorlin
 
 # Google分析track id，若为空则不启用
 google_analytics:
+# 腾讯分析sId，若为空则不启用
+tencent_analytics:
 
 # 高亮的主题，若为空则使用默认主题
 google_code_prettify: prettify-tomorrow-night-eighties
