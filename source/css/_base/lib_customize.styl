@@ -1,3 +1,8 @@
+.container
+    width 700px
+    @media (max-width: 767px)
+        width 90%
+
 // 重置materialize中的各种列表样式
 ul, ol
     padding-left 20px
@@ -41,8 +46,15 @@ nav ul
     &.medium
         height 440px
 
-    .card-content p
-        margin 0.5em 0
+    .card-content
+        padding 25px 25px 30px
+
+    .card-action
+        padding-left 25px
+        padding-right 25px
+
+    // .card-content p
+    //     margin 0.5em 0
 
 .chip
     height initial

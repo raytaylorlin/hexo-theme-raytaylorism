@@ -7,8 +7,9 @@ article
         font-size 2em
         font-weight bold
         line-height 1.4
-        margin-top 8px
+        margin-top 0
         margin-bottom 10px
+        color color-entry-subtitle
 
     a:not(.chip)
         color color-a
@@ -47,12 +48,27 @@ article
         &:hover
             color color-link
 
-    .entry
-        // text-align justify
-        line-height 1.6
+    .card-content .entry
+        font-size 16px
+        line-height 1.7
+
+        p
+            margin-top 0
+            margin-bottom 1em
+            text-align justify
+            text-justify inter-ideograph
+            word-break initial
+            word-break break-word
+
+            &:last-child
+                margin-bottom 0
+
+        ul, ol
+            margin-bottom 1.5em
 
         h1, h2, h3, h4, h5, h6
-            margin 0.6em 0
+            margin-top 0
+            margin-bottom 0.5em
 
         h1
             font-size 1.6em
