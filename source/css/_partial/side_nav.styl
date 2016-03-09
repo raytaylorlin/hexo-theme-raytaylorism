@@ -10,27 +10,33 @@ item-height = 48px
     a
         height item-height
         line-height item-height
+        color white
         i
             height item-height
             line-height item-height
             width 1.5rem
     li
         line-height item-height
-        
+
+        &:hover, &:active
+            background-color rgba(0, 0, 0, 0.2)
+            &.side-user
+                background-color transparent
+
     .avatar-image
         width 50px
         padding 0
         vertical-align middle
-    
+
     .info
         height user-height
-        
+
         p
             line-height 24px
             margin-top 5px
             margin-bottom 0
             text-shadow: 1px 1px 1px #444;
-        
+
         .name
             font-size 1.2em
         .desc
@@ -38,16 +44,14 @@ item-height = 48px
 
     li.side-user
         height user-height
-        background: url(images/side-user-cover.jpg) no-repeat center center;
+        // background: url(images/side-user-cover.jpg) no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        // margin-bottom: 10px;
 
-        margin-bottom: 10px;
-    
-    
-    
+
     // 分类目录
     collapse-base-padding = 15px
     collapse-step-padding = 15px
@@ -57,3 +61,16 @@ item-height = 48px
         padding-left collapse-base-padding + collapse-step-padding * 1
     .collapse-level-2
         padding-left collapse-base-padding + collapse-step-padding * 2
+
+    .collapse-space
+        margin-bottom 10px
+
+#category-menu.side-nav
+    a
+        height item-height * 0.75
+        line-height item-height * 0.75
+        i
+            height item-height * 0.75
+            line-height item-height * 0.75
+    li
+        line-height item-height * 0.75

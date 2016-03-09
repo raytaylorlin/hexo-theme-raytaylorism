@@ -1,3 +1,15 @@
+html
+    color rgba(0, 0, 0, 0.8)
+
+.container
+    width 700px
+    @media (max-width: 767px)
+        width 90%
+.container.main-container
+    @media (max-width: 767px)
+        width 100%
+
+// HTML标签样式
 // 重置materialize中的各种列表样式
 ul, ol
     padding-left 20px
@@ -13,7 +25,7 @@ nav, .fixed-action-btn
     li
         list-style-type none
 
-ul.pagination, ul.collapsible
+ul.pagination, ul.collapsible, ul.indicators
     padding-left 0
     li
         list-style-type none
@@ -35,14 +47,33 @@ nav ul
     a:hover
         background-color rgba(0, 0, 0, 0)
 
+nav .brand-logo
+    font-size 1.6rem
+
 .card
     margin-top 0
 
-    .card-content p
-        margin 0.5em 0
+    &.medium
+        height 440px
+
+    .card-content
+        padding 25px 25px 30px
+
+    .card-action
+        padding-left 25px
+        padding-right 25px
+
+    // .card-content p
+    //     margin 0.5em 0
+
+.chip
+    height initial
+    line-height 18px
+    padding 4px 14px
+    color white
 
 .breadcrumb
-    font-size 1.2em
+    font-size 1em
 
 .material-placeholder
     text-align center

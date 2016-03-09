@@ -1,11 +1,11 @@
 <div>
-    <ul class="side-nav" id="main-menu">
+    <ul class="side-nav <%= theme.color.side_nav %>" id="main-menu">
         <li class="side-user">
             <div class="row">
-                <div class="col s4">
+                <div class="col s4 no-padding">
                     <img class="avatar-image circle responsive-img" src="<%= theme.user.avatar %>" alt="User Avatar">
                 </div>
-                <div class="info col s8 valign-wrapper">
+                <div class="info col s8 valign-wrapper no-padding">
                     <div class="valign">
                         <p class="name"><%= theme.user.name %></p>
                         <p class="desc"><%= theme.user.desc %></p>
@@ -23,10 +23,10 @@
         <% } %>
     </ul>
 
-    <ul class="side-nav collection with-header" id="category-menu">
-        <li class="collection-header">
+    <ul class="side-nav <%= theme.color.side_nav %>" id="category-menu">
+        <!--<li class="">
             <h5 class="black-text">分类目录</h5>
-        </li>
+        </li>-->
 
     <%
         var catTree = {};
@@ -61,8 +61,8 @@
                         }
             %>
 
-            <li class="collection-item no-padding" collapse-level="<%= depth %>">
-                <a class="waves-effect collapse-level-<%= depth %>" href="<%- config.root %><%- path + item %>/">
+            <li class="collapse-level-<%= depth %>" collapse-level="<%= depth %>">
+                <a class="no-padding" href="<%- config.root %><%- path + item %>/">
                     <%= item %> <span class="right"><%= root[item]['posts_num'] %> 篇</span></a>
                 </a>
             </li>

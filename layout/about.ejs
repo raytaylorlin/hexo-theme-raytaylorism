@@ -2,35 +2,35 @@
 <% var aboutData = site.data.about; %>
 
 <div class="container main-container">
-    <div class="card about-page row <%= theme.color.about_header %>">
-        <div class="col s12 m4 l3">
-            <div class="header">
-                <div class="avatar-wrapper center-align">
-                    <img class="avatar-image circle responsive-img" src="<%= aboutData.avatar %>" alt="User Avatar">
-                </div>
-                <div class="info center-align">
-                    <p class="name"><%= aboutData.name %></p>
-                    <p class="desc"><%= aboutData.desc %></p>
-                </div>
-
-                <% if (site.data.link && site.data.link.social) { %>
-                    <div class="social-group center-align">
-                        <% for (var type in site.data.link.social) { %>
-                            <a class="social-link" href="<%= site.data.link.social[type] %>" target="_blank">
-                                <i class="fa fa-2x fa-<%= type %>"></i>
-                            </a>
-                        <% } %>
-                    </div>
-                <% } %>
+    <div class="card about-page row">
+        <div class="header <%= theme.color.about_header %>">
+            <div class="avatar-wrapper center-align">
+                <img class="avatar-image circle responsive-img" src="<%= aboutData.avatar %>" alt="User Avatar">
             </div>
+            <div class="info center-align">
+                <p class="name"><%= aboutData.name %></p>
+                <p class="desc"><%= aboutData.desc %></p>
+            </div>
+
+            <% if (site.data.link && site.data.link.social) { %>
+                <div class="social-group center-align">
+                    <% for (var type in site.data.link.social) { %>
+                        <a class="social-link" href="<%= site.data.link.social[type] %>" target="_blank">
+                            <i class="fa fa-2x fa-<%= type %>"></i>
+                        </a>
+                    <% } %>
+                </div>
+            <% } %>
         </div>
 
-        <div class="col s12 m8 l9 white">
+        <article>
             <div class="card-content">
                 <section class="about-me">
                     <h1 class="<%= theme.color.about_title %>-text">
-                        <i class="fa fa-street-view"></i>&nbsp;关于</h1>
-                    <%- item.content %>
+                        <i class="fa fa-street-view"></i>关于</h1>
+                    <div class="entry">
+                        <%- item.content %>
+                    </div>
                 </section>
 
                 <% if (aboutData.skills) { %>
@@ -62,21 +62,26 @@
                 <% if (aboutData.projects && aboutData.projects.length > 0) { %>
                 <section class="projects">
                     <h1 class="<%= theme.color.about_title %>-text">
-                        <i class="fa fa-code"></i>&nbsp;作品与项目</h1>
+                        <i class="fa fa-cubes"></i>作品与项目</h1>
                         <div class="row">
                             <% for (var i in aboutData.projects) { %>
-                                <div class="project-item col">
+                                <div class="project-item col m6">
                                     <div class="">
                                         <div class="card medium">
                                             <div class="card-image">
                                                 <img class="card-cover-image" src="<%= aboutData.projects[i].image %>">
                                                 <span class="card-title"><%= aboutData.projects[i].name %></span>
+                                                <div class="card-tag">
+                                                    <% for (var j in aboutData.projects[i].tags) { %>
+                                                        <span class="chip white-text <%= theme.color.tag %>"><%= aboutData.projects[i].tags[j] %></span>
+                                                    <% } %>
+                                                </div>
                                             </div>
                                             <div class="card-content">
                                                 <%= aboutData.projects[i].description %>
                                             </div>
                                             <div class="card-action">
-                                                <a class="<%= theme.color.readmore %>-text" href="<%= aboutData.projects[i].link %>"><%= aboutData.projects[i].link_text %></a>
+                                                <a class="<%= theme.color.readmore %>-text" href="<%= aboutData.projects[i].link %>" target="_blank"><%= aboutData.projects[i].link_text %></a>
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +97,7 @@
                 </section>
                 <% } %>
             </div>
-        </div>
+        </article>
     </div>
 
     <%- partial('_partial/plugin/comment', {page_id: 'about'}) %>

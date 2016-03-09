@@ -1,7 +1,7 @@
 <% if (item.tags && item.tags.length > 0){ %>
     <div class="tags-row">
         <% item.tags.forEach(function(tag) { %>
-            <a href="<%= config.root + tag.path %>" class="article-tag <%= theme.color.tag %> accent-4"><%= tag.name %></a>
+            <a href="<%= config.root + tag.path %>" class="chip <%= theme.color.tag %>"><%= tag.name %></a>
         <% }); %>
     </div>
 <% } %>

@@ -1,3 +1,6 @@
+.simple-article
+    margin-bottom 30px
+
 article
     .entry
         margin-top 20px
@@ -7,10 +10,11 @@ article
         font-size 2em
         font-weight bold
         line-height 1.4
-        margin-top 8px
+        margin-top 0
         margin-bottom 10px
-    
-    a:not(.article-tag)
+        color color-entry-subtitle
+
+    a:not(.chip)
         color color-a
         &:hover
             color color-a-hover
@@ -21,7 +25,7 @@ article
 
     .tags-row
         margin-top 10px
-    
+
     .article-tag
         display inline-block
         height 32px
@@ -29,7 +33,7 @@ article
         padding 0 12px
         border-radius 16px
         color white
-        
+
     header
         border-radius 0
         background none
@@ -47,12 +51,29 @@ article
         &:hover
             color color-link
 
-    .entry
-        // text-align justify
-        line-height 1.6
+    .card-content .entry
+        font-size 16px
+        line-height 1.7
+        @media (max-width: 480px)
+            line-height 1.5em
+
+        p
+            margin-top 0
+            margin-bottom 1em
+            text-align justify
+            text-justify inter-ideograph
+            word-break initial
+            word-break break-word
+
+            &:last-child
+                margin-bottom 0
+
+        ul, ol
+            margin-bottom 1.5em
 
         h1, h2, h3, h4, h5, h6
-            margin 0.6em 0
+            margin-top 0
+            margin-bottom 0.5em
 
         h1
             font-size 1.6em

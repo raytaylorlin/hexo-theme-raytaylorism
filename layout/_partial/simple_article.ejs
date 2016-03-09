@@ -1,26 +1,24 @@
-<article class="row simple-article">
-    <div class="col s12">
-        <div class="card hoverable">
+<article class="simple-article">
+        <div class="card">
             <div class="card-content">
                 <div class="article-title">
                     <%- partial('post/title') %>
                 </div>
-                
+
                 <%- partial('post/time') %>
                 <%- partial('post/tag') %>
-                
+
                 <% if (showEntry && item.excerpt && index) { %>
                     <div class="entry">
                         <%- item.excerpt %>
                     </div>
                 <% } %>
             </div>
-            
+
             <% if (item.excerpt) { %>
             <div class="card-action">
                 <a href="<%= item.path %>" class="<%= theme.color.readmore %>-text">READ MORE</a>
             </div>
             <% } %>
         </div>
-    </div>
 </article>
