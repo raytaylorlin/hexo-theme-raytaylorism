@@ -26,6 +26,7 @@ color:
   header: indigo
   footer: indigo
   page_nav: indigo
+  side_nav: indigo
   tag: green accent-4
   pagination: green
   tab: green
