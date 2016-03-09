@@ -4,9 +4,9 @@
 
 <div class="container main-container">
     <% if (readingData) { %>
-        <div class="row">
-            <div class="col s12">
-                <ul class="tabs">
+        <div class="">
+            <div class="row">
+                <ul class="tabs ">
                     <% for (var key in readingData.define) { %>
                         <li class="tab col s<%= 12 / tabCount %> ">
                             <a class="<%= theme.color.tab %>-text " href="#<%= key %>"><%= readingData.define[key] + '(' + readingData.contents[key].length + ')'%></a>
@@ -14,11 +14,12 @@
                     <% } %>
                 </ul>
             </div>
+
             <% for (var key in readingData.contents) { %>
-                <div id="<%= key %>" class="col s12" style="margin-top: 20px;">
+                <div id="<%= key %>" class="row" style="margin-top: 20px;">
                     <% var bookList = readingData.contents[key]; %>
                     <% for (var i in bookList) { %>
-                        <div class="book-item col s12 m4">
+                        <div class="book-item col s12 m6">
                             <div class="card small hoverable">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="<%= bookList[i].cover %>">
