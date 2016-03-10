@@ -6,7 +6,7 @@
     <% } %>
 <% } else { %>
     <% if (index){ %>
-        <h1><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
+        <h1 class="<%= theme.color.article_title_link %>-link-context"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
     <% } else { %>
         <h1><%= item.title %></h1>
     <% } %>

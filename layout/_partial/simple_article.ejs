@@ -9,15 +9,15 @@
                 <%- partial('post/tag') %>
 
                 <% if (showEntry && item.excerpt && index) { %>
-                    <div class="entry">
+                    <div class="entry <%= theme.color.link %>-link-context">
                         <%- item.excerpt %>
                     </div>
                 <% } %>
             </div>
 
             <% if (item.excerpt) { %>
-            <div class="card-action">
-                <a href="<%= item.path %>" class="<%= theme.color.readmore %>-text">READ MORE</a>
+            <div class="card-action <%= theme.color.link %>-link-context">
+                <a href="<%= item.path %>">READ MORE</a>
             </div>
             <% } %>
         </div>
