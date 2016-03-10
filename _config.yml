@@ -29,6 +29,7 @@ color:
   page_nav: indigo
   side_nav: indigo darken-1
   tag: green accent-4
+  link: indigo
   pagination: green
   tab: green
   archive_item: grey
