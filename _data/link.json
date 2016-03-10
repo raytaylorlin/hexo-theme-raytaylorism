@@ -5,10 +5,7 @@
 		"rss": "/atom.xml"
     },
     "extern": {
-	    "土土哥的技术博客": "http://tutuge.me/",
-		"屌刘neoye的博客": "http://neoyeelf.github.io/",
-		"苏塔是没有脚的设计师": "http://suta.im/",
-        "JFantasy的个人博客": "http://jfantasy.github.io/",
-		"丁基友的博客": "http://pyroc.at/"
+	    "raytaylorism主题作者的技术博客": "http://raytaylorlin.com/",
+		"Github地址（测试友情链接）": "https://github.com/raytaylorlin"
     }
 }
