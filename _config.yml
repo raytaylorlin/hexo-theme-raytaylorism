@@ -1,3 +1,4 @@
+# 菜单配置（若不需要某项可直接删除）
 menu:
   - text: 首页
     link: /
@@ -42,15 +43,13 @@ color:
 excerpt_link: Read More
 archive_yearly: true
 
-user:
-  name: 林寿山
-  desc: Web前端/游戏开发
-  avatar: http://tp2.sinaimg.cn/1956184117/180/5674436546/1
+# 版权信息
+copyright: © 2016 example.com, All rights reserved.
 
-copyright: © 2016 raytaylorlin.com, All rights reserved.
-
+# Disqus评论shortname，若为空则不启用
 disqus_shortname:
-duoshuo_shortname: raytaylorlin
+# 多说shortname，若为空则不启用
+duoshuo_shortname:
 
 # Google分析track id，若为空则不启用
 google_analytics:

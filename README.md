@@ -55,13 +55,13 @@ category_generator:
 * **关于页面**：`yourblog/themes/raytaylorism/_md/about/index.md`文件为自我介绍的正文，只需要像平时写博文一样正常地书写markdown即可。在`yourblog/source/_data/about.json`数据文件中配置关于页面的其他项。
     * `avatar`：String类型，头像图片链接
     * `name`：String类型，自己的姓名
+    * `tag`: String类型，描述自己的标签，**主要显示在侧滑栏的头部**
     * `desc`：String类型，对自己的简短描述
     * `skills`：Object类型，对象技能展示。对象key值为技能名，value值为评分（取值为0-10的整数），取值为-1为分隔线。若不需要则将该字段设为null
     * `projects`：Array类型，作品与项目展示，内含多个Object，每个Object都有`name`作品名、`image`封面、`description`作品描述、`link_text`链接文字、`link`链接地址。若不需要则将该字段设为null
     * `reward`：Array类型，打赏二维码图片列表。例子中两个图片分别为微信和支付宝的二维码图片链接。若不需要则将该字段设为null
 * **读书页面**：在`yourblog/source/_data/reading.json`数据文件中进行配置。读书页面有“已读”“在读”和“想读”三栏，分别对应`contents`项中的`readed`、`reading`和`wanted`字段，每个字段对应一个书籍列表，按照例子进行修改即可。
 * **new标签**：在`yourblog/source/_data/hint.json`数据文件中进行配置。`selector`项是一个数组，里面可以包含若干个CSS选择器用于选择要添加new标签的DOM元素。
-* **侧滑栏头部**：在`yourblog/themes/raytaylorism/_config.yml`中的`user`一项配置移动端的侧滑栏头部样式和文字。
 
 ### 插件
 
@@ -122,7 +122,7 @@ category_generator:
 [Materialize]: http://materializecss.com/
 [Google-code-prettify]: https://code.google.com/p/google-code-prettify/
 [Google Analytics]: http://www.google.com/analytics/
-[腾讯分析]:
+[腾讯分析]: http://v2.ta.qq.com/
 [Furatto]: http://icalialabs.github.io/furatto/
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
 [多说]: http://duoshuo.com/
