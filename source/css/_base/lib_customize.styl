@@ -34,7 +34,7 @@ ul.pagination, ul.collapsible, ul.indicators
         list-style-type none
 
 img
-    width 100%
+    max-width 100%
     padding 4px
     background-color #F5F5F5
     border 1px solid #ddd
@@ -82,14 +82,13 @@ nav .brand-logo
 .breadcrumb
     font-size 1em
 
-.material-placeholder
-    text-align center
-    width 75%
-    margin 0 auto
-
+// 图片lightbox点击缩放效果
 .materialboxed
     display initial
-    width 100%
+    margin-top 10px
+    max-width 100%
+    &.active
+        max-width initial
 
 // 幻灯片的导航按钮位置
 .slider .indicators
