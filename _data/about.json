@@ -14,6 +14,7 @@
     "projects": [{
 		"name": "你的项目A",
 		"image": "https://d13yacurqjgara.cloudfront.net/users/138819/screenshots/2578899/dribbble_800x600_01_1x.png",
+		"tags": ["2016年", "项目标签"],
 		"description": "你的项目A的简介",
 		"link_text": "网站链接",
 		"link": "https://dribbble.com/"
@@ -21,11 +22,12 @@
 		"name": "你的作品B",
 		"image": "https://d13yacurqjgara.cloudfront.net/users/4094/screenshots/2578885/time-lords-drib_1x.jpg",
 		"description": "你的作品B的简介",
+		"tags": ["Github", "设计"],
 		"link_text": "Github地址",
 		"link": "https://github.com/"
 	}],
 	"reward": [
-	    "http://raytaylorlin-blog.qiniudn.com/image%2Freward%2Fweixin_reward.png",
-		"http://raytaylorlin-blog.qiniudn.com/image%2Freward%2Fzhifubao_reward.png"
+	    "http://raytaylorlin-blog.qiniudn.com/image/about/weixin_reward.png",
+		"http://raytaylorlin-blog.qiniudn.com/image/about/zhifubao_reward.png"
 	]
 }

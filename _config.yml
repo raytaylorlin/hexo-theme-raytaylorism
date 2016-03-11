@@ -28,14 +28,16 @@ color:
   footer: indigo
   page_nav: indigo
   side_nav: indigo darken-1
-  tag: green accent-4
-  pagination: green
-  tab: green
+  tag: pink lighten-1
+  article_title_link: indigo
+  link: indigo
+  pagination: pink
+  tab: pink
   archive_item: grey
   readmore: blue
-  fab: green
-  fab_2: blue
-  fab_3: orange
+  fab: pink
+  fab_2: green
+  fab_3: yellow darken-1
   new: pink
   about_header: indigo
   about_title: indigo
