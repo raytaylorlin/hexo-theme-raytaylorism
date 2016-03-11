@@ -30,11 +30,10 @@ color:
   side_nav: indigo darken-1
   tag: pink lighten-1
   article_title_link: indigo
-  link: indigo
+  link: pink
   pagination: pink
   tab: pink
   archive_item: grey
-  readmore: blue
   fab: pink
   fab_2: green
   fab_3: yellow darken-1

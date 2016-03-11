@@ -28,7 +28,7 @@
                 <section class="about-me">
                     <h1 class="<%= theme.color.about_title %>-text">
                         <i class="fa fa-street-view"></i>关于</h1>
-                    <div class="entry">
+                    <div class="entry <%= theme.color.link %>-link-context">
                         <%- item.content %>
                     </div>
                 </section>
@@ -67,7 +67,7 @@
                             <% for (var i in aboutData.projects) { %>
                                 <div class="project-item col m6">
                                     <div class="">
-                                        <div class="card medium">
+                                        <div class="card medium <%= theme.color.link %>-link-context">
                                             <div class="card-image">
                                                 <img class="card-cover-image" src="<%= aboutData.projects[i].image %>">
                                                 <span class="card-title"><%= aboutData.projects[i].name %></span>
