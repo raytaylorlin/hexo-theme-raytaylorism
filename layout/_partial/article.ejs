@@ -5,7 +5,7 @@
             <% if (item.photos && item.photos.length) { %>
                 <%- partial('post/gallery') %>
             <% } %>
-            
+
             <div class="article-title">
                 <%- partial('post/title') %>
             </div>
@@ -13,7 +13,7 @@
             <%- partial('post/tag') %>
             <%- partial('post/tablecontents') %>
 
-            <div class="entry">
+            <div class="entry <%= theme.color.link %>-link-context">
                 <%- item.content %>
             </div>
         </div>

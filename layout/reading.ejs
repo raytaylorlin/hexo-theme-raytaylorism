@@ -24,7 +24,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="<%= bookList[i].cover %>">
                                 </div>
-                                <div class="card-content">
+                                <div class="card-content <%= theme.color.link %>-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4"><%= bookList[i].title %>
                                     </span>
                                     <p>评分：<%= bookList[i].score || '暂无' %>
