@@ -1,7 +1,8 @@
 <footer class="page-footer <%= theme.color.footer %> darken-1">
+    <% if (site.data.link) { %>
     <div class="container">
         <div class="row">
-            <% if (site.data.link && site.data.link.social) { %>
+            <% if (site.data.link.social) { %>
             <div class="social-group col m3 s12">
                 <h5 class="white-text">社交</h5>
                 <% for (var type in site.data.link.social) { %>
@@ -11,7 +12,7 @@
                 <% } %>
             </div>
             <% } %>
-            
+
             <% if (site.data.link && site.data.link.extern) { %>
             <div class="col m9 s12">
                 <h5 class="white-text">友情链接</h5>
@@ -22,9 +23,12 @@
             <% } %>
         </div>
     </div>
-    <div class="footer-copyright">
+    <% } %>
+
+    <div class="footer-copyright <%= theme.color.link %>-link-context">
         <div class="container">
             <%= theme.copyright %>
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
         </div>
     </div>
 </footer>
