@@ -19,7 +19,7 @@ cd yourblog
 git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git themes/raytaylorism
 ```
 
-请不定期`git pull`一下主题以便获得最新的功能。
+请不定期`git pull`一下主题以便获得最新的功能。**请在pull之前先备份好你原来的配置。**
 
 ## 启用（重要）
 
@@ -82,6 +82,7 @@ category_generator:
 
 ## 更新日志
 
+* 2.0.0-alpha(2016-3-14) 发布raytaylorism v2 alpha版本
 * 1.3.0(2014-10-22) 新增文章中目录导航
 * 1.2.9(2014-10-22) 修复主题在hexo 2.0+版本上运行报错的问题
 * 1.2.8(2014-6-20) 添加MathJax插件
