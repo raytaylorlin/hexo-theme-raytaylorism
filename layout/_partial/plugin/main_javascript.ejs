@@ -57,8 +57,10 @@
         });
         $('.indicator').addClass('<%= theme.color.tab %> lighten-2');
 
+        <% if (site.data.hint) { %>
         // 添加new标签
         $('<%= site.data.hint.new.selector.join(',') %>').append('<span class="new badge <%= theme.color.new %>"></span>');
+        <% } %>
     });
 })(jQuery);
 </script>

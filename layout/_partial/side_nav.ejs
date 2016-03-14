@@ -1,5 +1,6 @@
 <div>
     <ul class="side-nav <%= theme.color.side_nav %>" id="main-menu">
+        <% if (site.data.about) { %>
         <li class="side-user">
             <div class="row">
                 <div class="col s4 no-padding">
@@ -13,6 +14,8 @@
                 </div>
             </div>
         </li>
+        <% } %>
+
         <% for (var i in theme.menu){ %>
             <li class="no-padding">
                 <a class="waves-effect <%= theme.menu[i].class %> <%= theme.menu[i].category ? 'category-menu' : '' %>" href="<%= theme.menu[i].link %>" <% if (theme.menu[i].category) { %>data-activates="category-menu" <% } %>>
