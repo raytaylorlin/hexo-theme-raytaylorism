@@ -40,6 +40,8 @@ category_generator:
 
 ## 配置指南（重要）
 
+我的博文[《新版Hexo主题Raytaylorism v2发布》](http://raytaylorlin.com/daily/hexo-theme-raytaylorism-v2/)写了一些本指南没有涉及到的主题使用小技巧，可以作为参考。其余配置细节，还是以本指南的说明为主。
+
 ### 样式
 
 * **主题颜色配置**：如果对主题的配色不满意，可以自行在`yourblog/themes/raytaylorism/_config.yml`中的`color`一项进行配置。其中各部件的颜色字符串命名遵循[Google Material Design色板]规范。
