@@ -8,10 +8,10 @@
         var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
 
         // 给图片加上点击放大效果（materialbox插件）
-        // $imgs.addClass('materialboxed')
-        //     .each(function(i, el) {
-        //         $(this).attr('data-caption', $(this).attr('alt'));
-        //     }).materialbox();
+        $imgs.addClass('materialboxed')
+            .each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
 
         // 首页幻灯片
         $('.slider').slider({
