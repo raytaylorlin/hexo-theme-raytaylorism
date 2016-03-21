@@ -44,7 +44,7 @@ category_generator:
 
 ### 样式
 
-* **主题颜色配置**：如果对主题的配色不满意，可以自行在`yourblog/themes/raytaylorism/_config.yml`中的`color`一项进行配置。其中各部件的颜色字符串命名遵循[Google Material Design色板]规范。
+* **主题颜色配置**：如果对主题的配色不满意，可以自行在`yourblog/themes/raytaylorism/_config.yml`中的`color`一项进行配置。其中各部件的颜色字符串命名遵循[Materializecss色板]规范。注意：`link`、`article_title_link`和`tab`配置的是文字的颜色，**因此不可以给这几项配置`lighten`和`darken`的颜色加亮加暗的后缀**。
 * **页面标题**：在`yourblog/_config.yml`中，`title`项决定了页面header中显示的标题，`subtitle`决定了浏览器的`<title>`标签内容。
 * **favicon**：请将`yourblog/themes/raytaylorism/source/favicon.png`替换为你自己的图标文件，**保持`favicon.png`命名不变**。
 
@@ -119,7 +119,7 @@ category_generator:
 [Hexo]: http://hexo.io/
 [我的博客]: http://raytaylorlin.com/
 [Data Files]: https://hexo.io/docs/data-files.html
-[Google Material Design色板]: https://www.google.com/design/spec/style/color.html#color-color-palette
+[Materializecss色板]: http://materializecss.com/color.html#palette
 [Font Awesome图标]: https://fortawesome.github.io/Font-Awesome/icons/
 [Prettify Theme]: http://jmblog.github.io/color-themes-for-google-code-prettify/
 [Materialize]: http://materializecss.com/
