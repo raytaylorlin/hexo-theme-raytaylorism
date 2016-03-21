@@ -1,12 +1,7 @@
 <%
-var pageUrl = config.url + '/' + page.path;
-if (typeof page_id !== 'undefined') {
-    var pageId = page_id;
-} else if (typeof page.slug !== 'undefined') {
-    var pageId = page.slug.substr(page.slug.lastIndexOf('/') + 1);
-} else {
-    var pageId = page.title;
-}
+var pageId = page.path;
+var pageUrl = page.permalink;
+var pageTitle = page.title;
 %>
 
 <% if (theme.disqus_shortname && page.comments){ %>
@@ -34,7 +29,7 @@ if (typeof page_id !== 'undefined') {
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="<%= pageId %>" data-title="<%= page.title %>" data-url="<%= pageUrl %>"></div>
+                <div class="ds-thread" data-thread-key="<%= pageId %>" data-title="<%= pageTitle %>" data-url="<%= pageUrl %>"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));
