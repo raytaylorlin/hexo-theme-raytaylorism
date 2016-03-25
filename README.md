@@ -26,7 +26,7 @@ git clone https://github.com/raytaylorlin/hexo-theme-raytaylorism.git themes/ray
 1. 修改 `_config.yml` 中的`theme`一项的值为`raytaylorism`
 2. 由于本主题使用了[Data Files]数据文件和额外的layout文件，所以请复制以下文件到你的博客目录中，否则在启动server时可能会报错
     * **复制`yourblog/themes/raytaylorism/_data`文件夹到`yourblog/source`目录下**
-    * **复制`yourblog/themes/raytaylorism/_md/about`文件夹到`yourblog/source`目录下**
+    * **复制`yourblog/themes/raytaylorism/_md/`下所有文件夹（about和reading）到`yourblog/source`目录下**
 3. 在你的`yourblog/_config.yml`配置文件的`#pagination`的位置添加下面配置（禁用归档、标签、目录页面的分页功能）
 
 ```
