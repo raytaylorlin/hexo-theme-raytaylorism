@@ -27,7 +27,7 @@
                                 <div class="card-content <%= theme.color.link %>-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4"><%= bookList[i].title %>
                                     </span>
-                                    <p>评分：<%= bookList[i].score || '暂无' %>
+                                    <p><%= __('reading.score') %>: <%= bookList[i].score || '???' %>
                                         <a class="external-link right" href="<%= bookList[i].doubanLink %>" target="_blank">
 
                                             <i class="fa fa-external-link"></i>
@@ -36,8 +36,7 @@
                                 </div>
 
                                 <div class="card-reveal">
-                                    <span class="card-title grey-text text-darken-4">
-                                        简评
+                                    <span class="card-title grey-text text-darken-4"><%= __('reading.comment') %>
                                         <i class="fa fa-times-circle-o right"></i>
                                     </span>
 

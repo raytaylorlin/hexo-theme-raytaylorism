@@ -1,0 +1,39 @@
+categories: 分類
+search: 搜尋
+tags: 標籤
+tagcloud: 標籤雲
+prev: 上一頁
+next: 下一頁
+comment: 留言
+archive_a: 彙整
+archive_b: 彙整：%s
+page: 第 %d 頁
+recent_posts: 最新文章
+blogroll: 友情鏈接
+returntop: 回到頂部
+
+menu:
+    home: 首頁
+    archives: 彙整
+    category: 分類
+    reading: 讀書
+    about: 關於
+social: 社交
+powered:
+    first: 本博客由
+    last: "強力驅動 | 主題"
+current_page: 當前位置
+page_name:
+    categories: （分類目錄）
+    tags: （標籤）
+    archives: （彙整）
+reading:
+    score: 評分
+    comment: 簡評
+about:
+    about: 關於
+    skills: 技能
+    works: 作品與項目
+construction: 頁面建設中...
+go_back_home: 返回首頁
+no_title: 無題

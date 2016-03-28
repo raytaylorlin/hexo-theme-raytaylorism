@@ -10,5 +10,30 @@ archive_b: 归档：%s
 page: 第 %d 页
 recent_posts: 最近的文章
 blogroll: 友情链接
-menu: 菜单
 returntop: 回到顶部
+
+menu:
+    home: 首页
+    archives: 归档
+    category: 分类
+    reading: 读书
+    about: 关于
+social: 社交
+powered:
+    first: 本博客由
+    last: "强力驱动 | 主题"
+current_page: 当前位置
+page_name:
+    categories: （分类目录）
+    tags: （标签）
+    archives: （归档）
+reading:
+    score: 评分
+    comment: 简评
+about:
+    about: 关于
+    skills: 技能
+    works: 作品与项目
+construction: 页面建设中...
+go_back_home: 返回首页
+no_title: 无题

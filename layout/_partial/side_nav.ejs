@@ -20,17 +20,14 @@
             <li class="no-padding">
                 <a class="waves-effect <%= theme.menu[i].class %> <%= theme.menu[i].category ? 'category-menu' : '' %>" href="<%= theme.menu[i].link %>" <% if (theme.menu[i].category) { %>data-activates="category-menu" <% } %>>
                     <i class="fa fa-<%= theme.menu[i].icon %> "></i>
-                    <%= theme.menu[i].text %>
+                    <% var menuTextKey = 'menu.' + theme.menu[i].id; %>
+                    <%= __(menuTextKey) %>
                 </a>
             </li>
         <% } %>
     </ul>
 
     <ul class="side-nav <%= theme.color.side_nav %>" id="category-menu">
-        <!--<li class="">
-            <h5 class="black-text">分类目录</h5>
-        </li>-->
-
     <%
         var catTree = {};
 
