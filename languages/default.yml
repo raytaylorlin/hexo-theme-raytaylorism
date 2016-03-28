@@ -10,5 +10,30 @@ archive_b: "Archives: %s"
 page: Page %d
 recent_posts: Recent Posts
 blogroll: Links
-menu: Menu
 returntop: Return to top
+
+menu:
+    home: Home
+    archives: Archives
+    category: Categories
+    reading: Reading
+    about: About
+social: Social
+powered:
+    first: "Blog powered by"
+    last: "| Theme"
+current_page: Current page
+page_name:
+    categories: (Categories)
+    tags: (Tags)
+    archives: (Archives)
+reading:
+    score: Score
+    comment: Comment
+about:
+    about: About
+    skills: Skills
+    works: Works & Projects
+construction: Page under construction...
+go_back_home: Go back home
+no_title: No title

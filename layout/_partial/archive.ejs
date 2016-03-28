@@ -2,23 +2,23 @@
 var title = '';
 var archiveHtml = null;
 if (page.category) {
-    title = '（分类）'; 
+    titleKey = 'categories';
     archiveHtml = '<a class="breadcrumb" href="' + page.base + '">' + page.category + '</a>';
 }
 if (page.tag) {
-    title = '（标签）';
+    titleKey = 'tags';
     archiveHtml = '<a class="breadcrumb" href="' + page.base + '">' + page.tag + '</a>';
 }
 if (page.archive){
     if (page.year) {
         title = page.year + (page.month ? '/' + page.month : '');
     } else {
-        title = '（归档）';
+        titleKey = 'archives';
     }
 }
 %>
 
-<%- partial('pagenav', {nav_head: '当前位置' + title, partial_path: null, archive_html: archiveHtml}) %>
+<%- partial('pagenav', {nav_head: __('current_page') + __('page_name.' + titleKey), partial_path: null, archive_html: archiveHtml}) %>
 
 <% if (pagination == 2){ %>
     <% page.posts.each(function(item){ %>
@@ -27,7 +27,7 @@ if (page.archive){
     <%- partial('pagination') %>
 <% } else if (page.archive) { %>
     <ul class="collapsible mt-0" data-collapsible="accordion">
-        <% 
+        <%
             // 将各年份的文章汇总，数据结构为
             // [{year: 2016, posts: [item1, item2]}, {year: 2015, posts: [item3, item4, item5]}]
             var activeFlag = true;
@@ -50,7 +50,7 @@ if (page.archive){
         <% yearPosts.forEach(function(yearPost) { %>
             <li>
                 <div class="collapsible-header <%= activeFlag ? 'active' : '' %><% activeFlag = false; %>">
-                    <i class="fa fa-archive"></i><%= yearPost.year + '年' %>
+                    <i class="fa fa-archive"></i><%= yearPost.year %>
                 </div>
                 <div class="collapsible-body">
                     <div class="collection">

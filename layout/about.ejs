@@ -27,7 +27,7 @@
             <div class="card-content">
                 <section class="about-me">
                     <h1 class="<%= theme.color.about_title %>-text">
-                        <i class="fa fa-street-view"></i>关于</h1>
+                        <i class="fa fa-street-view"></i><%= __('about.about') %></h1>
                     <div class="entry <%= theme.color.link %>-link-context">
                         <%- item.content %>
                     </div>
@@ -36,7 +36,7 @@
                 <% if (aboutData.skills) { %>
                 <section class="skills">
                     <h1 class="<%= theme.color.about_title %>-text">
-                        <i class="fa fa-tasks"></i>&nbsp;技能</h1>
+                        <i class="fa fa-tasks"></i>&nbsp;<%= __('about.skills') %></h1>
                     <ul class="skill-list">
                         <% for (var skill in aboutData.skills) { %>
                             <% if (aboutData.skills[skill] > 0) { %>
@@ -62,7 +62,7 @@
                 <% if (aboutData.projects && aboutData.projects.length > 0) { %>
                 <section class="projects">
                     <h1 class="<%= theme.color.about_title %>-text">
-                        <i class="fa fa-cubes"></i>作品与项目</h1>
+                        <i class="fa fa-cubes"></i><%= __('about.works') %></h1>
                         <div class="row">
                             <% for (var i in aboutData.projects) { %>
                                 <div class="project-item col m6">

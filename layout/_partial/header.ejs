@@ -10,7 +10,8 @@
                     <li>
                         <a class="<%= theme.menu[i].class %> <%= theme.menu[i].category ? 'category-menu' : '' %>" href="<%= theme.menu[i].link %>" <% if (theme.menu[i].category) { %>data-activates="category-menu" <% } %>>
                             <i class="fa fa-<%= theme.menu[i].icon %> "></i>
-                            <%= theme.menu[i].text %>
+                            <% var menuTextKey = 'menu.' + theme.menu[i].id; %>
+                            <%= __(menuTextKey) %>
                         </a>
                     </li>
                 <% } %>
