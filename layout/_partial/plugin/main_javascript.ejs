@@ -13,6 +13,9 @@
                 $(this).attr('data-caption', $(this).attr('alt') || ' ');
             }).materialbox();
 
+        // 优化表格的显示
+        $('table').addClass('responsive-table striped bordered');
+
         // 首页幻灯片
         $('.slider').slider({
             indicators: true,
