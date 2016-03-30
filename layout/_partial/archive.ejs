@@ -3,11 +3,13 @@ var title = '';
 var archiveHtml = null;
 if (page.category) {
     titleKey = 'categories';
-    archiveHtml = '<a class="breadcrumb" href="' + page.base + '">' + page.category + '</a>';
+    archiveHtml = '<a class="breadcrumb" href="/' + page.base + '">' + page.category + '</a>';
 }
 if (page.tag) {
     titleKey = 'tags';
-    archiveHtml = '<a class="breadcrumb" href="' + page.base + '">' + page.tag + '</a>';
+    archiveHtml = '<a class="breadcrumb" href="/' + page.base + '">' + page.tag + '</a>';
+    console.log(site.url);
+    console.log(archiveHtml);
 }
 if (page.archive){
     if (page.year) {
