@@ -47,6 +47,7 @@ category_generator:
 * **主题颜色配置**：如果对主题的配色不满意，可以自行在`yourblog/themes/raytaylorism/_config.yml`中的`color`一项进行配置。其中各部件的颜色字符串命名遵循[Materializecss色板]规范。注意：`link`、`article_title_link`和`tab`配置的是文字的颜色，**因此不可以给这几项配置`lighten`和`darken`的颜色加亮加暗的后缀**。
 * **页面标题**：在`yourblog/_config.yml`中，`title`项决定了页面header中显示的标题，`subtitle`决定了浏览器的`<title>`标签内容。
 * **favicon**：请将`yourblog/themes/raytaylorism/source/favicon.png`替换为你自己的图标文件，**保持`favicon.png`命名不变**。
+* **多语言**：目前主题支持简体中文、繁体中文和英文三种语言，可以将`yourblog/_config.yml`中`language`一项设置为`zh-CN`、`zh-TW`、`en`实现
 
 ### 数据
 
@@ -84,6 +85,7 @@ category_generator:
 
 ## 更新日志
 
+* 2.1.2(2016-4-5) 优化二级无序列表的样式，修复标签页和分类页的pagenav链接重复显示了两次导致404的问题
 * 2.1.1(2016-3-29) 优化正文表格和引用的显示
 * 2.1.0(2016-3-28) 增加对繁体中文和英文的支持
 * 2.0.0-alpha(2016-3-14) 发布raytaylorism v2 alpha版本
