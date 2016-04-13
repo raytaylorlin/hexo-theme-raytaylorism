@@ -14,7 +14,13 @@
             }).materialbox();
 
         // 优化表格的显示
-        $('table').addClass('responsive-table striped bordered');
+        $('table').each(function() {
+            var $table = $(this);
+            // 除去多行代码的情况
+            if ($table.find('pre').length == 0) {
+                $table.addClass('responsive-table striped bordered');
+            }
+        });
 
         // 首页幻灯片
         $('.slider').slider({
