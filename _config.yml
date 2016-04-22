@@ -21,6 +21,10 @@ menu:
     link: /about
     icon: user
     class: menu-about
+  - id: search
+    link: "#search"
+    icon: search
+    class: menu-search modal-trigger
 
 # 颜色配置
 color:
