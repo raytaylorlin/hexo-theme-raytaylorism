@@ -70,6 +70,12 @@ category_generator:
 
 * **代码语法高亮**：语法高亮的主题默认由CSS文件`yourblog/themes/raytaylorism/source/css/lib/prettify-tomorrow-night-eighties.css`。如果需要替换，可以到[Prettify Theme]选择你喜欢的主题，下载主题的CSS文件并存放到相同的目录下，并将`yourblog/themes/raytaylorism/_config.yml`中的`google_code_prettify_theme`一项改为对应的文件名。
 * **评论**：评论插件默认使用[多说]，需要自行配置`yourblog/themes/raytaylorism/_config.yml`中的`duoshuo_shortname`为你自己站点的shortname
+* **搜索**：安装[hexo-generator-search]，在`yourblog/_config.yml`中添加如下配置代码。如果不需要搜索功能，将`yourblog/themes/raytaylorism/_config.yml`中`menu`的`-id: search`那一整项删除即可
+```
+search:
+  path: search.xml
+  field: all
+```
 * **RSS**：安装[hexo-generator-feed]，并按照说明配置（`atom.xml`的链接写在`yourblog/source/_data/link.json`的social项中，一般无需更改）
 * **站点分析**：
     * Google分析：`yourblog/themes/raytaylorism/_config.yml`中的`google_analytics`一项改为你的**Google分析track id**，留空则不启用
@@ -85,6 +91,7 @@ category_generator:
 
 ## 更新日志
 
+* 2.2.0(2016-4-22) 新增搜索功能
 * 2.1.3(2016-4-13) 修复多行代码被挤到下方的显示问题
 * 2.1.2(2016-4-5) 优化二级无序列表的样式，修复标签页和分类页的pagenav链接重复显示了两次导致404的问题
 * 2.1.1(2016-3-29) 优化正文表格和引用的显示
@@ -99,6 +106,8 @@ category_generator:
 [Materializecss色板]: http://materializecss.com/color.html#palette
 [Font Awesome图标]: https://fortawesome.github.io/Font-Awesome/icons/
 [Prettify Theme]: http://jmblog.github.io/color-themes-for-google-code-prettify/
+[hexo-generator-search]: https://github.com/PaicHyperionDev/hexo-generator-search
+[hexo-generator-feed]: https://github.com/hexojs/hexo-generator-feed
 [Materialize]: http://materializecss.com/
 [Google-code-prettify]: https://code.google.com/p/google-code-prettify/
 [Google Analytics]: http://www.google.com/analytics/

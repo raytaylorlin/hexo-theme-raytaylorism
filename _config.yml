@@ -1,26 +1,32 @@
 # 菜单配置（若不需要某项可直接删除）
 menu:
+  # 首页
   - id: home
     link: /
     icon: home
     class: menu-home
+  # 归档
   - id: archives
     link: /archives
     icon: archive
     class: menu-archive
+  # 目录
   - id: category
     link: javascript:;
     category: true
     icon: bookmark
     class: menu-category
+  # 读书
   - id: reading
     link: /reading
     icon: book
     class: menu-reading
+  # 关于
   - id: about
     link: /about
     icon: user
     class: menu-about
+  # 搜索
   - id: search
     link: "#search"
     icon: search
