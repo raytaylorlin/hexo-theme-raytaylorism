@@ -9,7 +9,7 @@ archive_a: 彙整
 archive_b: 彙整：%s
 page: 第 %d 頁
 recent_posts: 最新文章
-blogroll: 友情鏈接
+blogroll: 友情連結
 returntop: 回到頂部
 
 menu:
@@ -18,11 +18,11 @@ menu:
     category: 分類
     reading: 讀書
     about: 關於
-    search: 搜索
+    search: 搜尋
 social: 社交
 powered:
-    first: 本博客由
-    last: "強力驅動 | 主題"
+    first: 本站使用
+    last: "建置 | 主題"
 current_page: 當前位置
 page_name:
     categories: （分類目錄）
