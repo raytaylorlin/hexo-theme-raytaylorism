@@ -66,7 +66,7 @@
 
             // 搜索功能
             $('.modal-trigger').leanModal();
-            var searchXml = "<%= config.search.path %>";
+            var searchXml = "<%= config.search ? config.search.path : '' %>";
             if (searchXml.length == 0) {
              	searchXml = "search.xml";
             }
