@@ -48,6 +48,7 @@ category_generator:
 * **页面标题**：在`yourblog/_config.yml`中，`title`项决定了页面header中显示的标题，`subtitle`决定了浏览器的`<title>`标签内容。
 * **favicon**：请将`yourblog/themes/raytaylorism/source/favicon.png`替换为你自己的图标文件，**保持`favicon.png`命名不变**。
 * **多语言**：目前主题支持简体中文、繁体中文和英文三种语言，可以将`yourblog/_config.yml`中`language`一项设置为`zh-CN`、`zh-TW`、`en`实现
+* **正文宽度问题**：有许多使用者反映正文在大屏幕下显得太窄（默认为700px定宽），这是**出于提升文章阅读体验的考虑，在PC端上宽屏一行不至于过长，参考了UI设计师的建议以及一些知名博客类网站如[medium.com](https://medium.com/)、[简书](http://www.jianshu.com/)等等才做出的调整。**如果依旧对这样的宽度不满意，可以自行调整`yourblog/themes/raytaylorism/source/css/_base/lib_customize.styl`中的`.container`类的宽度设置
 
 ### 数据
 
