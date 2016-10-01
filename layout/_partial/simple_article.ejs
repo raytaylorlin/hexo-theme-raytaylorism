@@ -1,24 +1,24 @@
 <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    <%- partial('post/title') %>
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                <%- partial('post/title') %>
+            </div>
+
+            <%- partial('post/time') %>
+            <%- partial('post/tag') %>
+
+            <% if (showEntry && item.excerpt && index) { %>
+                <div class="entry <%= theme.color.link %>-link-context">
+                    <%- item.excerpt %>
                 </div>
-
-                <%- partial('post/time') %>
-                <%- partial('post/tag') %>
-
-                <% if (showEntry && item.excerpt && index) { %>
-                    <div class="entry <%= theme.color.link %>-link-context">
-                        <%- item.excerpt %>
-                    </div>
-                <% } %>
-            </div>
-
-            <% if (item.excerpt) { %>
-            <div class="card-action <%= theme.color.link %>-link-context">
-                <a href="<%= item.path %>">READ MORE</a>
-            </div>
             <% } %>
         </div>
+
+        <% if (item.excerpt) { %>
+        <div class="card-action <%= theme.color.link %>-link-context">
+            <a href="<%= "/" + item.path %>">READ MORE</a>
+        </ div>
+        <% } %>
+    </div>
 </article>
