@@ -55,7 +55,7 @@ if (page.archive){
                 <div class="collapsible-body">
                     <div class="collection">
                         <% yearPost.posts.forEach(function(item) { %>
-                            <a href="<%- config.root %><%- item.path %>" class="collection-item <%= theme.color.archive_item %>-text text-darken-1">
+                            <a href="<%- url_for(item.path) %>" class="collection-item <%= theme.color.archive_item %>-text text-darken-1">
                                 <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
                                 <span>&nbsp;&nbsp;&nbsp;</span>
                                 <%- item.title %>
@@ -69,7 +69,7 @@ if (page.archive){
 <% } else { %>
     <div class="collection mt-0">
         <% page.posts.each(function(item) { %>
-            <a href="<%- config.root %><%- item.path %>" class="collection-item <%= theme.color.archive_item %>-text text-darken-1">
+            <a href="<%- url_for(item.path) %>" class="collection-item <%= theme.color.archive_item %>-text text-darken-1">
                 <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
                 <span>&nbsp;&nbsp;&nbsp;</span>
                 <%- item.title %>
