@@ -1,7 +1,7 @@
 <article class="<%= item.layout %>">
   <header>
     <div class="icon"></div>
-    <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+    <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- url_for(item.path) %>"><%= item.date.format(config.date_format) %></a></time>
     <% if (item.link){ %>
       <% if (item.title){ %>
         <h1 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h1>
@@ -9,7 +9,7 @@
         <h1 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h1>
       <% } %>
     <% } else { %>
-      <h1 class="title"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
+      <h1 class="title"><a href="<%- url_for(item.path) %>"><%= item.title %></a></h1>
     <% } %>
   </header>
 </article>
