@@ -3,18 +3,29 @@
     <div class="container">
         <div class="row">
             <% if (site.data.link.social) { %>
-            <div class="social-group col m3 s12">
+            <div class="social-group col m4 s12">
                 <h5 class="white-text"><%= __('social') %></h5>
                 <% for (var type in site.data.link.social) { %>
                     <a class="social-link" href="<%= site.data.link.social[type] %>" target="_blank">
                         <i class="fa fa-2x fa-<%= type %>"></i>
                     </a>
                 <% } %>
+                <div class="site-visitors-container white-text">
+                    <span>
+                        <i class="fa fa-user"></i>
+                        <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+                    </span>
+                    <span>&nbsp;|&nbsp;</span>
+                    <span>
+                        <i class="fa fa-eye"></i>
+                        <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+                    </span>
+                </div>
             </div>
             <% } %>
 
             <% if (site.data.link && site.data.link.extern) { %>
-            <div class="col m9 s12">
+            <div class="col m8 s12">
                 <h5 class="white-text"><%= __('blogroll') %></h5>
                 <% for (var name in site.data.link.extern) { %>
                     <a class="social-link" href="<%= site.data.link.extern[name] %>" target="_blank"><%= name %></a>
