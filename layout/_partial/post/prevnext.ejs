@@ -1,0 +1,15 @@
+<% if (item.prev) { %>
+<p class="<%= theme.color.link %>-link-context">
+    <a href="<%= url_for(item.prev.path) %>" rel="next" title="<%= item.prev.title %>">
+    <%= __('prev', item.prev.title) %>
+  </a>
+</p>
+<% } %>
+
+<% if (item.next) { %>
+<p class="<%= theme.color.link %>-link-context">
+    <a href="<%= url_for(item.next.path) %>" rel="next" title="<%= item.next.title %>">
+    <%= __('next', item.next.title) %>
+  </a>
+</p>
+<% } %>

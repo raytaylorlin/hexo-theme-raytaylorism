@@ -2,8 +2,8 @@ categories: Categories
 search: Search
 tags: Tags
 tagcloud: Tag Cloud
-prev: Prev
-next: Next
+prev: "Prev: %s"
+next: "Next: %s"
 comment: Comments
 archive_a: Archives
 archive_b: "Archives: %s"
