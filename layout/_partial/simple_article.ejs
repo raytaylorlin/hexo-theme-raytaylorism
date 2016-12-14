@@ -17,7 +17,9 @@
 
         <% if (item.excerpt) { %>
         <div class="card-action <%= theme.color.link %>-link-context">
-            <a href="<%= "/" + item.path %>">READ MORE</a>
+            <a href="<%= "/" + item.path %>"> 
+                <%= theme.excerpt_link %> 
+            </a>
         </ div>
         <% } %>
     </div>
