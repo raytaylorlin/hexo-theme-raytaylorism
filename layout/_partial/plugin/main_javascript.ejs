@@ -38,18 +38,22 @@
 
             // 文章目录
             $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
-            // 目录滚动
-            $(window).scroll(function(){
-                var aTop = $('a.active.section');
-                if ($(window).scrollTop()<100) {
-                    Top=0;
-                }else {
-                    if (aTop[0]) {
-                        Top = aTop.offset().top-$('div.toc.hide-on-med-and-down').offset().top;
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
                     }
                 }
-                $('div.toc.hide-on-med-and-down').css('top', '-' + Top + 'px');
+                $toc.css('top', '-' + scrollTargetTop + 'px');
             });
+
             // 修正文章目录的left-border颜色
             var color = $('.table-of-contents-text').css('color');
             $('.table-of-contents-link').css('border-left-color', color);
