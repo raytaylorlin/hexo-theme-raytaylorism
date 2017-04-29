@@ -82,6 +82,7 @@ search:
     * Google分析：`yourblog/themes/raytaylorism/_config.yml`中的`google_analytics`一项改为你的**Google分析track id**，留空则不启用
     * 腾讯分析：（国内用户有Google分析被墙的可能）`yourblog/themes/raytaylorism/_config.yml`中的`tencent_analytics`一项改为你的**sId**（在腾讯分析添加站点后，复制代码中`sId=xxxxxxxx`那串数字就是sId），留空则不启用
     * 如果你需要其他第三方的站点统计，可以仿照上面的例子添加配置，并在`yourblog/themes/raytaylorism/layout/_partial/plugin/analytics.ejs`中添加相应的统计代码
+* **网页计数器**：使用不蒜子来统计PV和UV，若不需要可将`yourblog/themes/raytaylorism/_config.yml`中的`page_stat`设为false
 
 ## 使用的插件
 

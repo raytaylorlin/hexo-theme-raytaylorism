@@ -10,17 +10,7 @@
                         <i class="fa fa-2x fa-<%= type %>"></i>
                     </a>
                 <% } %>
-                <div class="site-visitors-container white-text">
-                    <span>
-                        <i class="fa fa-user"></i>
-                        <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-                    </span>
-                    <span>&nbsp;|&nbsp;</span>
-                    <span>
-                        <i class="fa fa-eye"></i>
-                        <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-                    </span>
-                </div>
+                <%- partial('plugin/page_stat') %>
             </div>
             <% } %>
 

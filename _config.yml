@@ -71,3 +71,6 @@ google_code_prettify: prettify-tomorrow-night-eighties
 
 # 是否启用MathJax数学公式渲染。如果你确认整个站点的博文都不会用到Latex数学公式，可以将其该项设为false提高页面加载速度
 mathjax: true
+
+# 是否启用网页计数器（使用不蒜子插件）
+page_stat: true
