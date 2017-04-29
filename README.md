@@ -70,7 +70,7 @@ category_generator:
 ### 插件
 
 * **代码语法高亮**：语法高亮的主题默认由CSS文件`yourblog/themes/raytaylorism/source/css/lib/prettify-tomorrow-night-eighties.css`。如果需要替换，可以到[Prettify Theme]选择你喜欢的主题，下载主题的CSS文件并存放到相同的目录下，并将`yourblog/themes/raytaylorism/_config.yml`中的`google_code_prettify_theme`一项改为对应的文件名。
-* **评论**：评论插件默认使用[多说]，需要自行配置`yourblog/themes/raytaylorism/_config.yml`中的`duoshuo_shortname`为你自己站点的shortname
+* **评论**：~评论插件默认使用[多说]，需要自行配置`yourblog/themes/raytaylorism/_config.yml`中的`duoshuo_shortname`为你自己站点的shortname~（多说即将关闭服务）评论插件默认使用[网易云跟帖]，需要自行配置`yourblog/themes/raytaylorism/_config.yml`中的`yungentie_product_key`为你自己站点的productKey（从通用代码中获取）
 * **搜索**：安装[hexo-generator-search]，在`yourblog/_config.yml`中添加如下配置代码。如果不需要搜索功能，将`yourblog/themes/raytaylorism/_config.yml`中`menu`的`-id: search`那一整项删除即可
 ```
 search:
@@ -93,6 +93,7 @@ search:
 
 ## 更新日志
 
+* 2.3.3(2017-4-29) 新增网易云跟帖评论插件支持
 * 2.3.2(2016-12-21) 优化文章目录，使其随正文内容滚动（https://github.com/raytaylorlin/hexo-theme-raytaylorism/pull/49）
 * 2.3.1(2016-12-14) 开放文章上一篇和下一篇功能
 * 2.3.0(2016-12-10) 新增站点PV、UV和文章阅读量统计
