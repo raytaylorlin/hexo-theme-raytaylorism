@@ -52,7 +52,7 @@ category_generator:
 
 ### 数据
 
-* **外部链接**：在`yourblog/source/_data/link.json`数据文件中进行配置
+* **外部链接**：在`yourblog/source/_data/link.json`数据文件中进行配置。如果不需要以下两项，直接把`link.json`删除即可。
     * 社交平台：对应`social`项，预设有`weibo`和`github`两种，如果需要其他社交平台可自行追加，但要注意**key值必须与[Font Awesome图标]相对应，否则可能无法正常显示**。
     * 友情链接：对应`extern`项，其中key值为链接文字，value值为外链URL
 * **首页幻灯片**：在`yourblog/source/_data/slider.json`数据文件中进行配置。可以配置背景图、标题、副标题、对齐方式。如果不需要幻灯片，直接把`slider.json`删除即可。
