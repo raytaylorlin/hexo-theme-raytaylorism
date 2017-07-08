@@ -8,9 +8,11 @@
             <div class="row">
                 <ul class="tabs ">
                     <% for (var key in readingData.define) { %>
+                        <% if (readingData.define[key] && readingData.contents[key]) { %>
                         <li class="tab col s<%= 12 / tabCount %> ">
                             <a class="<%= theme.color.tab %>-text " href="#<%= key %>"><%= readingData.define[key] + '(' + readingData.contents[key].length + ')'%></a>
                         </li>
+                        <% } %>
                     <% } %>
                 </ul>
             </div>
