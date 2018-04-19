@@ -62,6 +62,9 @@ disqus_shortname:
 duoshuo_shortname:
 # 网易云跟帖productKey，从通用代码中获取，若为空则不启用
 yungentie_product_key:
+# Valine是一款基于Leancloud的快速、简洁且高效的无后端评论系统。其appid和appkey的获取详见官网：https://valine.js.org/
+valine_appid:
+valine_appkey:
 
 # Google分析track id，若为空则不启用
 google_analytics:
