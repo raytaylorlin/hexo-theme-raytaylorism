@@ -63,6 +63,19 @@ duoshuo_shortname:
 # 网易云跟帖productKey，从通用代码中获取，若为空则不启用
 yungentie_product_key:
 
+# Valine 评论 https://valine.js.org
+valine:
+  enable: false # 如果你想用Valine评论系统，请设置enable为true
+  appId:  #your leancloud appId
+  appKey:  #your leancloud appKey
+  guest_info: nick,mail,link #valine comment header info
+  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+  avatar: mm # gravatar style https://valine.js.org/avatar
+  pageSize: 10 # comment list page size
+  verify: false # valine verify code (true/false)
+  notify: false # valine mail notify (true/false) 
+  lang: zh-cn
+
 # Google分析track id，若为空则不启用
 google_analytics:
 # 腾讯分析sId，若为空则不启用
