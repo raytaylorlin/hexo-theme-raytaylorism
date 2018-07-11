@@ -110,7 +110,7 @@ search:
 [历史记录](log.md)
 
 [Hexo]: http://hexo.io/
-[我的博客]: http://raytaylorlin.com/
+[我的博客]: https://raytaylorlin.github.io/
 [Data Files]: https://hexo.io/docs/data-files.html
 [Materializecss色板]: http://materializecss.com/color.html#palette
 [Font Awesome图标]: https://fortawesome.github.io/Font-Awesome/icons/
