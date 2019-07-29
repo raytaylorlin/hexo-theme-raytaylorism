@@ -7,10 +7,10 @@ raytaylorism（Ray Taylor主义）是我自己设计并制作的一款清新的�
 ## 预览
 
 * [我的博客]
-* [主题截图1](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot1.jpg)
-* [主题截图2](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot2.jpg)
-* [主题截图3](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot3.jpg)
-* [主题截图4](http://raytaylorlin-blog.qiniudn.com/image%2Fscreenshot%2Fscreenshot4.jpg)
+* [主题截图1](https://raytaylorlin-blog.oss-cn-shenzhen.aliyuncs.com/image%2Fscreenshot%2Fscreenshot1.jpg)
+* [主题截图2](https://raytaylorlin-blog.oss-cn-shenzhen.aliyuncs.com/image%2Fscreenshot%2Fscreenshot2.jpg)
+* [主题截图3](https://raytaylorlin-blog.oss-cn-shenzhen.aliyuncs.com/image%2Fscreenshot%2Fscreenshot3.jpg)
+* [主题截图4](https://raytaylorlin-blog.oss-cn-shenzhen.aliyuncs.com/image%2Fscreenshot%2Fscreenshot4.jpg)
 
 ## 安装
 

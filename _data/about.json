@@ -27,7 +27,7 @@
 		"link": "https://github.com/"
 	}],
 	"reward": [
-	    "http://raytaylorlin-blog.qiniudn.com/image/about/weixin_reward.png",
-		"http://raytaylorlin-blog.qiniudn.com/image/about/zhifubao_reward.png"
+	    "https://raytaylorlin-blog.oss-cn-shenzhen.aliyuncs.com/image/about/weixin_reward.png",
+		"https://raytaylorlin-blog.oss-cn-shenzhen.aliyuncs.com/image/about/zhifubao_reward.png"
 	]
 }
