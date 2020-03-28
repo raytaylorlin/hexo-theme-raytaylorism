@@ -63,4 +63,20 @@ var pageTitle = page.title;
       };
     </script>
     <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<% } else if(theme.minivaline.enable && theme.minivaline.appId && theme.minivaline.appKey && page.comments ){ %>
+    <section id="comment">
+      <div id="minivaline-container"></div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/minivaline/dist/MiniValine.min.js"></script>
+    <script>
+      new MiniValine({
+        el: '#minivaline-container',
+        appId: "<%= theme.minivaline.appId %>",
+        appKey: "<%= theme.minivaline.appKey %>",
+        placeholder: "<%= theme.minivaline.placeholder %>",
+        lang: "<%= theme.minivaline.lang %>",
+        adminEmailMd5: "<%= theme.minivaline.adminEmailMd5 %>",
+        math: <%= theme.minivaline.math %>
+      });
+    </script>
 <% } %>

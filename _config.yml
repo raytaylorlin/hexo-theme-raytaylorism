@@ -56,6 +56,17 @@ archive_yearly: true
 # 版权信息
 copyright: © 2016 example.com, All rights reserved.
 
+# MiniValine
+# See: https://github.com/MiniValine/MiniValine
+minivaline:
+  enable: false
+  appId:  # Your leancloud application appid
+  appKey:  # Your leancloud application appkey
+  placeholder: Write a Comment # Comment box placeholder
+  adminEmailMd5: # The MD5 of Admin Email to show Admin Flag.
+  math: true # Support MathJax.
+  lang: en # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
+
 # Disqus评论shortname，若为空则不启用
 disqus_shortname:
 # 多说shortname，若为空则不启用
