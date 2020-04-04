@@ -67,7 +67,7 @@ var pageTitle = page.title;
     <section id="comment">
       <div id="minivaline-container"></div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/minivaline/dist/MiniValine.min.js"></script>
+    <script src="https://unpkg.com/minivaline/dist/MiniValine.min.js"></script>
     <script>
       new MiniValine({
         el: '#minivaline-container',
@@ -76,7 +76,8 @@ var pageTitle = page.title;
         placeholder: "<%= theme.minivaline.placeholder %>",
         lang: "<%= theme.minivaline.lang %>",
         adminEmailMd5: "<%= theme.minivaline.adminEmailMd5 %>",
-        math: <%= theme.minivaline.math %>
+        math: <%= theme.minivaline.math %>,
+        md: <%= theme.minivaline.md %>
       });
     </script>
 <% } %>
